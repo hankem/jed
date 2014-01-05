@@ -13,7 +13,7 @@
 \done
 
 \function{append_region_to_file}
-\synopsis{Append the region to "file"}
+\synopsis{Append the region to \var{file}}
 \usage{Integer append_region_to_file (String file)}
 \description
   Appends a marked region to \var{file} returning number of lines
@@ -22,7 +22,7 @@
 \done
 
 \function{append_region_to_kill_array}
-\synopsis{Append the region to the element "n" of the kill array}
+\synopsis{Append the region to the element \var{n} of the kill array}
 \usage{Void append_region_to_kill_array (Integer n)}
 \description
   This function appends the currently defined region to the contents of
@@ -50,12 +50,12 @@
 \description
   This function checks to see if a region is defined and may exchange
   the current editing point and the mark to define a canonical region.
-  If the mark is not set, it signals an S-Lang error.  A canonical
+  If the mark is not set, it signals an \slang error.  A canonical
   region is one with the mark set earlier in the buffer than than the
   editing point.  Always call this if using a region which requires
   such a situation.
 
-  If the argument \var{ps} is non-zero, \var{push_spot} will be called,
+  If the argument \var{ps} is non-zero, \ifun{push_spot} will be called,
   otherwise, \var{ps} is zero and it will not be called.
 
   As an example, the following function counts the number of lines in
@@ -76,7 +76,7 @@
 \done
 
 \function{copy_region}
-\synopsis{copy a region to the buffer "buf"}
+\synopsis{copy a region to the buffer \var{buf}}
 \usage{Void copy_region (String buf)}
 \description
   This function may be used to copy a region defined by a mark and the
@@ -87,7 +87,7 @@
 \done
 
 \function{copy_region_to_kill_array}
-\synopsis{Copy the defined region to element "n" of the kill array}
+\synopsis{Copy the defined region to element \var{n} of the kill array}
 \usage{Void copy_region_to_kill_array (Integer n)}
 \description
   This function copies the currently defined region to the nth element,
@@ -115,8 +115,8 @@
   between the mark and the editing point.  The region includes the line
   containing the mark as well as the line at the current point. All
   other lines outside this region are completely inaccessible without
-  first lifting the restriction using the \var{widen} function. As a simple
-  example, suppose that there is a function called \var{print_buffer} that
+  first lifting the restriction using the \ifun{widen} function. As a simple
+  example, suppose that there is a function called \ifun{print_buffer} that
   operates on the entire buffer.  Then the following function will work
   on a region of lines:
 #v+
@@ -127,11 +127,11 @@
            widen ();
         }
 #v-
-  The \var{narrow} function will signal an error if the mark is not set.
+  The \ifun{narrow} function will signal an error if the mark is not set.
   Note also that the narrow function may be used recursively in the
   sense that a narrowed region may be further restricted using the
-  \var{narrow} function.  For each narrow, the \var{widen} function must be called
-  to lift each restriction.
+  \ifun{narrow} function.  For each narrow, the \ifun{widen} function must be
+  called to lift each restriction.
 \seealso{widen, narrow_to_region}
 \done
 
@@ -139,17 +139,17 @@
 \synopsis{Restrict editing exactly to the region}
 \usage{Void narrow_to_region (void)}
 \description
-  The \var{narrow_to_region} function behaves like the \var{narrow} function
-  that \var{narrow} operates on lines and \var{narrow_to_region} restricts
+  The \ifun{narrow_to_region} function behaves like the \ifun{narrow} function
+  that \ifun{narrow} operates on lines and \ifun{narrow_to_region} restricts
   editing to only characters within the region.
 \seealso{widen_region, narrow.}
 \done
 
 \function{pipe_region}
-\synopsis{Execute "cmd" as subprocess and sends the region to its stdin}
+\synopsis{Execute \var{cmd} as subprocess and sends the region to its stdin}
 \usage{Integer pipe_region (String cmd)}
 \description
-  The \var{pipe_region} function executes \var{cmd} in a separate process and
+  The \ifun{pipe_region} function executes \var{cmd} in a separate process and
   sends the region of characters defined by the mark and the current
   point to the standard input of the process.  It successful, it returns
   the exit status of the process.  Upon failure it signals an error.
@@ -162,7 +162,7 @@
 \usage{Void pop_narrow ()}
 \description
   The purpose of this function is to restore the last narrow
-  context that was saved via \var{push_narrow}.
+  context that was saved via \ifun{push_narrow}.
 \seealso{push_narrow, widen, widen_buffer}
 \done
 
@@ -176,15 +176,15 @@
 \done
 
 \function{translate_region}
-\synopsis{translate the characters in the region according to "a"}
+\synopsis{translate the characters in the region according to \var{a}}
 \usage{Void translate_region (String_Type[256] a)}
 \description
   This function uses the 256 element array of strings to translate the
   characters in a region based on the mapping defined by the array.
-  If an array element is \var{NULL}, then the corresponding character
+  If an array element is \NULL, then the corresponding character
   will not be replaced.
 
-  The \var{translate_region} function leaves the editing point at the
+  The \ifun{translate_region} function leaves the editing point at the
   end of the region.
 \example
 #v+
@@ -196,7 +196,7 @@
     bob (); push_mark (); eob ();
     translate_region (a);
 #v-
-  uses \var{translate_region} to replace the characters \var{'&'},
+  uses \ifun{translate_region} to replace the characters \var{'&'},
   \var{'<'}, \var{'>'}, and \var{'$'} by the strings
   \exmp{"&amp;"}, \exmp{"&lt;"}, \exmp{"&gt;"}, and \exmp{"&dollar;"},
   respectively.
@@ -204,11 +204,11 @@
 \done
 
 \function{widen}
-\synopsis{Undo the effect of "narrow"}
+\synopsis{Undo the effect of \ifun{narrow}}
 \usage{Void widen ()}
 \description
-  This function undoes the effect of \var{narrow}.  Consult the documentation
-  for \var{narrow} for more information.
+  This function undoes the effect of \ifun{narrow}.  Consult the documentation
+  for \ifun{narrow} for more information.
 \seealso{widen_region, narrow}
 \done
 
@@ -218,21 +218,21 @@
 \description
   This function widens the whole buffer.  If one intends to restore the
   narrow context after calling this function, the narrow context should be
-  saved via \var{push_narrow}.
+  saved via \ifun{push_narrow}.
 \seealso{narrow, widen, push_narrow, pop_narrow}
 \done
 
 \function{widen_region}
-\synopsis{Undo the effect of "narrow_to_region"}
+\synopsis{Undo the effect of \ifun{narrow_to_region}}
 \usage{Void widen_region ()}
 \description
-  This function undoes the effect of \var{narrow_to_region}.  Consult the
-  documentation for \var{narrow_to_region} for more information.
+  This function undoes the effect of \ifun{narrow_to_region}.  Consult the
+  documentation for \ifun{narrow_to_region} for more information.
 \seealso{widen, narrow_to_region}
 \done
 
 \function{write_region_to_file}
-\synopsis{Write the region to the file "filename"}
+\synopsis{Write the region to the file \var{filename}}
 \usage{Integer write_region_to_file (String filename)}
 \description
   This function may be used to write a region of the current buffer to
@@ -242,7 +242,7 @@
 \done
 
 \function{xform_region}
-\synopsis{Change the characters in the region according to "how"}
+\synopsis{Change the characters in the region according to \var{how}}
 \usage{Void xform_region (Integer how)}
 \description
   This function changes the characters in the region in a way specified

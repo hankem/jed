@@ -30,7 +30,7 @@
 \done
 
 \function{goto_user_mark}
-\synopsis{Return to the position of the User Mark "mark"}
+\synopsis{Return to the position of the User Mark \var{mark}}
 \usage{Void goto_user_mark (User_Mark mark)}
 \description
   This function returns to the position of the User Mark \var{mark}.  Before
@@ -40,7 +40,7 @@
 \done
 
 \function{is_user_mark_in_narrow}
-\synopsis{Test if the user mark "m" is within the narrowed buffer.}
+\synopsis{Test if the user mark \var{m} is within the narrowed buffer.}
 \usage{Integer is_user_mark_in_narrow (User_Mark m)}
 \description
   This function returns non-zero if the user mark \var{m} refers to a
@@ -73,7 +73,7 @@
 \done
 
 \function{move_user_mark}
-\synopsis{Move the User Mark "mark" to the current position}
+\synopsis{Move the User Mark \var{mark} to the current position}
 \usage{Void move_user_mark (User_Mark mark)}
 \description
   This function call takes a previously created User Mark, \var{mark}, and
@@ -104,7 +104,7 @@
 \done
 
 \function{pop_mark}
-\synopsis{Pop the most recent mark (if "g" is non-zero, go there)}
+\synopsis{Pop the most recent mark (if \var{g} is non-zero, go there)}
 \usage{pop_mark (Integer g)}
 \description
   \var{pop_mark} pops the most recent mark pushed onto the mark stack.  If
@@ -160,7 +160,7 @@
 \done
 
 \function{user_mark_buffer}
-\synopsis{Return the name of the buffer with User Mark "m"}
+\synopsis{Return the name of the buffer with User Mark \var{m}}
 \usage{String user_mark_buffer (User_Mark m)}
 \description
   This function returns the name of the buffer associated with the

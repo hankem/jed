@@ -1,5 +1,5 @@
 \function{abbrev_table_p}
-\synopsis{Test whether an abbreviation table "name" exists}
+\synopsis{Test whether an abbreviation table \var{name} exists}
 \usage{Integer abbrev_table_p (String name)}
 \description
   Returns non-zero if an abbreviation table with called \var{name} exists. If
@@ -7,7 +7,7 @@
 \done
 
 \function{create_abbrev_table}
-\synopsis{Create an abbreviation table "name"}
+\synopsis{Create an abbreviation table \var{name}}
 \usage{Void create_abbrev_table (String name, String word)}
 \description
   Create an abbreviation table with name \var{name}.  The second parameter
@@ -26,14 +26,14 @@
 \done
 
 \function{delete_abbrev_table}
-\synopsis{Delete the abbrev table "name"}
+\synopsis{Delete the abbrev table \var{name}}
 \usage{Void delete_abbrev_table (String name)}
 \description
   Delete the abbrev table specified by \var{name}.
 \done
 
 \function{dump_abbrev_table}
-\synopsis{Insert the abbreviation table "name"}
+\synopsis{Insert the abbreviation table \var{name}}
 \usage{Void dump_abbrev_table (String name)}
 \description
   This function inserts the contents of the abbreviation table called
@@ -50,7 +50,7 @@
 \done
 
 \function{use_abbrev_table}
-\synopsis{Use the abbreviation table "table" for the current buffer}
+\synopsis{Use the abbreviation table \var{table} for the current buffer}
 \usage{Void use_abbrev_table (String table)}
 \description
   Use the abbreviation table named \var{table} as the abbreviation table for

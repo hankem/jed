@@ -14,7 +14,7 @@ custom_variable ("Mouse_Wheel_Scroll_Lines", 3);
 %#v+
 %    Mouse_Selection_Word_Chars = "^ \n\"%&'()*,;<=>?@[]^`{|}";
 %#v-
-%  If the value of this variable is NULL, the word characters
+%  If the value of this variable is \NULL, the word characters
 %  associated with the buffer will be used.
 %\seealso{define_word}
 %!%-

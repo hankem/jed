@@ -182,7 +182,7 @@ variable LAST_SEARCH = Null_String;
 %  This function is used to create a new public global variable called
 %  \var{name}, initialized to \var{value}, unless it exists.  If the variable
 %  already exists but is not initialized, then it is initialized to
-%  \var{value}.  This is quite useful for slang files with user configurable
+%  \var{value}.  This is quite useful for \slang files with user configurable
 %  variables.  These variables can be defined and initialized by users
 %  before evaluating the file, or can be defined and initialized to a
 %  default value in a file using this function.

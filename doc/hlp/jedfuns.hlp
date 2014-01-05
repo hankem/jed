@@ -1,7 +1,7 @@
 abbrev_table_p
 
  SYNOPSIS
-  Test whether an abbreviation table "name" exists
+  Test whether an abbreviation table `name' exists
 
  USAGE
   Integer abbrev_table_p (String name)
@@ -15,7 +15,7 @@ abbrev_table_p
 create_abbrev_table
 
  SYNOPSIS
-  Create an abbreviation table "name"
+  Create an abbreviation table `name'
 
  USAGE
   Void create_abbrev_table (String name, String word)
@@ -46,7 +46,7 @@ define_abbrev
 delete_abbrev_table
 
  SYNOPSIS
-  Delete the abbrev table "name"
+  Delete the abbrev table `name'
 
  USAGE
   Void delete_abbrev_table (String name)
@@ -59,7 +59,7 @@ delete_abbrev_table
 dump_abbrev_table
 
  SYNOPSIS
-  Insert the abbreviation table "name"
+  Insert the abbreviation table `name'
 
  USAGE
   Void dump_abbrev_table (String name)
@@ -88,7 +88,7 @@ list_abbrev_tables
 use_abbrev_table
 
  SYNOPSIS
-  Use the abbreviation table "table" for the current buffer
+  Use the abbreviation table `table' for the current buffer
 
  USAGE
   Void use_abbrev_table (String table)
@@ -135,7 +135,7 @@ blocal_var_exists
 create_blocal_var
 
  SYNOPSIS
-  Create a buffer local variable "name"
+  Create a buffer local variable `name'
 
  USAGE
   Void create_blocal_var (String name)
@@ -153,7 +153,7 @@ create_blocal_var
 set_blocal_var
 
  SYNOPSIS
-  Set the buffer local variable "v" to value "val"
+  Set the buffer local variable `v' to value `val'
 
  USAGE
   Void set_blocal_var (val, String v)
@@ -685,7 +685,7 @@ add_color_object
 color_number
 
  SYNOPSIS
-  Return the object number associated with "obj"
+  Return the object number associated with `obj'
 
  USAGE
   Integer color_number (String obj)
@@ -845,7 +845,7 @@ set_color_esc
 set_color_object
 
  SYNOPSIS
-  Associate colors "fg" and "bg" with object "obj"
+  Associate colors `fg' and `bg' with object `obj'
 
  USAGE
   Void set_color_object (Integer obj, String fg, String bg)
@@ -986,7 +986,7 @@ BACKUP_BY_COPYING
 IsHPFSFileSystem
 
  SYNOPSIS
-  Test if drive of "path" is HPFS
+  Test if drive of `path' is HPFS
 
  USAGE
   Int_Type IsHPFSFileSystem(String_Type path)
@@ -1022,7 +1022,7 @@ change_default_dir
 copy_file
 
  SYNOPSIS
-  Copy a file "src" to "dest"
+  Copy a file `src' to `dest'
 
  USAGE
   Int_Type copy_file (String_Type src, String_Type dest)
@@ -1042,7 +1042,7 @@ copy_file
 delete_file
 
  SYNOPSIS
-  Delete the file "file"
+  Delete the file `file'
 
  USAGE
   Int_Type delete_file (String_Type file)
@@ -1109,7 +1109,7 @@ expand_symlink
 extract_filename
 
  SYNOPSIS
-  Separate the file name from "filespec"
+  Separate the file name from `filespec'
 
  USAGE
   String_Type extract_filename (String_Type filespec)
@@ -1131,7 +1131,7 @@ extract_filename
 file_changed_on_disk
 
  SYNOPSIS
-  Test if file "fn" is more recent than the current buffer
+  Test if file `fn' is more recent than the current buffer
 
  USAGE
   Int_Type file_changed_on_disk (String_Type fn)
@@ -1148,7 +1148,7 @@ file_changed_on_disk
 file_status
 
  SYNOPSIS
-  Return information about file "filename"
+  Return information about file `filename'
 
  USAGE
   Int_Type file_status (String_Type filename)
@@ -1195,7 +1195,7 @@ file_time_compare
 find_file
 
  SYNOPSIS
-  Open the file "name" in a buffer (or just goto buffer)
+  Open the file `name' in a buffer (or just goto buffer)
 
  USAGE
   Int_Type find_file (String_Type name)
@@ -1216,7 +1216,7 @@ find_file
 insert_file
 
  SYNOPSIS
-  Insert a file "f" into the current buffer
+  Insert a file `f' into the current buffer
 
  USAGE
   Int_Type insert_file (String_Type f)
@@ -1236,7 +1236,7 @@ insert_file
 msdos_fixup_dirspec
 
  SYNOPSIS
-  remove trailing backslash from "dir"
+  remove trailing backslash from `dir'
 
  USAGE
   String_Type msdos_fixup_dirspec (String_Type dir)
@@ -1251,7 +1251,7 @@ msdos_fixup_dirspec
 read_file
 
  SYNOPSIS
-  Read file "fn" but don't open in a window
+  Read file `fn' but don't open in a window
 
  USAGE
   Int_Type read_file (string fn)
@@ -1959,7 +1959,7 @@ indent_line
 insbuf
 
  SYNOPSIS
-  Insert buffer "buf" into the current buffer
+  Insert buffer `buf' into the current buffer
 
  USAGE
   Void insbuf (String buf)
@@ -1977,7 +1977,7 @@ insbuf
 insert
 
  SYNOPSIS
-  Insert string "str" into buffer at the current position
+  Insert string `str' into buffer at the current position
 
  USAGE
   Void insert (String str)
@@ -2027,7 +2027,7 @@ insert_byte
 insert_file_region
 
  SYNOPSIS
-  Insert a region of the file "file"
+  Insert a region of the file `file'
 
  USAGE
   Integer insert_file_region (String file, String beg, String end)
@@ -2054,7 +2054,7 @@ insert_file_region
 insert_from_kill_array
 
  SYNOPSIS
-  Insert the contents of element "n" of the kill array
+  Insert the contents of element `n' of the kill array
 
  USAGE
   Void insert_from_kill_array (Integer n)
@@ -2096,7 +2096,7 @@ trim
 whitespace
 
  SYNOPSIS
-  Insert white space of length "n"
+  Insert white space of length `n'
 
  USAGE
   whitespace (Integer n)
@@ -2351,7 +2351,7 @@ X_LAST_KEYSYM
 buffer_keystring
 
  SYNOPSIS
-  Append string "str" to the end of the input stream
+  Append string `str' to the end of the input stream
 
  USAGE
   Void buffer_keystring (String str);
@@ -2405,7 +2405,7 @@ definekey
 dump_bindings
 
  SYNOPSIS
-  Insert a list of keybindings for "map" into the buffer
+  Insert a list of keybindings for `map' into the buffer
 
  USAGE
   Void dump_bindings(String map);
@@ -2565,7 +2565,7 @@ input_pending
 keymap_p
 
  SYNOPSIS
-  Test if a keymap "kmap" exists
+  Test if a keymap `kmap' exists
 
  USAGE
   Integer keymap_p (String kmap);
@@ -2584,7 +2584,7 @@ keymap_p
 make_keymap
 
  SYNOPSIS
-  Create a keymap with name "km"
+  Create a keymap with name `km'
 
  USAGE
   Void make_keymap (String km);
@@ -2602,7 +2602,7 @@ make_keymap
 map_input
 
  SYNOPSIS
-  Remap an input character "x" to "y".
+  Remap an input character `x' to `y'.
 
  USAGE
   Void map_input (Integer x, Integer y);
@@ -2692,7 +2692,7 @@ set_abort_char
 set_current_kbd_command
 
  SYNOPSIS
-  Do as if "s" were entered from the keyboard
+  Do as if `s' were entered from the keyboard
 
  USAGE
   Void set_current_kbd_command (String s);
@@ -2723,7 +2723,7 @@ set_prefix_argument
 setkey
 
  SYNOPSIS
-  Bind a key sequence "key" to the function "fun"
+  Bind a key sequence `key' to the function `fun'
 
  USAGE
   Void setkey(String fun, String key);
@@ -2759,7 +2759,7 @@ setkey
 undefinekey
 
  SYNOPSIS
-  Remove a keybinding from "kmap"
+  Remove a keybinding from `kmap'
 
  USAGE
   Void undefinekey (String key, String kmap);
@@ -2813,7 +2813,7 @@ ungetkey
 unsetkey
 
  SYNOPSIS
-  Remove the definition of "key" from the "global" keymap
+  Remove the definition of `key' from the "global" keymap
 
  USAGE
   Void unsetkey(String key);
@@ -2872,7 +2872,7 @@ what_keymap
 which_key
 
  SYNOPSIS
-  Return the keys that are bound to the function "f"
+  Return the keys that are bound to the function `f'
 
  USAGE
   Integer which_key (String f);
@@ -2962,7 +2962,7 @@ dupmark
 goto_user_mark
 
  SYNOPSIS
-  Return to the position of the User Mark "mark"
+  Return to the position of the User Mark `mark'
 
  USAGE
   Void goto_user_mark (User_Mark mark)
@@ -2980,7 +2980,7 @@ goto_user_mark
 is_user_mark_in_narrow
 
  SYNOPSIS
-  Test if the user mark "m" is within the narrowed buffer.
+  Test if the user mark `m' is within the narrowed buffer.
 
  USAGE
   Integer is_user_mark_in_narrow (User_Mark m)
@@ -3037,7 +3037,7 @@ markp
 move_user_mark
 
  SYNOPSIS
-  Move the User Mark "mark" to the current position
+  Move the User Mark `mark' to the current position
 
  USAGE
   Void move_user_mark (User_Mark mark)
@@ -3076,7 +3076,7 @@ move_user_mark
 pop_mark
 
  SYNOPSIS
-  Pop the most recent mark (if "g" is non-zero, go there)
+  Pop the most recent mark (if `g' is non-zero, go there)
 
  USAGE
   pop_mark (Integer g)
@@ -3164,7 +3164,7 @@ push_spot
 user_mark_buffer
 
  SYNOPSIS
-  Return the name of the buffer with User Mark "m"
+  Return the name of the buffer with User Mark `m'
 
  USAGE
   String user_mark_buffer (User_Mark m)
@@ -3646,7 +3646,7 @@ clear_message
 flush
 
  SYNOPSIS
-  Immediately display "msg" as a message in the mini-buffer
+  Immediately display `msg' as a message in the mini-buffer
 
  USAGE
   Void flush (String msg);
@@ -3664,7 +3664,7 @@ flush
 tt_send
 
  SYNOPSIS
-  Send "s" directly to the terminal
+  Send `s' directly to the terminal
 
  USAGE
   Void tt_send (String s);
@@ -3707,7 +3707,7 @@ MINIBUFFER_ACTIVE
 _add_completion
 
  SYNOPSIS
-  "add_completion" for "n" names "f1", ... "fn"
+  `add_completion' for `n' names `f1', ... `fn'
 
  USAGE
   Void _add_completion (String f1, String f2, ..., Integer n);
@@ -3733,7 +3733,7 @@ _add_completion
 add_completion
 
  SYNOPSIS
-  Add the function "f" to the list for mini-buffer completion
+  Add the function `f' to the list for mini-buffer completion
 
  USAGE
   Void add_completion(String f);
@@ -4145,7 +4145,7 @@ get_last_macro
 get_passwd_info
 
  SYNOPSIS
-  Return information about the user "username"
+  Return information about the user `username'
 
  USAGE
   (dir, shell, pwd, uid, gid) = get_passwd_info (String username)
@@ -4182,7 +4182,7 @@ getpid
 is_internal
 
  SYNOPSIS
-  Test if function "f" is defined as an internal function
+  Test if function `f' is defined as an internal function
 
  USAGE
   Integer is_internal(String f)
@@ -4224,7 +4224,7 @@ quit_jed
 random
 
  SYNOPSIS
-  Return a random number in the range [0, "nmax"[
+  Return a random number in the range [0, `nmax'[
 
  USAGE
   Integer random (Integer seed, Integer nmax)
@@ -4309,7 +4309,7 @@ suspend
 usleep
 
  SYNOPSIS
-  Pause for "ms" milliseconds
+  Pause for `ms' milliseconds
 
  USAGE
   Void usleep (Integer ms)
@@ -4442,13 +4442,13 @@ mouse_set_current_window
 mouse_set_default_hook
 
  SYNOPSIS
-  Associate a function "fun" with the mouse event "name"
+  Associate a function `fun' with the mouse event `name'
 
  USAGE
   Void set_default_mouse_hook (String name, String fun)
 
  DESCRIPTION
-  This function associates a slang function `fun' with the mouse event
+  This function associates a S-Lang function `fun' with the mouse event
   specified by `name'.  The first parameter `name' must be one of the
   following:
 
@@ -4604,7 +4604,7 @@ bol
 bskip_chars
 
  SYNOPSIS
-  Skip past all characters defined by string "str"
+  Skip past all characters defined by string `str'
 
  USAGE
   Void bskip_chars (String str)
@@ -4644,7 +4644,7 @@ bskip_non_word_chars
 down
 
  SYNOPSIS
-  Move the editing point "n" lines down
+  Move the editing point `n' lines down
 
  USAGE
   Integer down(Integer n)
@@ -4731,7 +4731,7 @@ forward_paragraph
 goto_column
 
  SYNOPSIS
-  Move to the column "n"
+  Move to the column `n'
 
  USAGE
   Void goto_column (Integer n)
@@ -4755,7 +4755,7 @@ goto_column
 goto_column_best_try
 
  SYNOPSIS
-  like "goto_column" but don't insert whitespace
+  like `goto_column' but don't insert whitespace
 
  USAGE
   Integer goto_column_best_try (Integer c)
@@ -4773,7 +4773,7 @@ goto_column_best_try
 goto_line
 
  SYNOPSIS
-  Go to line number "n"
+  Go to line number `n'
 
  USAGE
   Void goto_line (Integer n)
@@ -4792,7 +4792,7 @@ goto_line
 left
 
  SYNOPSIS
-  Move the editing point backward "n" characters
+  Move the editing point backward `n' characters
 
  USAGE
   Integer left(Integer n)
@@ -4810,7 +4810,7 @@ left
 right
 
  SYNOPSIS
-  Move the editing position forward forward "n" characters
+  Move the editing position forward forward `n' characters
 
  USAGE
   Integer right(Integer n)
@@ -4829,7 +4829,7 @@ right
 skip_chars
 
  SYNOPSIS
-  Go forward past all characters defined by "s"
+  Go forward past all characters defined by `s'
 
  USAGE
   Void skip_chars(String s)
@@ -4924,7 +4924,7 @@ skip_word_chars
 up
 
  SYNOPSIS
-  Go up "n" lines
+  Go up `n' lines
 
  USAGE
   Integer up(Integer n)
@@ -4977,7 +4977,7 @@ get_process_flags
 kill_process
 
  SYNOPSIS
-  Kill the subprocess specified by the process handle "id"
+  Kill the subprocess specified by the process handle `id'
 
  USAGE
   Void kill_process (Int_Type id)
@@ -5079,7 +5079,7 @@ run_program
 run_shell_cmd
 
  SYNOPSIS
-  Run "cmd" in a separate process
+  Run `cmd' in a separate process
 
  USAGE
   Integer_Type run_shell_cmd (String cmd)
@@ -5104,7 +5104,7 @@ send_process
  DESCRIPTION
   This function sends the string `s' to the standard input of the
   process with the ID `id'.  With this function and
-  `set_process' with the argument `output'' you can establish a
+  `set_process' with the argument "output" you can establish a
   bi-directional communication with the process.
 
  SEE ALSO
@@ -5115,7 +5115,7 @@ send_process
 send_process_eof
 
  SYNOPSIS
-  Close the "stdin" of the process "id"
+  Close the "stdin" of the process `id'
 
  USAGE
   send_process_eof (Int_Type id)
@@ -5129,7 +5129,7 @@ send_process_eof
 set_process
 
  SYNOPSIS
-  Set "what" for process "pid"
+  Set `what' for process `pid'
 
  USAGE
   Void set_process (pid, what, value)
@@ -5144,10 +5144,10 @@ set_process
   parameter, `what', specifies what to set.  It must be one of the
   strings:
 
-        "signal" :  indicates that 'value' is the name of a function to call
+        "signal" :  indicates that `value' is the name of a function to call
                     when the process status changed.  The function specified
-                    by 'value' must be declared to accept an argument list:
-                    (pid, flags, status) where 'pid' has the same
+                    by `value' must be declared to accept an argument list:
+                    (pid, flags, status) where `pid' has the same
                     meaning as above and flags is an integer with the
                     meanings:
                       1: Process Running
@@ -5164,13 +5164,13 @@ set_process
                     guaranteed to be the buffer associated with the process.
 
        "output" :   This parameter determines how output from the process is
-                    is processed.  If the 'value' is the empty string "", output
+                    is processed.  If the `value' is the empty string "", output
                     will go to the end of the buffer associated with the process
                     and the point will be left there.
-                    If value is ".", output will go at the current buffer position.
-                    If value is "@", output will go to the end of the buffer but
-                    the point will not move.  Otherwise, 'value' is
-                    the name or a reference to a slang function that
+                    If `value' is ".", output will go at the current buffer position.
+                    If `value' is "@", output will go to the end of the buffer but
+                    the point will not move.  Otherwise, `value' is
+                    the name or a reference to a S-Lang function that
                     takes arguments: (pid, data) where pid has
                     the above meaning and data is the output from the process.
 
@@ -5210,7 +5210,7 @@ set_process_flags
 signal_process
 
  SYNOPSIS
-  Send a signal to the process "pid"
+  Send a signal to the process `pid'
 
  USAGE
   Void signal_process (Int_Type pid, Int_Type signum)
@@ -5343,7 +5343,7 @@ KILL_ARRAY_SIZE
 append_region_to_file
 
  SYNOPSIS
-  Append the region to "file"
+  Append the region to `file'
 
  USAGE
   Integer append_region_to_file (String file)
@@ -5358,7 +5358,7 @@ append_region_to_file
 append_region_to_kill_array
 
  SYNOPSIS
-  Append the region to the element "n" of the kill array
+  Append the region to the element `n' of the kill array
 
  USAGE
   Void append_region_to_kill_array (Integer n)
@@ -5438,7 +5438,7 @@ check_region
 copy_region
 
  SYNOPSIS
-  copy a region to the buffer "buf"
+  copy a region to the buffer `buf'
 
  USAGE
   Void copy_region (String buf)
@@ -5457,7 +5457,7 @@ copy_region
 copy_region_to_kill_array
 
  SYNOPSIS
-  Copy the defined region to element "n" of the kill array
+  Copy the defined region to element `n' of the kill array
 
  USAGE
   Void copy_region_to_kill_array (Integer n)
@@ -5521,8 +5521,8 @@ narrow
   The `narrow' function will signal an error if the mark is not set.
   Note also that the narrow function may be used recursively in the
   sense that a narrowed region may be further restricted using the
-  `narrow' function.  For each narrow, the `widen' function must be called
-  to lift each restriction.
+  `narrow' function.  For each narrow, the `widen' function must be
+  called to lift each restriction.
 
  SEE ALSO
   widen, narrow_to_region
@@ -5550,7 +5550,7 @@ narrow_to_region
 pipe_region
 
  SYNOPSIS
-  Execute "cmd" as subprocess and sends the region to its stdin
+  Execute `cmd' as subprocess and sends the region to its stdin
 
  USAGE
   Integer pipe_region (String cmd)
@@ -5604,7 +5604,7 @@ push_narrow
 translate_region
 
  SYNOPSIS
-  translate the characters in the region according to "a"
+  translate the characters in the region according to `a'
 
  USAGE
   Void translate_region (String_Type[256] a)
@@ -5612,7 +5612,7 @@ translate_region
  DESCRIPTION
   This function uses the 256 element array of strings to translate the
   characters in a region based on the mapping defined by the array.
-  If an array element is `NULL', then the corresponding character
+  If an array element is NULL, then the corresponding character
   will not be replaced.
 
   The `translate_region' function leaves the editing point at the
@@ -5641,7 +5641,7 @@ translate_region
 widen
 
  SYNOPSIS
-  Undo the effect of "narrow"
+  Undo the effect of `narrow'
 
  USAGE
   Void widen ()
@@ -5676,7 +5676,7 @@ widen_buffer
 widen_region
 
  SYNOPSIS
-  Undo the effect of "narrow_to_region"
+  Undo the effect of `narrow_to_region'
 
  USAGE
   Void widen_region ()
@@ -5693,7 +5693,7 @@ widen_region
 write_region_to_file
 
  SYNOPSIS
-  Write the region to the file "filename"
+  Write the region to the file `filename'
 
  USAGE
   Integer write_region_to_file (String filename)
@@ -5711,7 +5711,7 @@ write_region_to_file
 xform_region
 
  SYNOPSIS
-  Change the characters in the region according to "how"
+  Change the characters in the region according to `how'
 
  USAGE
   Void xform_region (Integer how)
@@ -5837,7 +5837,7 @@ blooking_at
 bol_bsearch
 
  SYNOPSIS
-  Search backward for "str" at the beginning of a line
+  Search backward for `str' at the beginning of a line
 
  USAGE
   Integer bol_bsearch (str)
@@ -5863,7 +5863,7 @@ bol_bsearch
 bol_bsearch_char
 
  SYNOPSIS
-  Search backward for character "ch" at the beginning of a line
+  Search backward for character `ch' at the beginning of a line
 
  USAGE
   Integer bol_fsearch_char (Integer ch)
@@ -5883,7 +5883,7 @@ bol_bsearch_char
 bol_fsearch
 
  SYNOPSIS
-  Search forward for "str" at the beginning of a line
+  Search forward for `str' at the beginning of a line
 
  USAGE
   Integer bol_fsearch (str)
@@ -5908,7 +5908,7 @@ bol_fsearch
 bol_fsearch_char
 
  SYNOPSIS
-  Search forward for character "ch" at the beginning of a line
+  Search forward for character `ch' at the beginning of a line
 
  USAGE
   Integer bol_fsearch_char (Integer ch)
@@ -5928,7 +5928,7 @@ bol_fsearch_char
 bsearch
 
  SYNOPSIS
-  Search backward for "str"
+  Search backward for `str'
 
  USAGE
   Integer bsearch (String str)
@@ -5969,7 +5969,7 @@ bsearch_char
 ffind
 
  SYNOPSIS
-  Search forward to the end of the line for the string "str"
+  Search forward to the end of the line for the string `str'
 
  USAGE
   Integer ffind (String s)
@@ -5991,7 +5991,7 @@ ffind
 ffind_char
 
  SYNOPSIS
-  Search forward on the current line for character "ch"
+  Search forward on the current line for character `ch'
 
  USAGE
   Integer ffind_char (Integer ch)
@@ -6012,7 +6012,7 @@ ffind_char
 find_matching_delimiter
 
  SYNOPSIS
-  Look for the delimiter that matches "ch"
+  Look for the delimiter that matches `ch'
 
  USAGE
   Integer find_matching_delimiter (Integer ch)
@@ -6045,7 +6045,7 @@ find_matching_delimiter
 fsearch
 
  SYNOPSIS
-  Search forward for the string "str"
+  Search forward for the string `str'
 
  USAGE
   Integer fsearch (String str)
@@ -6092,7 +6092,7 @@ fsearch_char
 looking_at
 
  SYNOPSIS
-  Test if the characters immediately following the point match "s"
+  Test if the characters immediately following the point match `s'
 
  USAGE
   Integer looking_at (String s)
@@ -6111,7 +6111,7 @@ looking_at
 re_bsearch
 
  SYNOPSIS
-  Search backward for regular expression "pattern"
+  Search backward for regular expression `pattern'
 
  USAGE
   Integer re_bsearch(String pattern)
@@ -6129,7 +6129,7 @@ re_bsearch
 re_fsearch
 
  SYNOPSIS
-  Search forward for regular expression "pattern"
+  Search forward for regular expression `pattern'
 
  USAGE
   Integer re_fsearch(String pattern)
@@ -6167,7 +6167,7 @@ regexp_nth_match
 replace
 
  SYNOPSIS
-  Replace all occurences of "old" with "new"
+  Replace all occurences of `old' with `new'
 
  USAGE
   Void replace(String old, String new)
@@ -6189,7 +6189,7 @@ replace
 replace_chars
 
  SYNOPSIS
-  Replace the next "n" characters with another string
+  Replace the next `n' characters with another string
 
  USAGE
   Int_Type replace_chars (Int_Type n, String_Type new)
@@ -6211,7 +6211,7 @@ replace_chars
 replace_match
 
  SYNOPSIS
-  Replace text previously matched with "re_fsearch" or "re_bsearch"
+  Replace text previously matched with `re_fsearch' or `re_bsearch'
 
  USAGE
   Int_Type replace_match(String_Type str, Int_Type method)
@@ -6877,7 +6877,7 @@ USE_ANSI_COLORS
 get_termcap_string
 
  SYNOPSIS
-  Return the keystring associated with the termcap capability "cap"
+  Return the keystring associated with the termcap capability `cap'
 
  USAGE
   String get_termcap_string (String cap);
@@ -7378,7 +7378,7 @@ otherwindow
 recenter
 
  SYNOPSIS
-  Scroll the window to make the "nth" line contain the current line
+  Scroll the window to make the `nth' line contain the current line
 
  USAGE
   Void recenter (Integer nth);

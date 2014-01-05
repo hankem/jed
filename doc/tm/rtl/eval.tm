@@ -17,10 +17,10 @@
 \done
 
 \function{evalbuffer}
-\synopsis{Eval the current buffer as S-Lang script}
+\synopsis{Eval the current buffer as \slang script}
 \usage{Void evalbuffer ([String_Type namespace])}
 \description
-  This function causes the current buffer to be sent to the S-Lang
+  This function causes the current buffer to be sent to the \slang
   interpreter for evaluation.  If the optional namespace argument is
   given, the buffer will be evaluated in the specified namespace.  If an
   error is encountered while parsing the buffer, the cursor will be

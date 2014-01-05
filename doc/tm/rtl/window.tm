@@ -211,7 +211,7 @@
 \done
 
 \function{recenter}
-\synopsis{Scroll the window to make the "nth" line contain the current line}
+\synopsis{Scroll the window to make the \var{nth} line contain the current line}
 \usage{Void recenter (Integer nth);}
 \description
   This function may be used to scroll the window such that the \var{nth} line

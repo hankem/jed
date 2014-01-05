@@ -53,10 +53,10 @@
 \done
 
 \function{mouse_set_default_hook}
-\synopsis{Associate a function "fun" with the mouse event "name"}
+\synopsis{Associate a function \var{fun} with the mouse event \var{name}}
 \usage{Void set_default_mouse_hook (String name, String fun)}
 \description
-  This function associates a slang function \var{fun} with the mouse event
+  This function associates a \slang function \var{fun} with the mouse event
   specified by \var{name}.  The first parameter \var{name} must be one of the
   following:
 #v+

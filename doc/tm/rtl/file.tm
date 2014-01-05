@@ -10,7 +10,7 @@
 \done
 
 \function{IsHPFSFileSystem}
-\synopsis{Test if drive of "path" is HPFS}
+\synopsis{Test if drive of \var{path} is HPFS}
 \usage{Int_Type IsHPFSFileSystem(String_Type path)}
 \description
   Returns non-zero if drive of \var{path} (possibly the default drive) is
@@ -32,7 +32,7 @@
 \done
 
 \function{copy_file}
-\synopsis{Copy a file "src" to "dest"}
+\synopsis{Copy a file \var{src} to \var{dest}}
 \usage{Int_Type copy_file (String_Type src, String_Type dest)}
 \description
   This function may be used to copy a file named \var{src} to a new file
@@ -44,7 +44,7 @@
 \done
 
 \function{delete_file}
-\synopsis{Delete the file "file"}
+\synopsis{Delete the file \var{file}}
 \usage{Int_Type delete_file (String_Type file)}
 \description
   This function may be used to delete a file specified by the \var{file}
@@ -65,7 +65,7 @@
 \synopsis{Expand a file name to a canonical form}
 \usage{String_Type expand_filename (String_Type file)}
 \description
-  The \var{expand_filename} function expands a file to a canonical form.
+  The \ifun{expand_filename} function expands a file to a canonical form.
   For example, under Unix, if \var{file} has the value \exmp{"/a/b/../c/d"}, it
   returns \exmp{"/a/c/d"}.  Similarly, if \var{file} has the value
   \exmp{"/a/b/c//d/e"}, \exmp{"/d/e"} is returned.
@@ -83,7 +83,7 @@
 \done
 
 \function{extract_filename}
-\synopsis{Separate the file name from "filespec"}
+\synopsis{Separate the file name from \var{filespec}}
 \usage{String_Type extract_filename (String_Type filespec)}
 \description
   This function may be used to separate the file name from the path of
@@ -97,7 +97,7 @@
 \done
 
 \function{file_changed_on_disk}
-\synopsis{Test if file "fn" is more recent than the current buffer}
+\synopsis{Test if file \var{fn} is more recent than the current buffer}
 \usage{Int_Type file_changed_on_disk (String_Type fn)}
 \description
   This function may be used to determine if the disk file specified by the
@@ -106,7 +106,7 @@
 \done
 
 \function{file_status}
-\synopsis{Return information about file "filename"}
+\synopsis{Return information about file \var{filename}}
 \usage{Int_Type file_status (String_Type filename)}
 \description
   The \var{file_status} function returns information about a file specified
@@ -139,7 +139,7 @@
 \done
 
 \function{find_file}
-\synopsis{Open the file "name" in a buffer (or just goto buffer)}
+\synopsis{Open the file \var{name} in a buffer (or just goto buffer)}
 \usage{Int_Type find_file (String_Type name)}
 \description
   The \var{find_file} function switches to the buffer associated with the
@@ -152,7 +152,7 @@
 \done
 
 \function{insert_file}
-\synopsis{Insert a file "f" into the current buffer}
+\synopsis{Insert a file \var{f} into the current buffer}
 \usage{Int_Type insert_file (String_Type f)}
 \description
   This function may be used to insert the contents of a file named \var{f}
@@ -164,7 +164,7 @@
 \done
 
 \function{msdos_fixup_dirspec}
-\synopsis{remove trailing backslash from "dir"}
+\synopsis{remove trailing backslash from \var{dir}}
 \usage{String_Type msdos_fixup_dirspec (String_Type dir)}
 \description
   The motivation behind this is that DOS does not like a trailing
@@ -173,7 +173,7 @@
 \done
 
 \function{read_file}
-\synopsis{Read file "fn" but don't open in a window}
+\synopsis{Read file \var{fn} but don't open in a window}
 \usage{Int_Type read_file (string fn)}
 \description
   The \var{read_file} function may be used to read a file specified by \var{fn}

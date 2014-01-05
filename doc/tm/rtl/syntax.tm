@@ -140,7 +140,7 @@
   like \exmp{[a-z]} and \exmp{[^a-z0-9]}, parentheses, \exmp{+}, \exmp{*}, \exmp{?}, \exmp{|}
   and \exmp{.}. Any meta-character can be escaped using a backslash
   so that it can be used as a normal character, but beware that
-  due to the syntax of S-Lang strings the backslash has to be
+  due to the syntax of \slang strings the backslash has to be
   doubled when specified as a string constant. For example:
 #v+
         dfa_define_highlight_rule ("^[ \t]*\\*+[ \t].*$", "comment", "C");

@@ -8,7 +8,7 @@
 \done
 
 \function{color_number}
-\synopsis{Return the object number associated with "obj"}
+\synopsis{Return the object number associated with \var{obj}}
 \usage{Integer color_number (String obj)}
 \description
   This function returns the object number associated with the
@@ -132,7 +132,7 @@
 \done
 
 \function{set_color_object}
-\synopsis{Associate colors "fg" and "bg" with object "obj"}
+\synopsis{Associate colors \var{fg} and \var{bg} with object \var{obj}}
 \usage{Void set_color_object (Integer obj, String fg, String bg)}
 \description
   Associate colors \var{fg} and \var{bg} with object \var{obj}.  Valid values for \var{obj}

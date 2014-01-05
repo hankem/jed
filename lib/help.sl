@@ -461,7 +461,7 @@ define describe_variable ()
 %\usage{Void help_apropos (Void)}
 %\description
 %  Use either the marked region or else extract an alphanumeric keyword,
-%  and then display S-Lang apropos context for this entry.
+%  and then display \slang apropos context for this entry.
 %\seealso{apropos, help_slang, help_for_apropos}
 %!%-
 define help_apropos ()
@@ -476,7 +476,7 @@ define help_apropos ()
 %\usage{Void help_slang (Void)}
 %\description
 %  Use either the marked region or else extract an alphanumeric keyword,
-%  and then display S-Lang function/variable help.
+%  and then display \slang function/variable help.
 %\seealso{apropos, help_apropos, help_for_function}
 %!%-
 define help_slang ()

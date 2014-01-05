@@ -8,10 +8,10 @@
 \done
 
 \function{_add_completion}
-\synopsis{"add_completion" for "n" names "f1", ... "fn"}
+\synopsis{\ifun{add_completion} for \var{n} names \var{f1}, ... \var{fn}}
 \usage{Void _add_completion (String f1, String f2, ..., Integer n);}
 \description
-  The \var{_add_completion} function is like the \var{add_completion} function
+  The \ifun{_add_completion} function is like the \ifun{add_completion} function
   except that it takes \var{n} names \var{f1}, ... \var{fn}.
   For example,
 #v+
@@ -26,14 +26,14 @@
 \done
 
 \function{add_completion}
-\synopsis{Add the function "f" to the list for mini-buffer completion}
+\synopsis{Add the function \var{f} to the list for mini-buffer completion}
 \usage{Void add_completion(String f);}
 \description
-  The \var{add_completion} function adds the user defined S-Lang function
+  The \ifun{add_completion} function adds the user defined \slang function
   with name specified by the string \var{f} to the list of functions that
   are eligible for mini-buffer completion.  The function specified by
   \var{f} must be already defined before this function is called.  The
-  S-Lang function \var{is_defined} may be used to test whether or not the
+  \slang function \ifun{is_defined} may be used to test whether or not the
   function is defined.
 \seealso{read_with_completion, _add_completion}
 \done
@@ -42,7 +42,7 @@
 \synopsis{Prompt for a key}
 \usage{Int_Type get_mini_response (String_Type str)}
 \description
-  The \var{get_mini_response} function display the text \var{str} at
+  The \ifun{get_mini_response} function display the text \var{str} at
   the bottom of the screen and waits for the user to press a key.  The
   key is returned.
 \seealso{read_mini, getkey, flush}
@@ -52,7 +52,7 @@
 \synopsis{Prompt for a y or n response}
 \usage{Int_Type get_y_or_n (String_Type str)}
 \description
-  The \var{get_y_or_n} function forms a y/n question by
+  The \ifun{get_y_or_n} function forms a y/n question by
   concatenating \exmp{"? (y/n)"} to \var{str} and displays the result
   at the bottom of the display.  It returns \1 if the user responds
   with \exmp{y}, \0 with \exmp{n}, or \exmp{-1} if the user cancelled
@@ -75,7 +75,7 @@
 \synopsis{Read input from the mini-buffer}
 \usage{String read_mini (String prompt, String dflt, String init);}
 \description
-  The \var{read_mini} function reads a line of input from the user in the
+  The \ifun{read_mini} function reads a line of input from the user in the
   mini-buffer.  The first parameter, \var{prompt}, is used to prompt the
   user.  The second parameter, \var{dflt}, is what is returned as a default
   value if the user simply presses the return key.  The final parameter,

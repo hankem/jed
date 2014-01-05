@@ -100,7 +100,7 @@
 \done
 
 \function{get_termcap_string}
-\synopsis{Return the keystring associated with the termcap capability "cap"}
+\synopsis{Return the keystring associated with the termcap capability \var{cap}}
 \usage{String get_termcap_string (String cap);}
 \description
   This function may be used to extract the string associated with the

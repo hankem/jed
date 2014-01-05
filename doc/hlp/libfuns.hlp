@@ -394,7 +394,7 @@ get_comment_info
      flags      % flags
      column     % preferred column for comments
 
-  If comment information does not exist for the mode, then `NULL' will
+  If comment information does not exist for the mode, then NULL will
   be returned.
 
  SEE ALSO
@@ -2529,7 +2529,7 @@ custom_variable
   This function is used to create a new public global variable called
   `name', initialized to `value', unless it exists.  If the variable
   already exists but is not initialized, then it is initialized to
-  `value'.  This is quite useful for slang files with user configurable
+  `value'.  This is quite useful for S-Lang files with user configurable
   variables.  These variables can be defined and initialized by users
   before evaluating the file, or can be defined and initialized to a
   default value in a file using this function.

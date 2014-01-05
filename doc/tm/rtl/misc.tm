@@ -52,7 +52,7 @@
 \usage{Void call(String f)}
 \description
   The \var{call} function is used to execute an internal function which is
-  not directly accessible to the S-Lang interpreter.
+  not directly accessible to the \slang interpreter.
 \seealso{is_internal}
 \done
 
@@ -102,7 +102,7 @@
   This function should be called to exit JED in a graceful and safe
   manner.  If any buffers have been modified but not saved, the user is
   queried about whether or not to save each one first.  \var{exit_jed} calls
-  the S-Lang hook \var{exit_hook} if it is defined.  If \var{exit_hook} is
+  the \slang hook \var{exit_hook} if it is defined.  If \var{exit_hook} is
   defined, it must either call \var{quit_jed} or \var{exit_jed} to really exit
   the editor.  If \var{exit_jed} is called from \var{exit_hook}, \var{exit_hook} will
   not be called again.  For example:
@@ -141,7 +141,7 @@
 \done
 
 \function{get_passwd_info}
-\synopsis{Return information about the user "username"}
+\synopsis{Return information about the user \var{username}}
 \usage{(dir, shell, pwd, uid, gid) = get_passwd_info (String username)}
 \description
   This function returns password information about the user with name
@@ -166,13 +166,13 @@
 \done
 
 \function{is_internal}
-\synopsis{Test if function "f" is defined as an internal function}
+\synopsis{Test if function \var{f} is defined as an internal function}
 \usage{Integer is_internal(String f)}
 \description
   \var{is_internal} returns non-zero if function \var{f} is defined as an
   internal function or returns zero if not.  Internal functions are not
-  immediately accessible from S-Lang; rather, they must be called using
-  the \var{call} function.  See also the related S-Lang function
+  immediately accessible from \slang; rather, they must be called using
+  the \var{call} function.  See also the related \slang function
   \var{is_defined} in the S-Lang Programmer's Reference.
 \seealso{call}
 \done
@@ -192,7 +192,7 @@
 \done
 
 \function{random}
-\synopsis{Return a random number in the range [0, "nmax"[}
+\synopsis{Return a random number in the range [0, \var{nmax}[}
 \usage{Integer random (Integer seed, Integer nmax)}
 \description
   The \var{random} function returns a random number in the range 0 to, but
@@ -249,7 +249,7 @@
 \done
 
 \function{usleep}
-\synopsis{Pause for "ms" milliseconds}
+\synopsis{Pause for \var{ms} milliseconds}
 \usage{Void usleep (Integer ms)}
 \description
   A call to usleep will cause the editor to pause for \var{ms} milliseconds.

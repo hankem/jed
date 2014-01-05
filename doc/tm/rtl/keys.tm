@@ -70,7 +70,7 @@
 \usage{Int_Type IGNORE_USER_ABORT}
 \description
   If set to a non-zero value, the keyboard interrupt character, e.g.,
-  \exmp{Ctrl-G} will not trigger a S-Lang error.  When JED starts up,
+  \exmp{Ctrl-G} will not trigger a \slang error.  When JED starts up,
   this value is set to \1 so that the user cannot interrupt the loading
   of site.sl.  Later, it is set to 0.
 \seealso{set_abort_char}
@@ -133,7 +133,7 @@
 \done
 
 \function{buffer_keystring}
-\synopsis{Append string "str" to the end of the input stream}
+\synopsis{Append string \var{str} to the end of the input stream}
 \usage{Void buffer_keystring (String str);}
 \description
   Append string \var{str} to the end of the input stream to be read by JED's
@@ -163,7 +163,7 @@
 \done
 
 \function{dump_bindings}
-\synopsis{Insert a list of keybindings for "map" into the buffer}
+\synopsis{Insert a list of keybindings for \var{map} into the buffer}
 \usage{Void dump_bindings(String map);}
 \description
   This functions inserts a formatted list of keybindings for the keymap
@@ -269,7 +269,7 @@
 \done
 
 \function{keymap_p}
-\synopsis{Test if a keymap "kmap" exists}
+\synopsis{Test if a keymap \var{kmap} exists}
 \usage{Integer keymap_p (String kmap);}
 \description
   The \var{keymap_p} function may be used to determine whether or not a
@@ -280,7 +280,7 @@
 \done
 
 \function{make_keymap}
-\synopsis{Create a keymap with name "km"}
+\synopsis{Create a keymap with name \var{km}}
 \usage{Void make_keymap (String km);}
 \description
   The \var{make_keymap} function creates a keymap with a name specified by
@@ -290,7 +290,7 @@
 \done
 
 \function{map_input}
-\synopsis{Remap an input character "x" to "y".}
+\synopsis{Remap an input character \var{x} to \var{y}.}
 \usage{Void map_input (Integer x, Integer y);}
 \description
   The \var{map_input} function may be used to remap an input character with
@@ -346,17 +346,17 @@
 \done
 
 \function{set_abort_char}
-\synopsis{change the keyboard character that generates an S-Lang interrupt}
+\synopsis{change the keyboard character that generates an \slang interrupt}
 \usage{Void set_abort_char (Integer ch);}
 \description
   This function may be used to change the keyboard character that
-  generates an S-Lang interrupt.  The parameter \var{ch} is the ASCII value
+  generates an \slang interrupt.  The parameter \var{ch} is the ASCII value
   of the character that will become the new abort character. The
   default abort character \exmp{Ctrl-G} corresponds to \exmp{ch=7}.
 \done
 
 \function{set_current_kbd_command}
-\synopsis{Do as if "s" were entered from the keyboard}
+\synopsis{Do as if \var{s} were entered from the keyboard}
 \usage{Void set_current_kbd_command (String s);}
 \description
   Undocumented
@@ -373,7 +373,7 @@
 \done
 
 \function{setkey}
-\synopsis{Bind a key sequence "key" to the function "fun"}
+\synopsis{Bind a key sequence \var{key} to the function \var{fun}}
 \usage{Void setkey(String fun, String key);}
 \description
   This function may be used to define a key sequence specified by the
@@ -386,7 +386,7 @@
   sets the key sequence \exmp{Ctrl-K t} to the function \var{bob}.
 
   The \var{fun} argument is usually the name of an internal or a user
-  defined S-Lang function.  However, if may also be a sequence of
+  defined \slang function.  However, if may also be a sequence of
   functions or even another keysequence (a keyboard macro).  For
   example,
 #v+
@@ -401,7 +401,7 @@
 \done
 
 \function{undefinekey}
-\synopsis{Remove a keybinding from "kmap"}
+\synopsis{Remove a keybinding from \var{kmap}}
 \usage{Void undefinekey (String key, String kmap);}
 \description
   This function may be used to remove a keybinding from a specified
@@ -431,7 +431,7 @@
 \done
 
 \function{unsetkey}
-\synopsis{Remove the definition of "key" from the "global" keymap}
+\synopsis{Remove the definition of \var{key} from the "global" keymap}
 \usage{Void unsetkey(String key);}
 \description
   This function is used to remove the definition of the key sequence
@@ -466,7 +466,7 @@
 \done
 
 \function{which_key}
-\synopsis{Return the keys that are bound to the function "f"}
+\synopsis{Return the keys that are bound to the function \var{f}}
 \usage{Integer which_key (String f);}
 \description
   The \var{which_key} function returns the the number of keys that are

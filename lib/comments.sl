@@ -30,7 +30,7 @@ private define extract_major_mode (mode)
 %     flags      % flags
 %     column     % preferred column for comments
 %#v-
-%  If comment information does not exist for the mode, then \ivar{NULL} will
+%  If comment information does not exist for the mode, then \NULL will
 %  be returned.
 %\seealso{set_comment_info, comment_region, comment_line, uncomment_region}
 %!%-

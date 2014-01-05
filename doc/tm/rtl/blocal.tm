@@ -9,7 +9,7 @@
 \done
 
 \function{create_blocal_var}
-\synopsis{Create a buffer local variable "name"}
+\synopsis{Create a buffer local variable \var{name}}
 \usage{Void create_blocal_var (String name)}
 \description
   This function is used to create a buffer local variable named
@@ -19,7 +19,7 @@
 \done
 
 \function{set_blocal_var}
-\synopsis{Set the buffer local variable "v" to value "val"}
+\synopsis{Set the buffer local variable \var{v} to value \var{val}}
 \usage{Void set_blocal_var (val, String v)}
 \description
   This function sets the value of the buffer local variable with name \var{v}

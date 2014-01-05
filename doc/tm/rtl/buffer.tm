@@ -118,7 +118,7 @@
 \usage{Void delbuf (String buf)}
 \description
   \var{delbuf} may be used to delete a buffer with the name specified by
-  \var{buf}.  If the buffer does not exist, a S-Lang error will be generated.
+  \var{buf}.  If the buffer does not exist, a \slang error will be generated.
 \seealso{whatbuf, bufferp, sw2buf}
 \done
 
@@ -269,7 +269,7 @@
 #v-
   may be used to turn on overwrite mode for the current buffer.
 
-  Advanced S-Lang programmers exploit the fact that S-Lang is a stack
+  Advanced \slang programmers exploit the fact that \slang is a stack
   based language and simply write the above function as:
 #v+
         define set_overwrite_mode ()
@@ -291,7 +291,7 @@
   does not exist, one will be created.
   Note: Unlike \var{setbuf}, the change
   to the new buffer is more permanent in the sense that when control
-  passed back out of S-Lang to the main editor loop, if the current
+  passed back out of \slang to the main editor loop, if the current
   buffer at that time is the buffer specified here, this buffer will be
   attached to the window.
 \seealso{setbuf, pop2buf, bufferp}

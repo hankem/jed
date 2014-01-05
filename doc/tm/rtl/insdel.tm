@@ -85,7 +85,7 @@
 \done
 
 \function{insbuf}
-\synopsis{Insert buffer "buf" into the current buffer}
+\synopsis{Insert buffer \var{buf} into the current buffer}
 \usage{Void insbuf (String buf)}
 \description
   This function may be used to insert the contents of a buffer specified
@@ -95,7 +95,7 @@
 \done
 
 \function{insert}
-\synopsis{Insert string "str" into buffer at the current position}
+\synopsis{Insert string \var{str} into buffer at the current position}
 \usage{Void insert (String str)}
 \description
   Inserts string \var{str} into buffer at the current position.  The editing
@@ -121,7 +121,7 @@
 \done
 
 \function{insert_file_region}
-\synopsis{Insert a region of the file "file"}
+\synopsis{Insert a region of the file \var{file}}
 \usage{Integer insert_file_region (String file, String beg, String end)}
 \description
   This function may be used to insert a region specified by the strings
@@ -140,7 +140,7 @@
 \done
 
 \function{insert_from_kill_array}
-\synopsis{Insert the contents of element "n" of the kill array}
+\synopsis{Insert the contents of element \var{n} of the kill array}
 \usage{Void insert_from_kill_array (Integer n)}
 \description
   This function inserts the contents of the nth element, specified by
@@ -164,7 +164,7 @@
 \done
 
 \function{whitespace}
-\synopsis{Insert white space of length "n"}
+\synopsis{Insert white space of length \var{n}}
 \usage{whitespace (Integer n)}
 \description
   The \var{whitespace} function inserts white space of length \var{n} into the

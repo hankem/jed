@@ -32,7 +32,7 @@
 \description
   This function moves the current editing point backward past the
   current paragraph to the line that is a paragraph separator.  Such a
-  line is determined by the S-Lang hook \var{is_paragraph_separator}.  This
+  line is determined by the \slang hook \var{is_paragraph_separator}.  This
   hook can be modified on a buffer by buffer basis by using the
   function \var{set_buffer_hook}.
 \seealso{forward_paragraph, set_buffer_hook}
@@ -59,7 +59,7 @@
 \done
 
 \function{bskip_chars}
-\synopsis{Skip past all characters defined by string "str"}
+\synopsis{Skip past all characters defined by string \var{str}}
 \usage{Void bskip_chars (String str)}
 \description
   This function may be used to skip backward past all characters defined by the
@@ -83,7 +83,7 @@
 \done
 
 \function{down}
-\synopsis{Move the editing point "n" lines down}
+\synopsis{Move the editing point \var{n} lines down}
 \usage{Integer down(Integer n)}
 \description
   The \var{down} function is used to move the editing point down a number of
@@ -133,12 +133,12 @@
 \description
   This function moves the current editing point forward past the end of
   the current paragraph.  Paragraph delimiters are defined through either
-  a buffer hook or via the hook \var{is_paragraph_separator}.
+  a buffer hook or via the hook \ifun{is_paragraph_separator}.
 \seealso{backward_paragraph, set_buffer_hook}
 \done
 
 \function{goto_column}
-\synopsis{Move to the column "n"}
+\synopsis{Move to the column \var{n}}
 \usage{Void goto_column (Integer n)}
 \description
   This function moves the current editing point to the column specified
@@ -152,7 +152,7 @@
 \done
 
 \function{goto_column_best_try}
-\synopsis{like "goto_column" but don't insert whitespace}
+\synopsis{like \ifun{goto_column} but don't insert whitespace}
 \usage{Integer goto_column_best_try (Integer c)}
 \description
   This function is like \var{goto_column} except that it will not insert
@@ -162,7 +162,7 @@
 \done
 
 \function{goto_line}
-\synopsis{Go to line number "n"}
+\synopsis{Go to line number \var{n}}
 \usage{Void goto_line (Integer n)}
 \description
   The \var{goto_line} function may be used to move to a specific line number
@@ -173,7 +173,7 @@
 \done
 
 \function{left}
-\synopsis{Move the editing point backward "n" characters}
+\synopsis{Move the editing point backward \var{n} characters}
 \usage{Integer left(Integer n)}
 \description
   \var{left} moves the editing point backward \var{n} characters and returns the
@@ -183,7 +183,7 @@
 \done
 
 \function{right}
-\synopsis{Move the editing position forward forward "n" characters}
+\synopsis{Move the editing position forward forward \var{n} characters}
 \usage{Integer right(Integer n)}
 \description
   This function moves the editing position forward forward \var{n}
@@ -194,7 +194,7 @@
 \done
 
 \function{skip_chars}
-\synopsis{Go forward past all characters defined by "s"}
+\synopsis{Go forward past all characters defined by \var{s}}
 \usage{Void skip_chars(String s)}
 \description
   This function may be used to move the editing point forward past all
@@ -257,7 +257,7 @@
 \done
 
 \function{up}
-\synopsis{Go up "n" lines}
+\synopsis{Go up \var{n} lines}
 \usage{Integer up(Integer n)}
 \description
   This function moves the current point up \var{n} lines and returns the

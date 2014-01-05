@@ -24,7 +24,7 @@
 \synopsis{Search backward to the beginning of the line}
 \usage{Integer bfind (String str)}
 \description
-  \var{bfind} searches backward from the current position to the beginning
+  \ifun{bfind} searches backward from the current position to the beginning
   of the line for the string \var{str}.  If a match is found, the length of
   \var{str} is returned and the current point is moved to the start of the
   match. If no match is found, zero is returned.
@@ -57,23 +57,23 @@
 \done
 
 \function{bol_bsearch}
-\synopsis{Search backward for "str" at the beginning of a line}
+\synopsis{Search backward for \var{str} at the beginning of a line}
 \usage{Integer bol_bsearch (str)}
 \description
-  \var{bol_bsearch} searches backward from the current point until the
+  \ifun{bol_bsearch} searches backward from the current point until the
   beginning of the buffer for the occurrences of the string \var{str} at
   the beginning of a line.  If a match is found, the length of \var{str} is
   returned and the current point is moved to the start of the match. If
   no match is found, zero is returned.
 
-  Note: \var{bol_bsearch} is much faster than using \var{re_bsearch} to perform
+  Note: \ifun{bol_bsearch} is much faster than using \ifun{re_bsearch} to perform
   a search that matches the beginning of a line.
 \seealso{bol_fsearch, bsearch, bfind, re_bsearch}
 \seealso{CASE_SEARCH}
 \done
 
 \function{bol_bsearch_char}
-\synopsis{Search backward for character "ch" at the beginning of a line}
+\synopsis{Search backward for character \var{ch} at the beginning of a line}
 \usage{Integer bol_fsearch_char (Integer ch)}
 \description
   This function searches backward for a character \var{ch} at the beginning
@@ -83,22 +83,22 @@
 \done
 
 \function{bol_fsearch}
-\synopsis{Search forward for "str" at the beginning of a line}
+\synopsis{Search forward for \var{str} at the beginning of a line}
 \usage{Integer bol_fsearch (str)}
 \description
-  \var{bol_fsearch} searches forward from the current point until the end
+  \ifun{bol_fsearch} searches forward from the current point until the end
   of the buffer for occurrences of the string \var{str} at the beginning of
   a line.  If a match is found, the length of \var{str} is returned and the
   current point is moved to the start of the match.  If no match is
   found, zero is returned.
-  Note: \var{bol_fsearch} is much faster than using \var{re_fsearch} to perform
+  Note: \ifun{bol_fsearch} is much faster than using \ifun{re_fsearch} to perform
   a search that matches the beginning of a line.
 \seealso{bol_bsearch, fsearch, ffind, re_fsearch}
 \seealso{CASE_SEARCH}
 \done
 
 \function{bol_fsearch_char}
-\synopsis{Search forward for character "ch" at the beginning of a line}
+\synopsis{Search forward for character \var{ch} at the beginning of a line}
 \usage{Integer bol_fsearch_char (Integer ch)}
 \description
   This function searches forward for a character \var{ch} at the beginning
@@ -108,10 +108,10 @@
 \done
 
 \function{bsearch}
-\synopsis{Search backward for "str"}
+\synopsis{Search backward for \var{str}}
 \usage{Integer bsearch (String str)}
 \description
-  The \var{bsearch} function searches backward from the current position
+  The \ifun{bsearch} function searches backward from the current position
   for the string \var{str}.  If \var{str} is found, this function will return
   the length of \var{str} and move the current position to the beginning of
   the matched text.  If a match is not found, zero will be returned and
@@ -131,10 +131,10 @@
 \done
 
 \function{ffind}
-\synopsis{Search forward to the end of the line for the string "str"}
+\synopsis{Search forward to the end of the line for the string \var{str}}
 \usage{Integer ffind (String s)}
 \description
-  \var{ffind} searches forward from the current position to the end of the
+  \ifun{ffind} searches forward from the current position to the end of the
   line for the string \var{str}.  If a match is found, the length of \var{str}
   is returned and the current point is moved to the start of the match.
   If no match is found, zero is returned.
@@ -145,7 +145,7 @@
 \done
 
 \function{ffind_char}
-\synopsis{Search forward on the current line for character "ch"}
+\synopsis{Search forward on the current line for character \var{ch}}
 \usage{Integer ffind_char (Integer ch)}
 \description
   This function searches forward on the current line for the character
@@ -156,14 +156,14 @@
 \done
 
 \function{find_matching_delimiter}
-\synopsis{Look for the delimiter that matches "ch"}
+\synopsis{Look for the delimiter that matches \var{ch}}
 \usage{Integer find_matching_delimiter (Integer ch)}
 \description
   This function scans either forward or backward looking for the
   delimiter that matches the character specified by \var{ch}.  The actual
   direction depends upon the syntax of the character \var{ch}.  The
   matching delimiter pair must be declared as such by a prior call to
-  \var{define_syntax}.  This function returns one of the following values:
+  \ifun{define_syntax}.  This function returns one of the following values:
 #v+
          1    Match found
          0    Match not found
@@ -181,7 +181,7 @@
 \done
 
 \function{fsearch}
-\synopsis{Search forward for the string "str"}
+\synopsis{Search forward for the string \var{str}}
 \usage{Integer fsearch (String str)}
 \description
   This function may be used to search forward in buffer looking for the
@@ -208,7 +208,7 @@
 \done
 
 \function{looking_at}
-\synopsis{Test if the characters immediately following the point match "s"}
+\synopsis{Test if the characters immediately following the point match \var{s}}
 \usage{Integer looking_at (String s)}
 \description
   This function returns non-zero if the characters immediately following
@@ -219,7 +219,7 @@
 \done
 
 \function{re_bsearch}
-\synopsis{Search backward for regular expression "pattern"}
+\synopsis{Search backward for regular expression \var{pattern}}
 \usage{Integer re_bsearch(String pattern)}
 \description
   Search backward for regular expression \var{pattern}.  This function returns
@@ -229,7 +229,7 @@
 \done
 
 \function{re_fsearch}
-\synopsis{Search forward for regular expression "pattern"}
+\synopsis{Search forward for regular expression \var{pattern}}
 \usage{Integer re_fsearch(String pattern)}
 \description
   Search forward for regular expression \var{pattern}.  This function returns
@@ -251,7 +251,7 @@
 \done
 
 \function{replace}
-\synopsis{Replace all occurences of "old" with "new"}
+\synopsis{Replace all occurences of \var{old} with \var{new}}
 \usage{Void replace(String old, String new)}
 \description
   This function may be used to replace all occurences of the string
@@ -263,7 +263,7 @@
 \done
 
 \function{replace_chars}
-\synopsis{Replace the next "n" characters with another string}
+\synopsis{Replace the next \var{n} characters with another string}
 \usage{Int_Type replace_chars (Int_Type n, String_Type new)}
 \description
   This function may be used to replace the next \exmp{n} characters at the
@@ -275,11 +275,11 @@
 \done
 
 \function{replace_match}
-\synopsis{Replace text previously matched with "re_fsearch" or "re_bsearch"}
+\synopsis{Replace text previously matched with \ifun{re_fsearch} or \ifun{re_bsearch}}
 \usage{Int_Type replace_match(String_Type str, Int_Type method)}
 \description
-  This function replaces text previously matched with \var{re_fsearch}
-  or \var{re_bsearch} at the current editing point with string
+  This function replaces text previously matched with \ifun{re_fsearch}
+  or \ifun{re_bsearch} at the current editing point with string
   \exmp{str}.  If \exmp{method} is zero, \exmp{str} is a specially formatted
   string of the form described below. If \exmp{method} is non-zero,
   \exmp{str} is regarded as a simple string and is used literally.  If
@@ -298,7 +298,7 @@
   matching the regular expression \exmp{re}.  The first argument \var{filename}
   specifies which file to search.  The last argument \var{nmax} specifies
   how many matches to return.  Each line that is matched is pushed onto
-  the S-Lang stack.  The number of matches (limited by \var{nmax}) is returned.
+  the \slang stack.  The number of matches (limited by \var{nmax}) is returned.
   If the file contains no matches, zero is returned.
 \done
 

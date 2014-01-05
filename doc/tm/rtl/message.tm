@@ -27,7 +27,7 @@
 \done
 
 \function{flush}
-\synopsis{Immediately display "msg" as a message in the mini-buffer}
+\synopsis{Immediately display \var{msg} as a message in the mini-buffer}
 \usage{Void flush (String msg);}
 \description
   The \var{flush} function behaves like \var{message} except that it immediately
@@ -37,7 +37,7 @@
 \done
 
 \function{tt_send}
-\synopsis{Send "s" directly to the terminal}
+\synopsis{Send \var{s} directly to the terminal}
 \usage{Void tt_send (String s);}
 \description
   This function may be used to send a string specified by \var{s} directly
