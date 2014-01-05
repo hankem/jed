@@ -456,7 +456,6 @@ dfa_set_init_callback (&setup_dfa_callback, "Lua");
 
 %!%+
 %\function{lua_mode}
-%\synopsis{lua_mode}
 %\usage{lua_mode ()}
 %\description
 %  A major mode for editing lua files.

@@ -52,6 +52,7 @@ install: $(HLP_FILES)
 clean:
 	-rm -f *~ *.dvi *.log *.aux *.toc rtl/*.BAK rtl/*~ *.html *.txt *.hlp
 check: help
+	@echo 'content lines starting with less than 2 blanks:'
 	@awk 'NF>0 {					\
   if(substr($$0,1,1)!=" ")				\
     topic = $$1;					\
@@ -64,3 +65,8 @@ check: help
 	&& $$0!=" SEE ALSO")				\
     printf("%s @ %s\n%s\n", topic, FILENAME, $$0);	\
 } ' $(HLP_FILES)
+	@echo '\synopsis lines identical to the topic:'
+	@awk 'NF>0 && substr($$0,1,1)!=" " { topic = $$0; }	\
+	      $$1=="SYNOPSIS"              { nr_check = NR+1; }	\
+	      NR==nr_check && $$1==topic   { print topic; }	\
+' $(HLP_FILES)

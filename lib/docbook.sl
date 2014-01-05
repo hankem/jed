@@ -1240,7 +1240,6 @@ definekey ("tex_insert_quote", "'", $1);
 
 %!%+
 %\function{docbook_mode}
-%\synopsis{docbook_mode}
 %\usage{Void docbook_mode ();}
 %\description
 %  This mode is designed to facilitate the editing of Docbook 3.1 SGML files.

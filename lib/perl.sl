@@ -162,7 +162,6 @@ require ("perlxtra");
 % override these default values in ~/.jedrc
 %!%+
 %\variable{Perl_Continued_Offset}
-%\synopsis{Perl_Continued_Offset}
 %\usage{Integer Perl_Continued_Offset = 2;}
 %\description
 %  This variable controls the indentation of statements that are continued

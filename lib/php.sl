@@ -1819,7 +1819,6 @@ dfa_set_init_callback( &setup_dfa_callback, $1 );
 
 %!%+
 %\function{php_mode}
-%\synopsis{php_mode}
 %\usage{Void php_mode ();}
 %\description
 %  This is a mode that is dedicated to facilitate the editing of PHP language files.

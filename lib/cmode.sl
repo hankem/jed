@@ -1658,7 +1658,6 @@ define c_mode_common ()
 
 %!%+
 %\function{c_mode}
-%\synopsis{c_mode}
 %\usage{Void cmode ();}
 %\description
 %  This is a mode that is dedicated to facilitate the editing of C language files.

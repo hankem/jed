@@ -527,7 +527,6 @@ dfa_set_init_callback (&setup_dfa_callback, "html");
 
 %!%+
 %\function{html_mode}
-%\synopsis{html_mode}
 %\usage{Void html_mode ();}
 %\description
 %  \sfun{html_mode} is a mode designed for editing HTML files.

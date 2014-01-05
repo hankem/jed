@@ -33,7 +33,6 @@ define occur_goto_line ()
 
 %!%+
 %\function{occur}
-%\synopsis{occur}
 %\usage{Void occur ();}
 %\description
 %  This function may be used to search for all occurences of a string in the

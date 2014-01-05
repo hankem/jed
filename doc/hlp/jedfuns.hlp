@@ -7686,8 +7686,6 @@ x_server_vendor
  DESCRIPTION
    This function returns the vendor name of the X server.
 
- SEE ALSO
-
 --------------------------------------------------------------
 
 x_set_icon_name
@@ -7697,10 +7695,6 @@ x_set_icon_name
 
  USAGE
   x_set_icon_name (String_Type name)
-
- DESCRIPTION
-
- SEE ALSO
 
 --------------------------------------------------------------
 

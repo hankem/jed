@@ -159,7 +159,6 @@ private define keyeqs (seq, key)
 
 %!%+
 %\function{expand_keystring}
-%\synopsis{expand_keystring}
 %\usage{String expand_keystring (String key)}
 %\description
 %  This function takes a key string that is suitable for use in a \ifun{setkey}

@@ -58,7 +58,6 @@ private variable
 
 %!%+
 %\variable{Minued_Lines}
-%\synopsis{Minued_Lines}
 %\usage{Integer_Type Minued_Lines = 0;}
 %\description
 %  This variable controls the number of lines shown in the minued
@@ -232,7 +231,6 @@ private define minued_update_hook   ()       %{{{
 
 %!%+
 %\function{minued_mode}
-%\synopsis{minued_mode}
 %\usage{Void minued_mode ();}
 %\description
 %  \var{minued_mode} is a mini-buffer's contents editor with which you can view all

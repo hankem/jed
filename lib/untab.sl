@@ -20,7 +20,6 @@ define untab_convert_to_tabs ()
 
 %!%+
 %\function{untab}
-%\synopsis{untab}
 %\usage{Void untab ();}
 %\description
 %  This function may be used either to convert tabs to spaces or, if called

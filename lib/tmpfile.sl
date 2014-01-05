@@ -1,6 +1,5 @@
 %!%+
 %\function{make_tmp_file}
-%\synopsis{make_tmp_file}
 %\usage{String make_tmp_file (String base);}
 %\description
 %  This function returns a unique file name that begins with \exmp{base}.

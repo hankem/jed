@@ -4,7 +4,6 @@ ifnot (is_defined ("Fold_Bob_Eob_Error_Action")) %{{{
 {
 %!%+
 %\variable{Fold_Bob_Eob_Error_Action}
-%\synopsis{Fold_Bob_Eob_Error_Action}
 %\usage{Integer Fold_Bob_Eob_Error_Action = 1;}
 %\description
 %  This value of this variable determines the what will happen upon

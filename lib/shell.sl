@@ -169,7 +169,6 @@ public define shell () %{{{
 
 %!%+
 %\function{shell_builtin}
-%\synopsis{shell_builtin}
 %\description
 %  rudimentary `builtin' shell commands:
 %	`cd [dir]'	change the default directory

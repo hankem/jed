@@ -930,7 +930,6 @@ private define init_menu (menu)
 
 %!%+
 %\function{latex_mode}
-%\synopsis{latex_mode}
 %\usage{Void latex_mode ();}
 %\description
 %  This mode is designed to facilitate the task of editing latex files.

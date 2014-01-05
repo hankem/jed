@@ -589,7 +589,6 @@ dfa_set_init_callback (&setup_dfa_callback, "python");
 
 %!%+
 %\function{python_mode}
-%\synopsis{python_mode}
 %\usage{python_mode ()}
 %\description
 %  A major mode for editing python files.

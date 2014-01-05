@@ -49,7 +49,6 @@ define create_array ()
 %{{{ strncat (n)
 %!%+
 %\function{strncat}
-%\synopsis{strncat}
 %\usage{Void strncat (String a, String b, ..., Integer n);}
 %\description
 %  Returns concatenated string "abc..."

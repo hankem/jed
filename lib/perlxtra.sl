@@ -25,7 +25,6 @@
 
 %!%+
 %\variable{Perl_Flags}
-%\synopsis{Perl_Flags}
 %\usage{String Perl_Flags = "-w";}
 %\description
 %  Extra (or 'expert') command-line options (switches) for running Perl.
@@ -41,7 +40,6 @@ custom_variable("Perl_Flags", Null_String);
 
 %!%+
 %\variable{Perl_Indent}
-%\synopsis{Perl_Indent}
 %\usage{Integer Perl_Indent = 4;}
 %\description
 %  This value determines the number of columns the current line is indented
@@ -373,7 +371,6 @@ static define help_for_perl (what)
 
 %% %!%+
 %% %\function{extract_word}
-%% %\synopsis{extract_word}
 %% %\usage{String extract_word (String Word_Chars)}
 %% %\description
 %% %  Extract a word defined by \var{Word_Chars} from the current buffer

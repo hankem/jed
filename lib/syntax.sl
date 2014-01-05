@@ -17,7 +17,6 @@ private define add_hash_to_syntax_table (tbl, hash, len, n)
 
 %!%+
 %\function{add_keywords}
-%\synopsis{add_keywords}
 %\usage{String add_keywords (String tbl, String kws, Int len, Int n);}
 %\description
 %  Adds a set of keywords \var{kws}, each of length \var{len}, to the already
@@ -51,7 +50,6 @@ define add_keywords (tbl, kws, len, n)
 
 %!%+
 %\function{add_keyword_n}
-%\synopsis{add_keyword_n}
 %\usage{Void add_keyword_n (String tbl, String kw, Int n);}
 %\description
 %  Adds a single keyword \var{kw} to the already existing syntax table \var{tbl}.
@@ -66,7 +64,6 @@ define add_keyword_n (tbl, kw, n)
 
 %!%+
 %\function{add_keyword}
-%\synopsis{add_keyword}
 %\usage{Void add_keyword (String_Type tbl, String_Type kw);}
 %\description
 %  Adds a single keyword \var{kw} to the already existing syntax table \var{tbl}.
@@ -79,7 +76,6 @@ define add_keyword ()
 
 %!%+
 %\function{remove_keywords}
-%\synopsis{remove_keywords}
 %\usage{String remove_keywords (String tbl, String kws, Int len, Int n);}
 %\description
 %  Removes a set of keywords \var{kws}, each of length \var{len}, from the already

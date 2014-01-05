@@ -38,14 +38,11 @@
 \usage{String_Type x_server_vendor ()}
 \description
    This function returns the vendor name of the X server.
-\seealso{}
 \done
 
 \function{x_set_icon_name}
 \synopsis{Set the icon do display in X windows (xjed only)}
 \usage{x_set_icon_name (String_Type name)}
-\description
-\seealso{}
 \done
 
 \function{x_set_keysym}

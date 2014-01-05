@@ -9,7 +9,6 @@ private variable Max_Num_Lines = 32; % The same as in 'mini.sl'
 
 %!%+
 %\variable{History_File}
-%\synopsis{History_File}
 %\usage{String_Type History_File = "jed.his";}
 %\description
 %  The variable \var{History_File} is used by the function \sfun{history_save}
@@ -30,7 +29,6 @@ custom_variable ("History_File",
 
 %!%+
 %\function{history_load}
-%\synopsis{history_load}
 %\usage{Void_Type history_load ();}
 %\description
 %  This function reads a history file, i.e. each line of the file is
@@ -84,7 +82,6 @@ define history_load ()
 
 %!%+
 %\function{history_save}
-%\synopsis{history_save}
 %\usage{Int_Type history_save ()}
 %\description
 %  This function saves the contents of the mini-buffer (see \sfun{history_load}
@@ -148,7 +145,6 @@ define history_save ()
 
 %!%+
 %\function{history_local_save}
-%\synopsis{history_local_save}
 %\usage{Void_Type history_local_save ()}
 %\description
 %  This function saves the contents of the mini-buffer at some arbitrary file.

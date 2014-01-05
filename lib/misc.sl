@@ -3,7 +3,6 @@
 
 %!%+
 %\function{make_tmp_buffer_name}
-%\synopsis{make_tmp_buffer_name}
 %\usage{String make_tmp_buffer_name (String base);}
 %\description
 %  Generates a unique buffer name using the string \var{base} for the beginning
@@ -50,7 +49,6 @@ define misc_do_write_to_file (str, file, write_function)
 
 %!%+
 %\function{append_string_to_file}
-%\synopsis{append_string_to_file}
 %\usage{Integer append_string_to_file (String str, String file);}
 %\description
 %  The string \var{str} is appended to file \var{file}.  This function returns -1
@@ -64,7 +62,6 @@ define append_string_to_file (str, file)
 
 %!%+
 %\function{write_string_to_file}
-%\synopsis{write_string_to_file}
 %\usage{Integer write_string_to_file (String str, String file);}
 %\description
 %  The string \var{str} is written to file \var{file}.  This function returns -1

@@ -310,9 +310,6 @@ C_Newline_Indent_Trim
 
 c_mode
 
- SYNOPSIS
-  c_mode
-
  USAGE
   Void cmode ();
 
@@ -435,9 +432,6 @@ set_comment_info
 --------------------------------------------------------------
 
 strncat
-
- SYNOPSIS
-  strncat
 
  USAGE
   Void strncat (String a, String b, ..., Integer n);
@@ -635,9 +629,6 @@ cua_one_press_escape
 
 cua_save_buffer
 
- SYNOPSIS
-  cua_save_buffer
-
  USAGE
   Void cua_save_buffer();
 
@@ -830,9 +821,6 @@ dired
 --------------------------------------------------------------
 
 docbook_mode
-
- SYNOPSIS
-  docbook_mode
 
  USAGE
   Void docbook_mode ();
@@ -1068,9 +1056,6 @@ f90_mode
 
 Fold_Bob_Eob_Error_Action
 
- SYNOPSIS
-  Fold_Bob_Eob_Error_Action
-
  USAGE
   Integer Fold_Bob_Eob_Error_Action = 1;
 
@@ -1147,9 +1132,6 @@ Help_Describe_Bindings_Show_Synopsis
 
 expand_keystring
 
- SYNOPSIS
-  expand_keystring
-
  USAGE
   String expand_keystring (String key)
 
@@ -1220,9 +1202,6 @@ help_slang
 
 History_File
 
- SYNOPSIS
-  History_File
-
  USAGE
   String_Type History_File = "jed.his";
 
@@ -1238,9 +1217,6 @@ History_File
 --------------------------------------------------------------
 
 history_load
-
- SYNOPSIS
-  history_load
 
  USAGE
   Void_Type history_load ();
@@ -1280,9 +1256,6 @@ history_load
 
 history_save
 
- SYNOPSIS
-  history_save
-
  USAGE
   Int_Type history_save ()
 
@@ -1306,9 +1279,6 @@ history_save
 --------------------------------------------------------------
 
 history_local_save
-
- SYNOPSIS
-  history_local_save
 
  USAGE
   Void_Type history_local_save ()
@@ -1358,9 +1328,6 @@ html_mark_prev_tag
 --------------------------------------------------------------
 
 html_mode
-
- SYNOPSIS
-  html_mode
 
  USAGE
   Void html_mode ();
@@ -1421,9 +1388,6 @@ Ispell_Program_Name
 
 latex_mode
 
- SYNOPSIS
-  latex_mode
-
  USAGE
   Void latex_mode ();
 
@@ -1458,9 +1422,6 @@ latex_mode
 --------------------------------------------------------------
 
 lua_mode
-
- SYNOPSIS
-  lua_mode
 
  USAGE
   lua_mode ()
@@ -1602,9 +1563,6 @@ matlab_mode
 
 Minued_Lines
 
- SYNOPSIS
-  Minued_Lines
-
  USAGE
   Integer_Type Minued_Lines = 0;
 
@@ -1627,9 +1585,6 @@ Minued_Lines
 --------------------------------------------------------------
 
 minued_mode
-
- SYNOPSIS
-  minued_mode
 
  USAGE
   Void minued_mode ();
@@ -1664,9 +1619,6 @@ minued_mode
 
 make_tmp_buffer_name
 
- SYNOPSIS
-  make_tmp_buffer_name
-
  USAGE
   String make_tmp_buffer_name (String base);
 
@@ -1677,9 +1629,6 @@ make_tmp_buffer_name
 --------------------------------------------------------------
 
 append_string_to_file
-
- SYNOPSIS
-  append_string_to_file
 
  USAGE
   Integer append_string_to_file (String str, String file);
@@ -1692,9 +1641,6 @@ append_string_to_file
 --------------------------------------------------------------
 
 write_string_to_file
-
- SYNOPSIS
-  write_string_to_file
 
  USAGE
   Integer write_string_to_file (String str, String file);
@@ -1811,9 +1757,6 @@ Mouse_Selection_Word_Chars
 
 Mouse_Save_Point_Mode
 
- SYNOPSIS
-  Mouse_Save_Point_Mode
-
  USAGE
   Integer Mouse_Save_Point_Mode = 1;
 
@@ -1838,9 +1781,6 @@ nroff_mode
 
 occur
 
- SYNOPSIS
-  occur
-
  USAGE
   Void occur ();
 
@@ -1853,9 +1793,6 @@ occur
 --------------------------------------------------------------
 
 Perl_Continued_Offset
-
- SYNOPSIS
-  Perl_Continued_Offset
 
  USAGE
   Integer Perl_Continued_Offset = 2;
@@ -2049,9 +1986,6 @@ perl_mode
 
 Perl_Flags
 
- SYNOPSIS
-  Perl_Flags
-
  USAGE
   String Perl_Flags = "-w";
 
@@ -2068,9 +2002,6 @@ Perl_Flags
 --------------------------------------------------------------
 
 Perl_Indent
-
- SYNOPSIS
-  Perl_Indent
 
  USAGE
   Integer Perl_Indent = 4;
@@ -2200,9 +2131,6 @@ perldoc
 
 php_mode
 
- SYNOPSIS
-  php_mode
-
  USAGE
   Void php_mode ();
 
@@ -2248,9 +2176,6 @@ php_mode
 --------------------------------------------------------------
 
 python_mode
-
- SYNOPSIS
-  python_mode
 
  USAGE
   python_mode ()
@@ -2418,9 +2343,6 @@ Session_Filename
 
 shell_builtin
 
- SYNOPSIS
-  shell_builtin
-
  DESCRIPTION
   rudimentary `builtin' shell commands:
 	`cd [dir]'	change the default directory
@@ -2456,10 +2378,7 @@ Tab_Always_Inserts_Tab
 Info_Directory
 
  SYNOPSIS
-  Info_Directory
-
- DESCRIPTION
-  A comma-separated list of info directories to search.
+  Comma-separated list of info directories to search
 
 --------------------------------------------------------------
 
@@ -2494,9 +2413,6 @@ Jed_Highlight_Cache_Dir
 --------------------------------------------------------------
 
 C_CONTINUED_OFFSET
-
- SYNOPSIS
-  C_CONTINUED_OFFSET
 
  USAGE
   Integer C_CONTINUED_OFFSET = 2;
@@ -2535,9 +2451,6 @@ C_Colon_Offset
 
 C_Preprocess_Indent
 
- SYNOPSIS
-  C_Preprocess_Indent
-
  USAGE
   Integer C_Preprocess_Indent = 1;
 
@@ -2565,9 +2478,6 @@ C_Comment_Column
 
 C_INDENT
 
- SYNOPSIS
-  C_INDENT
-
  USAGE
   Integer C_INDENT = 3;
 
@@ -2582,9 +2492,6 @@ C_INDENT
 
 C_BRACE
 
- SYNOPSIS
-  C_BRACE
-
  USAGE
   Integer C_BRACE = 2;
 
@@ -2598,9 +2505,6 @@ C_BRACE
 --------------------------------------------------------------
 
 C_BRA_NEWLINE
-
- SYNOPSIS
-  C_BRA_NEWLINE
 
  USAGE
   Integer C_BRA_NEWLINE = 1;
@@ -2617,9 +2521,6 @@ C_BRA_NEWLINE
 --------------------------------------------------------------
 
 custom_variable
-
- SYNOPSIS
-  custom_variable
 
  USAGE
   custom_variable (String_Type name, Any_Type value)
@@ -2640,9 +2541,6 @@ custom_variable
 
 str_replace_all
 
- SYNOPSIS
-  str_replace_all
-
  USAGE
   String str_replace_all (str, old, new);
 
@@ -2656,9 +2554,6 @@ str_replace_all
 --------------------------------------------------------------
 
 vinsert
-
- SYNOPSIS
-  vinsert
 
  USAGE
   Void vinsert (String, fmt,...);
@@ -2689,9 +2584,6 @@ dircat
 
 bol_skip_white
 
- SYNOPSIS
-  bol_skip_white
-
  USAGE
   Void bol_skip_white ();
 
@@ -2707,9 +2599,6 @@ bol_skip_white
 
 bskip_white
 
- SYNOPSIS
-  bskip_white
-
  USAGE
   Void bskip_white ();
 
@@ -2723,9 +2612,6 @@ bskip_white
 --------------------------------------------------------------
 
 buffer_filename
-
- SYNOPSIS
-  buffer_filename
 
  USAGE
   String_Type buffer_filename ([String_Type bufname])
@@ -2744,9 +2630,6 @@ buffer_filename
 
 file_type
 
- SYNOPSIS
-  file_type
-
  DESCRIPTION
   returns type of file.  e.g., /usr/a.b/file.c --> c
 
@@ -2756,9 +2639,6 @@ file_type
 --------------------------------------------------------------
 
 search_path_for_file
-
- SYNOPSIS
-  search_path_for_file
 
  USAGE
   String_Type search_path_for_file (path, file [,delim])
@@ -3002,9 +2882,6 @@ insert_single_space
 
 looking_at_char
 
- SYNOPSIS
-  looking_at_char
-
  USAGE
   Integer looking_at_char (Integer ch);
 
@@ -3016,9 +2893,6 @@ looking_at_char
 --------------------------------------------------------------
 
 local_setkey
-
- SYNOPSIS
-  local_setkey
 
  USAGE
   Void local_setkey (String fun, String key);
@@ -3034,9 +2908,6 @@ local_setkey
 --------------------------------------------------------------
 
 local_unsetkey
-
- SYNOPSIS
-  local_unsetkey
 
  USAGE
   Void local_unsetkey (String key);
@@ -3062,9 +2933,6 @@ call_function
 --------------------------------------------------------------
 
 runhooks
-
- SYNOPSIS
-  runhooks
 
  USAGE
   Void runhooks (String_Type hook, [optional args...]);
@@ -3109,9 +2977,6 @@ Jed_Tmp_Directory
 
 pop_mark_0
 
- SYNOPSIS
-  pop_mark_0
-
  USAGE
   Void pop_mark_0 ();
 
@@ -3125,9 +2990,6 @@ pop_mark_0
 --------------------------------------------------------------
 
 pop_mark_1
-
- SYNOPSIS
-  pop_mark_1
 
  USAGE
   Void pop_mark_1 ();
@@ -3143,9 +3005,6 @@ pop_mark_1
 
 goto_spot
 
- SYNOPSIS
-  goto_spot
-
  USAGE
   Void goto_spot ();
 
@@ -3159,9 +3018,6 @@ goto_spot
 --------------------------------------------------------------
 
 push_spot_bob
-
- SYNOPSIS
-  push_spot_bob
 
  USAGE
   Void push_spot_bob ();
@@ -3177,9 +3033,6 @@ push_spot_bob
 
 push_spot_bol
 
- SYNOPSIS
-  push_spot_bol
-
  USAGE
   Void push_spot_bol ();
 
@@ -3193,9 +3046,6 @@ push_spot_bol
 --------------------------------------------------------------
 
 push_mark_eol
-
- SYNOPSIS
-  push_mark_eol
 
  USAGE
   Void push_mark_eol ();
@@ -3211,9 +3061,6 @@ push_mark_eol
 
 push_mark_eob
 
- SYNOPSIS
-  push_mark_eob
-
  USAGE
   Void push_mark_eob ();
 
@@ -3227,9 +3074,6 @@ push_mark_eob
 --------------------------------------------------------------
 
 mark_buffer
-
- SYNOPSIS
-  mark_buffer
 
  USAGE
   mark_buffer ();
@@ -3245,9 +3089,6 @@ mark_buffer
 
 bufsubstr_delete
 
- SYNOPSIS
-  bufsubstr_delete
-
  USAGE
   String bufsubstr_delete ()
 
@@ -3262,9 +3103,6 @@ bufsubstr_delete
 
 del_eol
 
- SYNOPSIS
-  del_eol
-
  USAGE
   Void del_eol ();
 
@@ -3277,9 +3115,6 @@ del_eol
 --------------------------------------------------------------
 
 del_through_eol
-
- SYNOPSIS
-  del_through_eol
 
  USAGE
   del_through_eol ();
@@ -3294,9 +3129,6 @@ del_through_eol
 --------------------------------------------------------------
 
 line_as_string
-
- SYNOPSIS
-  line_as_string
 
  USAGE
   String line_as_string ()
@@ -3433,10 +3265,10 @@ redo
 no_mode
 
  SYNOPSIS
-  no_mode
+  Generic mode not designed for anything in particular
 
- DESCRIPTION
-  Generic mode not designed for anything in particular.
+ USAGE
+  no_mode
 
  SEE ALSO
   text_mode, c_mode
@@ -3444,9 +3276,6 @@ no_mode
 --------------------------------------------------------------
 
 Mode_Hook_Pointer
-
- SYNOPSIS
-  Mode_Hook_Pointer
 
  DESCRIPTION
   This is a reference to a function that is called from mode_hook.
@@ -3514,9 +3343,6 @@ modeline_hook
 
 add_mode_for_extension
 
- SYNOPSIS
-  add_mode_for_extension
-
  USAGE
   Void add_mode_for_extension (String mode, String ext);
 
@@ -3556,9 +3382,6 @@ set_buffer_modified_flag
 
 buffer_modified
 
- SYNOPSIS
-  buffer_modified
-
  USAGE
   Int_Type buffer_modified ()
 
@@ -3583,9 +3406,6 @@ set_buffer_undo
 --------------------------------------------------------------
 
 set_readonly
-
- SYNOPSIS
-  set_readonly
 
  DESCRIPTION
   Takes 1 parameter: 0 turn off readonly
@@ -3628,9 +3448,6 @@ is_overwrite_mode
 --------------------------------------------------------------
 
 set_overwrite
-
- SYNOPSIS
-  set_overwrite
 
  USAGE
   set_overwrite (Int_Type x)
@@ -3714,25 +3531,15 @@ toggle_undo
 
 set_buffer_no_backup
 
- SYNOPSIS
-  set_buffer_no_backup
-
  USAGE
   Void set_buffer_no_backup ();
-
- DESCRIPTION
 
 --------------------------------------------------------------
 
 set_buffer_no_autosave
 
- SYNOPSIS
-  set_buffer_no_autosave
-
  USAGE
   Void set_buffer_no_autosave ();
-
- DESCRIPTION
 
 --------------------------------------------------------------
 
@@ -3768,9 +3575,6 @@ custom_color
 --------------------------------------------------------------
 
 help_for_help_string
-
- SYNOPSIS
-  help_for_help_string
 
  DESCRIPTION
   String to display at bottom of screen upon JED startup and when
@@ -3818,9 +3622,6 @@ read_file_from_mini
 
 read_string_with_completion
 
- SYNOPSIS
-  read_string_with_completion
-
  USAGE
   String read_string_with_completion (prompt, dflt, list)
 
@@ -3834,9 +3635,6 @@ read_string_with_completion
 
 Startup_With_File
 
- SYNOPSIS
-  Startup_With_File
-
  DESCRIPTION
   If non-zero, startup by asking user for a filename if one was
   not specified on the command line.
@@ -3844,9 +3642,6 @@ Startup_With_File
 --------------------------------------------------------------
 
 jed_startup_hook
-
- SYNOPSIS
-  jed_startup_hook
 
  DESCRIPTION
   Function that gets executed right before JED enters its main editing
@@ -3867,9 +3662,6 @@ save_buffer
 
 push_visible_mark
 
- SYNOPSIS
-  push_visible_mark
-
  USAGE
   Void push_visible_mark ();
 
@@ -3885,9 +3677,6 @@ push_visible_mark
 
 set_mark_cmd
 
- SYNOPSIS
-  set_mark_cmd
-
  USAGE
   Void set_mark_cmd ();
 
@@ -3902,9 +3691,6 @@ set_mark_cmd
 --------------------------------------------------------------
 
 smart_set_mark_cmd
-
- SYNOPSIS
-  smart_set_mark_cmd
 
  USAGE
   Void smart_set_mark_cmd ();
@@ -4075,9 +3861,6 @@ close_filter_process
 
 add_keywords
 
- SYNOPSIS
-  add_keywords
-
  USAGE
   String add_keywords (String tbl, String kws, Int len, Int n);
 
@@ -4095,9 +3878,6 @@ add_keywords
 
 add_keyword_n
 
- SYNOPSIS
-  add_keyword_n
-
  USAGE
   Void add_keyword_n (String tbl, String kw, Int n);
 
@@ -4111,9 +3891,6 @@ add_keyword_n
 
 add_keyword
 
- SYNOPSIS
-  add_keyword
-
  USAGE
   Void add_keyword (String_Type tbl, String_Type kw);
 
@@ -4126,9 +3903,6 @@ add_keyword
 --------------------------------------------------------------
 
 remove_keywords
-
- SYNOPSIS
-  remove_keywords
 
  USAGE
   String remove_keywords (String tbl, String kws, Int len, Int n);
@@ -4244,9 +4018,6 @@ text_mode
 
 make_tmp_file
 
- SYNOPSIS
-  make_tmp_file
-
  USAGE
   String make_tmp_file (String base);
 
@@ -4291,9 +4062,6 @@ open_unique_filename
 --------------------------------------------------------------
 
 untab
-
- SYNOPSIS
-  untab
 
  USAGE
   Void untab ();

@@ -173,7 +173,6 @@ define cua_one_press_escape()
 %{{{ cua_save_buffer()
 %!%+
 %\function{cua_save_buffer}
-%\synopsis{cua_save_buffer}
 %\usage{Void cua_save_buffer();}
 %\description
 %  Save current buffer.

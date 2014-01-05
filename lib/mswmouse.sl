@@ -162,7 +162,6 @@ define mouse_next_buffer ()
 custom_variable ("Mouse_Save_Point_Mode", 1);
 %!%+
 %\variable{Mouse_Save_Point_Mode}
-%\synopsis{Mouse_Save_Point_Mode}
 %\usage{Integer Mouse_Save_Point_Mode = 1;}
 %\description
 %  If this variable is non-zero, the editing point will be restored to its

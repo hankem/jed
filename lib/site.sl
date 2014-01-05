@@ -63,9 +63,7 @@ variable Null_String = "";
 
 %!%+
 %\variable{Info_Directory}
-%\synopsis{Info_Directory}
-%\description
-%  A comma-separated list of info directories to search.
+%\synopsis{Comma-separated list of info directories to search}
 %!%-
 variable Info_Directory;
 variable Jed_Bin_Dir;
@@ -94,7 +92,6 @@ variable Jed_Highlight_Cache_Dir;      %  dir where NEW files kept
 
 %!%+
 %\variable{C_CONTINUED_OFFSET}
-%\synopsis{C_CONTINUED_OFFSET}
 %\usage{Integer C_CONTINUED_OFFSET = 2;}
 %\description
 %  This variable controls the indentation of statements that are continued
@@ -122,7 +119,6 @@ variable C_Colon_Offset = 1;
 
 %!%+
 %\variable{C_Preprocess_Indent}
-%\synopsis{C_Preprocess_Indent}
 %\usage{Integer C_Preprocess_Indent = 1;}
 %\description
 %  This variable controls the indentation of preprocessor directives
@@ -142,7 +138,6 @@ variable C_Comment_Column = 40;
 
 %!%+
 %\variable{C_INDENT}
-%\synopsis{C_INDENT}
 %\usage{Integer C_INDENT = 3;}
 %\description
 %  This value determines the number of columns the current line is indented
@@ -153,7 +148,6 @@ variable C_INDENT = 3;
 
 %!%+
 %\variable{C_BRACE}
-%\synopsis{C_BRACE}
 %\usage{Integer C_BRACE = 2;}
 %\description
 %  This is a C-mode variable that specifies how much an opening brace
@@ -164,7 +158,6 @@ variable C_BRACE = 2;
 
 %!%+
 %\variable{C_BRA_NEWLINE}
-%\synopsis{C_BRA_NEWLINE}
 %\usage{Integer C_BRA_NEWLINE = 1;}
 %\description
 %  This variable is used by the indentation routines for the C language.
@@ -184,7 +177,6 @@ variable LAST_SEARCH = Null_String;
 
 %!%+
 %\function{custom_variable}
-%\synopsis{custom_variable}
 %\usage{custom_variable (String_Type name, Any_Type value)}
 %\description
 %  This function is used to create a new public global variable called
@@ -226,7 +218,6 @@ public define custom_variable (name, value)
 %{{{ str_replace_all (str, old, new)
 %!%+
 %\function{str_replace_all}
-%\synopsis{str_replace_all}
 %\usage{String str_replace_all (str, old, new);}
 %\description
 %  Replace all occurences of \var{old} in \var{str} with \var{new} and return the
@@ -286,7 +277,6 @@ define compile_parse_errors ();
 
 %!%+
 %\function{vinsert}
-%\synopsis{vinsert}
 %\usage{Void vinsert (String, fmt,...);}
 %\description
 %  This function is like \var{insert} except that it takes a variable number
@@ -390,7 +380,6 @@ define dircat(dir, file)
 %{{{ bol_skip_white ()
 %!%+
 %\function{bol_skip_white}
-%\synopsis{bol_skip_white}
 %\usage{Void bol_skip_white ();}
 %\description
 %  This function combines the two functions \var{bol} and \var{skip_white} into a
@@ -408,7 +397,6 @@ define bol_skip_white ()
 %{{{ bskip_white ()
 %!%+
 %\function{bskip_white}
-%\synopsis{bskip_white}
 %\usage{Void bskip_white ();}
 %\description
 %  This function skips backward over whitespace.
@@ -426,7 +414,6 @@ define bskip_white ()
 
 %!%+
 %\function{buffer_filename}
-%\synopsis{buffer_filename}
 %\usage{String_Type buffer_filename ([String_Type bufname])}
 %\description
 %  When called with no arguments, this function returns the name of the
@@ -468,7 +455,6 @@ define path2list ()
 %{{{ file_type(file)
 %!%+
 %\function{file_type}
-%\synopsis{file_type}
 %\description
 %  returns type of file.  e.g., /usr/a.b/file.c --> c
 %\seealso{path_extname}
@@ -485,7 +471,6 @@ define file_type(file)
 
 %!%+
 %\function{search_path_for_file}
-%\synopsis{search_path_for_file}
 %\usage{String_Type search_path_for_file (path, file [,delim])}
 %\description
 %  The \var{search_path_for_file} function searches the directories specified
@@ -1019,7 +1004,6 @@ define insert_single_space ()
 
 %!%+
 %\function{looking_at_char}
-%\synopsis{looking_at_char}
 %\usage{Integer looking_at_char (Integer ch);}
 %\description
 %  This function returns non-zero if the character at the current editing
@@ -1035,7 +1019,6 @@ define looking_at_char ()
 
 %!%+
 %\function{local_setkey}
-%\synopsis{local_setkey}
 %\usage{Void local_setkey (String fun, String key);}
 %\description
 %  This function is like \sfun{setkey} but unlike \sfun{setkey} which operates on the
@@ -1050,7 +1033,6 @@ define local_setkey ()
 
 %!%+
 %\function{local_unsetkey}
-%\synopsis{local_unsetkey}
 %\usage{Void local_unsetkey (String key);}
 %\description
 %  This function is like \sfun{unsetkey} but unlike \sfun{unsetkey} which unsets a key
@@ -1122,7 +1104,6 @@ define call_function ()
 
 %!%+
 %\function{runhooks}
-%\synopsis{runhooks}
 %\usage{Void runhooks (String_Type hook, [optional args...]);}
 %!%-
 define runhooks ()
@@ -1185,7 +1166,6 @@ Jed_Tmp_Directory = "/tmp";
 
 %!%+
 %\function{pop_mark_0}
-%\synopsis{pop_mark_0}
 %\usage{Void pop_mark_0 ();}
 %\description
 %  Since \sfun{pop_mark} is used so often with an argument of \var{0}, this function
@@ -1199,7 +1179,6 @@ define pop_mark_0 ()
 
 %!%+
 %\function{pop_mark_1}
-%\synopsis{pop_mark_1}
 %\usage{Void pop_mark_1 ();}
 %\description
 %  Since \sfun{pop_mark} is used so often with an argument of \var{1}, this function
@@ -1213,7 +1192,6 @@ define pop_mark_1 ()
 
 %!%+
 %\function{goto_spot}
-%\synopsis{goto_spot}
 %\usage{Void goto_spot ();}
 %\description
 %  This function returns to the position of the last pushed spot.  The spot
@@ -1228,7 +1206,6 @@ define goto_spot ()
 
 %!%+
 %\function{push_spot_bob}
-%\synopsis{push_spot_bob}
 %\usage{Void push_spot_bob ();}
 %\description
 %  The function sequence \var{push_spot (); bob ();} occurs so often that
@@ -1243,7 +1220,6 @@ define push_spot_bob ()
 
 %!%+
 %\function{push_spot_bol}
-%\synopsis{push_spot_bol}
 %\usage{Void push_spot_bol ();}
 %\description
 %  The function sequence \var{push_spot (); bol ();} occurs so often that
@@ -1258,7 +1234,6 @@ define push_spot_bol ()
 
 %!%+
 %\function{push_mark_eol}
-%\synopsis{push_mark_eol}
 %\usage{Void push_mark_eol ();}
 %\description
 %  The function sequence \var{push_mark (); eol ();} occurs so often that
@@ -1273,7 +1248,6 @@ define push_mark_eol ()
 
 %!%+
 %\function{push_mark_eob}
-%\synopsis{push_mark_eob}
 %\usage{Void push_mark_eob ();}
 %\description
 %  The function sequence \var{push_mark (); eob ();} occurs so often that
@@ -1288,7 +1262,6 @@ define push_mark_eob ()
 
 %!%+
 %\function{mark_buffer}
-%\synopsis{mark_buffer}
 %\usage{mark_buffer ();}
 %\description
 %  This function marks the whole buffer leaving the point at the end
@@ -1303,7 +1276,6 @@ define mark_buffer ()
 
 %!%+
 %\function{bufsubstr_delete}
-%\synopsis{bufsubstr_delete}
 %\usage{String bufsubstr_delete ()}
 %\description
 %  This functions returns the contents of a region defined my the mark
@@ -1318,7 +1290,6 @@ define bufsubstr_delete ()
 
 %!%+
 %\function{del_eol}
-%\synopsis{del_eol}
 %\usage{Void del_eol ();}
 %\description
 %  This function deletes from the current position to the end of the line.
@@ -1332,7 +1303,6 @@ define del_eol ()
 
 %!%+
 %\function{del_through_eol}
-%\synopsis{del_through_eol}
 %\usage{del_through_eol ();}
 %\description
 %  This function deletes all text from the current point through the end of
@@ -1347,7 +1317,6 @@ define del_through_eol ()
 
 %!%+
 %\function{line_as_string}
-%\synopsis{line_as_string}
 %\usage{String line_as_string ()}
 %\description
 %  This function returns the current line as a string.  This does not include
@@ -1691,9 +1660,8 @@ public define redo ()
 
 %!%+
 %\function{no_mode}
-%\synopsis{no_mode}
-%\description
-%  Generic mode not designed for anything in particular.
+%\synopsis{Generic mode not designed for anything in particular}
+%\usage{no_mode}
 %\seealso{text_mode, c_mode}
 %!%-
 define no_mode ()
@@ -1712,7 +1680,6 @@ define _function_return_1 () {return 1;}
 
 %!%+
 %\variable{Mode_Hook_Pointer}
-%\synopsis{Mode_Hook_Pointer}
 %\description
 %  This is a reference to a function that is called from mode_hook.
 %  If the function returns non-zero, then the mode is assumed to have
@@ -1869,7 +1836,6 @@ Mode_List_Modes += ",text,text,text,slang";
 
 %!%+
 %\function{add_mode_for_extension}
-%\synopsis{add_mode_for_extension}
 %\usage{Void add_mode_for_extension (String mode, String ext);}
 %\description
 %  This function modifies Mode_List in such a way that when a file with
@@ -2005,7 +1971,6 @@ define set_buffer_modified_flag ()
 
 %!%+
 %\function{buffer_modified}
-%\synopsis{buffer_modified}
 %\usage{Int_Type buffer_modified ()}
 %\description
 %  Returns non-zero if the buffer modified flag is set.
@@ -2031,7 +1996,6 @@ define set_buffer_undo ()
 
 %!%+
 %\function{set_readonly}
-%\synopsis{set_readonly}
 %\description
 %  Takes 1 parameter: 0 turn off readonly
 %                     1 turn on readonly
@@ -2071,7 +2035,6 @@ define is_overwrite_mode ()
 
 %!%+
 %\function{set_overwrite}
-%\synopsis{set_overwrite}
 %\usage{set_overwrite (Int_Type x)}
 %\description
 %  If the parameter \var{x} is non-zero, the buffer will be put in overwrite
@@ -2142,10 +2105,7 @@ define toggle_undo()
 
 %!%+
 %\function{set_buffer_no_backup}
-%\synopsis{set_buffer_no_backup}
 %\usage{Void set_buffer_no_backup ();}
-%\description
-%
 %!%-
 define set_buffer_no_backup ()
 {
@@ -2154,10 +2114,7 @@ define set_buffer_no_backup ()
 
 %!%+
 %\function{set_buffer_no_autosave}
-%\synopsis{set_buffer_no_autosave}
 %\usage{Void set_buffer_no_autosave ();}
-%\description
-%
 %!%-
 define set_buffer_no_autosave ()
 {
@@ -2251,7 +2208,6 @@ define set_emailaddress (s)
 
 %!%+
 %\variable{help_for_help_string}
-%\synopsis{help_for_help_string}
 %\description
 %  String to display at bottom of screen upon JED startup and when
 %  user executes the help function.
@@ -2393,7 +2349,6 @@ define read_file_from_mini ()
 
 %!%+
 %\function{read_string_with_completion}
-%\synopsis{read_string_with_completion}
 %\usage{String read_string_with_completion (prompt, dflt, list)}
 %\description
 %  This function takes 3 String parameters and returns a String.  The
@@ -2413,7 +2368,6 @@ define read_string_with_completion (prompt, dflt, list)
 
 %!%+
 %\variable{Startup_With_File}
-%\synopsis{Startup_With_File}
 %\description
 %  If non-zero, startup by asking user for a filename if one was
 %  not specified on the command line.
@@ -2423,7 +2377,6 @@ variable Startup_With_File = 0;
 %% startup hook
 %!%+
 %\function{jed_startup_hook}
-%\synopsis{jed_startup_hook}
 %\description
 %  Function that gets executed right before JED enters its main editing
 %  loop.  This is for last minute modifications of data structures that
@@ -2675,7 +2628,6 @@ define downcase_word()
 
 %!%+
 %\function{push_visible_mark}
-%\synopsis{push_visible_mark}
 %\usage{Void push_visible_mark ();}
 %\description
 %  This function is performs the same task as \sfun{push_mark} except that the
@@ -2691,7 +2643,6 @@ define push_visible_mark ()
 
 %!%+
 %\function{set_mark_cmd}
-%\synopsis{set_mark_cmd}
 %\usage{Void set_mark_cmd ();}
 %\description
 %  If a mark is already set, and that mark is a visible mark, then this
@@ -2709,7 +2660,6 @@ define set_mark_cmd ()
 
 %!%+
 %\function{smart_set_mark_cmd}
-%\synopsis{smart_set_mark_cmd}
 %\usage{Void smart_set_mark_cmd ();}
 %\description
 %  If the top mark is a visible mark, this function will remove that mark;
