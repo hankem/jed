@@ -52,9 +52,9 @@ define create_array ()
 %\synopsis{strncat}
 %\usage{Void strncat (String a, String b, ..., Integer n);}
 %\description
-% Returns concatenated string "abc..."
+%  Returns concatenated string "abc..."
 %\notes
-% This function is obsolete.
+%  This function is obsolete.
 %!%-
 define strncat (n)
 {
@@ -84,4 +84,3 @@ define set_jed_library_path(path)
    (t,) = strreplace(path, ",", char(path_get_delimiter()), strlen(path));
    set_slang_load_path(t);
 }
-

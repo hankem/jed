@@ -69,7 +69,7 @@ custom_variable("Dabbrev_delete_tail", 0);
 %\synopsis{Which buffers should dabbrev expand from?}
 %\usage{Int_Type Dabbrev_Default_Buflist = 0}
 %\description
-% The buffer-list when dabbrev is called without argument
+%  The buffer-list when \sfun{dabbrev} is called without argument
 %     0 = current buffer,
 %     1 = visible buffers (including the current),
 %     2 = all buffers of same mode,
@@ -86,8 +86,8 @@ custom_variable("Dabbrev_Default_Buflist", 0);
 %\synopsis{Scan folds for expansions}
 %\usage{Int_Type Dabbrev_Look_in_Folds = 1}
 %\description
-% Should dabbrev scan folded parts of the source buffer(s)
-% for expansions too?
+%  Should \sfun{dabbrev} also scan folded parts of the source buffer(s)
+%  for expansions?
 %\seealso{dabbrev}
 %!%-
 custom_variable("Dabbrev_Look_in_Folds", 1);
@@ -97,7 +97,7 @@ custom_variable("Dabbrev_Look_in_Folds", 1);
 %\synopsis{Let dabbrev stick to case}
 %\usage{Int_Type Dabbrev_Case_Search = 1}
 %\description
-%  Should dabbrev consider the case of words when looking for expansions?
+%  Should \sfun{dabbrev} consider the case of words when looking for expansions?
 %  Will be overridden by a blocal variable "Dabbrev_Case_Search" or by the
 %  mode-info variable "dabbrev_case_search".
 %\seealso{dabbrev}
@@ -443,44 +443,41 @@ private define dab_expand (c)
 %\synopsis{Complete the current word looking for similar words}
 %\usage{dabbrev([optional_argument])}
 %\description
-% Takes the current stem (part of word before the cursor)
-% and scans the current buffer for words that begin with this stem.
-% The current word is expanded by the non-stem part of the finding.
-% Subsequent calls to dabbrev replace the last completion with the next
-% guess.
+%  Takes the current stem (part of word before the cursor) and scans the
+%  current buffer for words that begin with this stem.  The current word
+%  is expanded by the non-stem part of the finding.  Subsequent calls to
+%  \sfun{dabbrev} replace the last completion with the next guess.
 %
-% The search for completions takes place over a list of buffers specified
-% by the \var{Dabbrev_Default_Buflist} variable unless \var{dabbrev} has
-% been called with an argument.  The optional argument may either be an
-% integer whose value is interpreted as for \var{Dabbrev_Default_Buflist},
-% or a string containing a newline separated list of buffer names to search.
+%  The search for completions takes place over a list of buffers specified
+%  by the \var{Dabbrev_Default_Buflist} variable unless \sfun{dabbrev} has been
+%  called with an argument.  The optional argument may either be an integer
+%  whose value is interpreted as for \var{Dabbrev_Default_Buflist}, or a string
+%  containing a newline separated list of buffer names to search.
 %
-% The scan proceeds as follows:
+%  The scan proceeds as follows:
 %#v+
 %     foreach buffer in buflist
 %       from cursor backwards to the beginning of the buffer
 %       from cursor forwards to the end of the buffer
 %#v-
 %\example
-% The current buffer contains the line
+%  The current buffer contains the line
 %#v+
 %   foo is better than foobar, foobase or foo
 %#v-
-% with the cursor at the end of the line.
-% dabbrev completes foo with foobase.
-% If called again (immediately) foobase is changed to foobar
-% If called once again, foobase is changed to foo and a message is
-% given: No more completions.
-%
+%  with the cursor at the end of the line.
+%  dabbrev completes foo with foobase.
+%  If called again (immediately) foobase is changed to foobar
+%  If called once again, foobase is changed to foo and a message is
+%  given: No more completions.
 %\notes
 %  You can use the optional argument to have keybindings to different
 %  "flavours" of dabbrev.
 %#v+
-% setkey("dabbrev", "^A");                 % expand from Dabbrev_Default_Buflist
-% setkey("dabbrev(1)", "\ea");             % expand from visible buffers
-% setkey("dabbrev(\"wordlist\")","\e^A");  % expand from the buffer "wordlist"
+%  setkey("dabbrev", "^A");                 % expand from Dabbrev_Default_Buflist
+%  setkey("dabbrev(1)", "\ea");             % expand from visible buffers
+%  setkey("dabbrev(\"wordlist\")","\e^A");  % expand from the buffer "wordlist"
 %#v-
-%
 %\seealso{Dabbrev_Default_Buflist, Dabbrev_Look_in_Folds}
 %!%-
 

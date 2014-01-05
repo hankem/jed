@@ -592,22 +592,21 @@ dfa_set_init_callback (&setup_dfa_callback, "python");
 %\synopsis{python_mode}
 %\usage{python_mode ()}
 %\description
-% A major mode for editing python files.
+%  A major mode for editing python files.
 %
-% The following keys have python specific bindings:
+%  The following keys have python specific bindings:
 %#v+
-% DELETE deletes to previous indent level
-% TAB indents line
-% ^C# comments region or current line
-% ^C> shifts line or region right
-% ^C< shifts line or region left
-% ^C^C executes the region, or the buffer if region not marked.
-% ^C|  executes the region
-% ^C\t reindents the region
-% :    colon dedents appropriately
+%  DELETE deletes to previous indent level
+%  TAB    indents line
+%  ^C#    comments region or current line
+%  ^C>    shifts line or region right
+%  ^C<    shifts line or region left
+%  ^C^C   executes the region, or the buffer if region not marked.
+%  ^C|    executes the region
+%  ^C\t   reindents the region
+%  :      colon dedents appropriately
 %#v-
-% Hooks: \var{python_mode_hook}
-%
+%  Hooks: \var{python_mode_hook}
 %\seealso{Py_Indent_Level}
 %\seealso{set_mode, c_mode}
 %!%-

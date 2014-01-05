@@ -2,8 +2,8 @@
 \synopsis{Non-zero is the mini-buffer is in use}
 \usage{Int_Type MINIBUFFER_ACTIVE}
 \description
- The \var{MINIBUFFER_ACTIVE} variable will be non-zero if the
- mini-buffer is in use.
+  The \var{MINIBUFFER_ACTIVE} variable will be non-zero if the
+  mini-buffer is in use.
 \seealso{read_mini}
 \done
 

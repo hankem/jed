@@ -7,10 +7,10 @@
 %\synopsis{spell-check program name}
 %\usage{variable Ispell_Program_Name = ""}
 %\description
-% The spell check command used by the \sfun{ispell} function. It must
-% be ispell-compatible (one of "ispell", "aspell" or "hunspell").  If
-% unset, the ispell program will be auto-detected by searching the
-% path for one of the above programs.
+%  The spell check command used by the \sfun{ispell} function. It must
+%  be ispell-compatible (one of "ispell", "aspell" or "hunspell").  If
+%  unset, the ispell program will be auto-detected by searching the
+%  path for one of the above programs.
 %\seealso{ispell, search_path_for_file}
 %!%-
 custom_variable("Ispell_Program_Name", NULL);

@@ -25,9 +25,7 @@ define html_paragraph_separator ()
 % Movement function (JM)
 %!%+
 %\function{html_skip_tag}
-%\synopsis{html_skip_tag}
-%\description
-% skip forward past html tag
+%\synopsis{Skip forward past html tag}
 %!%-
 define html_skip_tag()
 {
@@ -37,9 +35,7 @@ define html_skip_tag()
 
 %!%+
 %\function{html_bskip_tag}
-%\synopsis{html_bskip_tag}
-%\description
-% skip backward past html tag
+%\synopsis{Skip backward past html tag}
 %!%-
 define html_bskip_tag()
 {
@@ -48,9 +44,7 @@ define html_bskip_tag()
 
 %!%+
 %\function{html_mark_next_tag}
-%\synopsis{html_mark_next_tag}
-%\description
-% mark the next html tag forward
+%\synopsis{Mark the next html tag forward}
 %!%-
 define html_mark_next_tag()
 {
@@ -65,9 +59,7 @@ define html_mark_next_tag()
 
 %!%+
 %\function{html_mark_prev_tag}
-%\synopsis{html_mark_prev_tag}
-%\description
-% mark the previous html tag
+%\synopsis{Mark the previous html tag}
 %!%-
 define html_mark_prev_tag()
 {
@@ -538,11 +530,11 @@ dfa_set_init_callback (&setup_dfa_callback, "html");
 %\synopsis{html_mode}
 %\usage{Void html_mode ();}
 %\description
-% \var{html_mode} is a mode designed for editing HTML files.
-% If a region is defined (i.e., if a mark is set), many HTML
-% tags will insert around the region, e.g. '<B>' and '</B>'.
+%  \sfun{html_mode} is a mode designed for editing HTML files.
+%  If a region is defined (i.e., if a mark is set), many HTML
+%  tags will insert around the region, e.g. '<B>' and '</B>'.
 %
-% Keybindings begin with ^C and are grouped according to function:
+%  Keybindings begin with ^C and are grouped according to function:
 %     ^CA...  Anchors (<A>...</A>)
 %     ^CD...  Definition lists (<DL>...</DL>)
 %     ^CF...  Forms (<form>...</form>)
@@ -552,8 +544,8 @@ dfa_set_init_callback (&setup_dfa_callback, "html");
 %     ^CP...  Paragraph styles, etc. (<P>, <BR>, <HR>, <ADDRESS>, etc.)
 %     ^CS...  Character styles (<EM>, <STRONG>, <B>, <I>, etc.)
 %     ^CT...  Tables
-% Additionally, some special movement commands and miscellaneous
-% characters are defined:
+%  Additionally, some special movement commands and miscellaneous
+%  characters are defined:
 %     ^C^B    skip to beginning of prior HTML tag
 %     ^C^F    skip to end of next HTML tag
 %     ^C^N    mark next HTML tag from '<' to '>'
@@ -566,9 +558,9 @@ dfa_set_init_callback (&setup_dfa_callback, "html");
 %     ^Ce     insert HTML text for 'Eurosymbol'
 %     ^CC     insert HTML comment (around region, if marked)
 %
-% For a complete list of keybindings, use \var{describe_bindings}.
+%  For a complete list of keybindings, use \var{describe_bindings}.
 %
-% This function calls \var{html_mode_hook} if it exists.
+%  This function calls \var{html_mode_hook} if it exists.
 %!%-
 define html_mode ()
 {

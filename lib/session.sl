@@ -49,10 +49,9 @@
 %\synopsis{Name of the file where session information is saved}
 %\usage{Session_Filename = ".jedsession";}
 %\description
-% The \svar{Session_Filename} function specifies the name of the file
-% where session information is saved.  If the filename is a relative
-% one, then it will be regarded as relative to the startup directory.
-%\seealso{}
+%  The \svar{Session_Filename} function specifies the name of the file
+%  where session information is saved.  If the filename is a relative
+%  one, then it will be regarded as relative to the startup directory.
 %!%-
 custom_variable ("Session_Filename", ".jedsession");
 custom_variable ("Session_Exclude_Patterns", NULL);

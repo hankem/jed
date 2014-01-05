@@ -20,12 +20,11 @@ private define add_hash_to_syntax_table (tbl, hash, len, n)
 %\synopsis{add_keywords}
 %\usage{String add_keywords (String tbl, String kws, Int len, Int n);}
 %\description
+%  Adds a set of keywords \var{kws}, each of length \var{len}, to the already
+%  existing syntax table \var{tbl}.  For convenience of the user, the function
+%  does alphabetical sorting and removes duplicate entries.
 %
-% Adds a set of keywords `kws', each of length `len', to the already
-% existing syntax table `tbl'.  For convenience of the user, the function
-% does alphabetical sorting and removes duplicate entries.
-%
-% The previous list of keywords is returned.
+%  The previous list of keywords is returned.
 %\seealso{define_keywords_n, create_syntax_table, add_keyword_n}
 %!%-
 define add_keywords (tbl, kws, len, n)
@@ -55,8 +54,7 @@ define add_keywords (tbl, kws, len, n)
 %\synopsis{add_keyword_n}
 %\usage{Void add_keyword_n (String tbl, String kw, Int n);}
 %\description
-%
-% Adds a single keyword `kw' to the already existing syntax table `tbl'.
+%  Adds a single keyword \var{kw} to the already existing syntax table \var{tbl}.
 %\seealso{define_keywords_n, create_syntax_table, add_keywords}
 %!%-
 define add_keyword_n (tbl, kw, n)
@@ -71,8 +69,7 @@ define add_keyword_n (tbl, kw, n)
 %\synopsis{add_keyword}
 %\usage{Void add_keyword (String_Type tbl, String_Type kw);}
 %\description
-%
-% Adds a single keyword `kw' to the already existing syntax table `tbl'.
+%  Adds a single keyword \var{kw} to the already existing syntax table \var{tbl}.
 %\seealso{define_keywords_n, create_syntax_table, add_keyword_n}
 %!%-
 define add_keyword ()
@@ -85,10 +82,10 @@ define add_keyword ()
 %\synopsis{remove_keywords}
 %\usage{String remove_keywords (String tbl, String kws, Int len, Int n);}
 %\description
-% Removes a set of keywords `kws', each of length `len', from the already
-% existing syntax table `tbl'.
+%  Removes a set of keywords \var{kws}, each of length \var{len}, from the already
+%  existing syntax table \var{tbl}.
 %
-% The previous list of keywords is returned.
+%  The previous list of keywords is returned.
 %\seealso{add_keywords, define_keywords_n, create_syntax_table, add_keyword_n}
 %!%-
 define remove_keywords (tbl, kws, len, n)

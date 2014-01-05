@@ -21,7 +21,7 @@
 \synopsis{Kill the subprocess specified by the process handle "id"}
 \usage{Void kill_process (Int_Type id)}
 \description
-  Kill the subprocess specified by the process handle \var{id}	    
+  Kill the subprocess specified by the process handle \var{id}
 \seealso{open_process}
 \done
 
@@ -94,10 +94,10 @@
 \synopsis{Send a string to the specified subprocess}
 \usage{Void send_process (Int_Type id, String s)}
 \description
- This function sends the string \exmp{s} to the standard input of the
- process with the ID \var{id}.  With this function and
- \ifun{set_process} with the argument `output'' you can establish a
- bi-directional communication with the process.
+  This function sends the string \exmp{s} to the standard input of the
+  process with the ID \var{id}.  With this function and
+  \ifun{set_process} with the argument `output'' you can establish a
+  bi-directional communication with the process.
 \seealso{open_process, set_process, send_process_eof}
 \done
 
@@ -127,7 +127,7 @@
                     by 'value' must be declared to accept an argument list:
                     (pid, flags, status) where 'pid' has the same
                     meaning as above and flags is an integer with the
-                    meanings: 
+                    meanings:
                       1: Process Running
                       2: Process Stopped
                       4: Process Exited Normally
@@ -140,7 +140,7 @@
                     process.
                     Note: when this function is called, the current buffer is
                     guaranteed to be the buffer associated with the process.
-       
+
        "output" :   This parameter determines how output from the process is
                     is processed.  If the 'value' is the empty string "", output
                     will go to the end of the buffer associated with the process

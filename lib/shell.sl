@@ -171,21 +171,20 @@ public define shell () %{{{
 %\function{shell_builtin}
 %\synopsis{shell_builtin}
 %\description
-% rudimentary `builtin' shell commands:
-% 	`cd [dir]'	change the default directory
-% 	`exit'		exit the subshell
-% 	`pwd'		Print Working Directory
+%  rudimentary `builtin' shell commands:
+%	`cd [dir]'	change the default directory
+%	`exit'		exit the subshell
+%	`pwd'		Print Working Directory
 %
-% functions to eliminate some jed/shell vs. real shell problems
-% 	`clear'		erase the *shell* buffer
-% 	`e'		simulate ^X^F keybinding
-% 	`jed'		simulate ^X^F keybinding
+%  functions to eliminate some jed/shell vs. real shell problems:
+%	`clear'		erase the *shell* buffer
+%	`e'		simulate ^X^F keybinding
+%	`jed'		simulate ^X^F keybinding
 %
-%
-% returns one of the following on the stack
-% 	Null_String	- builtin dispatched, no prompt
-% 	"pwd"		- builtin dispatched, give prompt
-% 	cmd		- use shell to execute CMD
+%  returns one of the following on the stack:
+%	Null_String	- builtin dispatched, no prompt
+%	"pwd"		- builtin dispatched, give prompt
+%	cmd		- use shell to execute CMD
 %!%-
 define shell_builtin (cmd) %{{{
 {

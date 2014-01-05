@@ -56,21 +56,21 @@ ifnot (keymap_p (Most_Map))
 
 %!%+
 %\function{most_mode}
-%\synopsis{most_mode}
+%\synopsis{Emulates MOST fileviewer}
+%\usage{most_mode}
 %\description
-% Emulates MOST fileviewer
-% The following keys are defined:
+%  The following keys are defined:
 %#v+
-% SPACE            next screen
-% DELETE           previous screen
-% /                search_forward
-% ?                search_backward
-% n                find next occurrence
-% q                quit most mode  (usually kills buffer if not modified)
-% e                edit buffer
-% h                help summary
-% t                Top of Buffer
-% b                End of Buffer
+%   SPACE	next screen
+%   DELETE	previous screen
+%   /		search_forward
+%   ?		search_backward
+%   n		find next occurrence
+%   q		quit most mode  (usually kills buffer if not modified)
+%   e		edit buffer
+%   h		help summary
+%   t		Top of Buffer
+%   b		End of Buffer
 %#v-
 %!%-
 define most_mode ()

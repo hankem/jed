@@ -2,10 +2,10 @@
 \synopsis{Set the backup mode}
 \usage{Int_Type BACKUP_BY_COPYING}
 \description
- If non-zero, backup files will be made by copying the original file
- to the backup file.  If zero, the backup file will be created by
- renaming the original file to the backup file.  The default for
- \var{BACKUP_BY_COPYING} is zero because it is fastest.
+  If non-zero, backup files will be made by copying the original file
+  to the backup file.  If zero, the backup file will be created by
+  renaming the original file to the backup file.  The default for
+  \var{BACKUP_BY_COPYING} is zero because it is fastest.
 \seealso{rename_file, copy_file}
 \done
 
@@ -57,8 +57,8 @@
 \synopsis{Return number of files and list of files matching filename}
 \description
    returns the number of files and a list of files which match filename.
-      On Unix, this defaults to filename*.  It is primarily useful for
-      DOS and VMS to expand wildcard filenames
+   On Unix, this defaults to filename*.  It is primarily useful for
+   DOS and VMS to expand wildcard filenames.
 \done
 
 \function{expand_filename}
@@ -134,7 +134,7 @@
   that if a file does not exist, its modification time is taken to be
   at the beginning of time.  Thus, if \var{f} exists, but \var{g} does
   not, the \exmp{file_time_compare (f, g)} will return a positive
-  number. 
+  number.
 \seealso{file_status, time}
 \done
 

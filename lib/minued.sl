@@ -61,14 +61,14 @@ private variable
 %\synopsis{Minued_Lines}
 %\usage{Integer_Type Minued_Lines = 0;}
 %\description
-% This variable controls the number of lines shown in the minued
-% buffer. If the value of \var{Minued_Lines} is -1, then the entire
-% screen is used. If it is 0, the window splits vertically. A positive
-% value selects the exact number of lines to show. This value shouldn't
-% be greater than \var{SCREEN_HEIGHT}-4, and is only useful while you are
-% working with one window.
+%  This variable controls the number of lines shown in the minued
+%  buffer. If the value of \var{Minued_Lines} is -1, then the entire
+%  screen is used. If it is 0, the window splits vertically. A positive
+%  value selects the exact number of lines to show. This value shouldn't
+%  be greater than \var{SCREEN_HEIGHT}-4, and is only useful while you are
+%  working with one window.
 %
-% Default value is 0.
+%  Default value is 0.
 %\seealso{minued}
 %\seealso{SCREEN_HEIGHT}
 %!%-
@@ -235,16 +235,16 @@ private define minued_update_hook   ()       %{{{
 %\synopsis{minued_mode}
 %\usage{Void minued_mode ();}
 %\description
-% \var{minued_mode} is a mini-buffer's contents editor with which you can view all
-% previously entered lines in it. Select and modify one of them. Press return
-% and that line will be updated in the mini-buffer and evaluated in the buffer
-% from which minued was called.
+%  \var{minued_mode} is a mini-buffer's contents editor with which you can view all
+%  previously entered lines in it. Select and modify one of them. Press return
+%  and that line will be updated in the mini-buffer and evaluated in the buffer
+%  from which minued was called.
 %
-% All lines appears numbered, in the same order that they are stored in the
-% mini-buffer. Use the last line of minued if you want to add a new one.
-% Instead of a number, that line shows "add> ".
+%  All lines appears numbered, in the same order that they are stored in the
+%  mini-buffer. Use the last line of minued if you want to add a new one.
+%  Instead of a number, that line shows "add> ".
 %
-% The following key-bindings are defined in \var{minued_mode}:
+%  The following key-bindings are defined in \var{minued_mode}:
 %#v+
 %    Return        Update and evaluate the current line.
 %    Meta-Return   Evaluate the current line.
@@ -252,7 +252,7 @@ private define minued_update_hook   ()       %{{{
 %    Meta-R        Remove the current line, don't leave 'minued_mode'.
 %    Ctrl-C        Quit.
 %#v-
-% Note: Minued cannot be invoked from the mini-buffer.
+%  Note: Minued cannot be invoked from the mini-buffer.
 %\seealso{history_load, history_save}
 %\seealso{Minued_Lines}
 %!%-

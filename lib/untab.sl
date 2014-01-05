@@ -23,9 +23,9 @@ define untab_convert_to_tabs ()
 %\synopsis{untab}
 %\usage{Void untab ();}
 %\description
-% This function may be used either to convert tabs to spaces or, if called
-% with a prefix argument, it will perform the opposite conversion from
-% spaces to tabs.  This function operates on a region.
+%  This function may be used either to convert tabs to spaces or, if called
+%  with a prefix argument, it will perform the opposite conversion from
+%  spaces to tabs.  This function operates on a region.
 %!%-
 define untab ()
 {

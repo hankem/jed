@@ -26,16 +26,16 @@ ifnot (keymap_p($1))
 
 %!%+
 %\function{tex_mode}
-%\synopsis{tex_mode}
+%\usage{tex_mode}
 %\description
-% Mode useful for editing TeX and LaTeX modes.
-% Useful bindings:
+%  Mode useful for editing TeX and LaTeX modes.
+%  Useful bindings:
 %#v+
-%  '"'  :  tex_insert_quote
-%  '\'' :  tex_insert_quote
-%  '$'  :  tex_blink_dollar
-%  '.'  :  tex_ldots.  Inserts a '.' except if preceded by two dots.  In
-%           this case, the dots are converted to \ldots.
+%   '"'  :  tex_insert_quote
+%   '\'' :  tex_insert_quote
+%   '$'  :  tex_blink_dollar
+%   '.'  :  tex_ldots.  Inserts a '.' except if preceded by two dots.  In
+%            this case, the dots are converted to \ldots.
 %#v-
 %  When tex mode is loaded, 'tex_mode_hook' is called.  This hook will allow
 %  users to customize the mode.  In particular, certain functions here have

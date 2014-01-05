@@ -459,21 +459,20 @@ dfa_set_init_callback (&setup_dfa_callback, "Lua");
 %\synopsis{lua_mode}
 %\usage{lua_mode ()}
 %\description
-% A major mode for editing lua files.
+%  A major mode for editing lua files.
 %
-% The following keys have lua specific bindings:
+%  The following keys have lua specific bindings:
 %#v+
-% DELETE deletes to previous indent level
-% TAB indents line
-% ^C# comments region or current line
-% ^C> shifts line or region right
-% ^C< shifts line or region left
-% ^C^C executes the region, or the buffer if region not marked.
-% ^C|  executes the region
-% ^C\t reindents the region
+%  DELETE deletes to previous indent level
+%  TAB	 indents line
+%  ^C#	 comments region or current line
+%  ^C>	 shifts line or region right
+%  ^C<	 shifts line or region left
+%  ^C^C	 executes the region, or the buffer if region not marked.
+%  ^C|	 executes the region
+%  ^C\t	 reindents the region
 %#v-
-% Hooks: \var{lua_mode_hook}
-%
+%  Hooks: \var{lua_mode_hook}
 %\seealso{Lua_Indent_Level}
 %\seealso{set_mode, c_mode}
 %!%-

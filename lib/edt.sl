@@ -92,12 +92,11 @@ private variable EDT_Dir; EDT_Dir = 1;
 
 %!%+
 %\function{edt_advance}
-%\synopsis{edt_advance}
+%\synopsis{ADVANCE - (4)}
 %\description
-% ADVANCE - (4)
-% Sets the current direction to forward for the CHAR, WORD, LINE, EOL, PAGE,
-% SECT, SUBS, FIND, and FNDNXT keys.  ADVANCE means that movement will be
-% toward the end of the buffer; that is, to the right and down.
+%  Sets the current direction to forward for the CHAR, WORD, LINE, EOL, PAGE,
+%  SECT, SUBS, FIND, and FNDNXT keys.  ADVANCE means that movement will be
+%  toward the end of the buffer; that is, to the right and down.
 %!%-
 define edt_advance()
 {
@@ -107,12 +106,11 @@ define edt_advance()
 
 %!%+
 %\function{edt_backup}
-%\synopsis{edt_backup}
+%\synopsis{BACKUP - (5)}
 %\description
-% BACKUP - (5)
-% Sets the cursor direction to backward for the CHAR, WORD, LINE, EOL, PAGE,
-% SECT, SUBS, FIND, and FNDNXT keys.  BACKUP means that movement will be
-% toward the beginning of the buffer% that is, to the left and up.
+%  Sets the cursor direction to backward for the CHAR, WORD, LINE, EOL, PAGE,
+%  SECT, SUBS, FIND, and FNDNXT keys.  BACKUP means that movement will be
+%  toward the beginning of the buffer% that is, to the left and up.
 %!%-
 define edt_backup()
 {
@@ -150,11 +148,10 @@ define edt_word()
 
 %!%+
 %\function{edt_wdel}
-%\synopsis{edt_wdel}
+%\synopsis{DEL W - (-)}
 %\description
-% DEL W - (-)
-% Deletes text from the cursor to the beginning of the next word, storing the
-% text in the delete word buffer.
+%  Deletes text from the cursor to the beginning of the next word, storing the
+%  text in the delete word buffer.
 %!%-
 define edt_wdel()
 {
@@ -171,11 +168,10 @@ define edt_specins()
 
 %!%+
 %\function{edt_uwdel}
-%\synopsis{edt_uwdel}
+%\synopsis{UND W - (GOLD -)}
 %\description
-% UND W - (GOLD -)
-% Inserts the contents of the delete word buffer directly to the left of the
-% cursor.
+%  Inserts the contents of the delete word buffer directly to the left of the
+%  cursor.
 %!%-
 define edt_uwdel()
 {
@@ -196,13 +192,12 @@ define edt_delbol()
 
 %!%+
 %\function{edt_ldel}
-%\synopsis{edt_ldel}
+%\synopsis{DEL L - (PF4)}
 %\description
-% DEL L - (PF4)
-% Deletes text from the cursor position to the end of the current line, including
-% the line terminator.  If the cursor is positioned at the beginning of a line,
-% the entire line is deleted.  The deleted text is saved in the delete line
-% buffer.
+%  Deletes text from the cursor position to the end of the current line, including
+%  the line terminator.  If the cursor is positioned at the beginning of a line,
+%  the entire line is deleted.  The deleted text is saved in the delete line
+%  buffer.
 %!%-
 define edt_ldel()
 {
@@ -213,11 +208,10 @@ define edt_ldel()
 
 %!%+
 %\function{edt_uldel}
-%\synopsis{edt_uldel}
+%\synopsis{UND L - (GOLD PF4)}
 %\description
-% UND L - (GOLD PF4)
-% Inserts the contents of the delete line buffer directly to the left of the
-% cursor.
+%  Inserts the contents of the delete line buffer directly to the left of the
+%  cursor.
 %!%-
 define edt_uldel()
 {
@@ -226,13 +220,12 @@ define edt_uldel()
 
 %!%+
 %\function{edt_find}
-%\synopsis{edt_find}
+%\synopsis{FIND - (GOLD PF3)}
 %\description
-% FIND - (GOLD PF3)
-% Searches for an occurrence of a string.  Press the FIND key and then enter the
-% string using the main keyboard.  End the string by pressing either the ADVANCE
-% or BACKUP key to set the direction of the search, or the ENTER key to search in
-% the current direction.
+%  Searches for an occurrence of a string.  Press the FIND key and then enter the
+%  string using the main keyboard.  End the string by pressing either the ADVANCE
+%  or BACKUP key to set the direction of the search, or the ENTER key to search in
+%  the current direction.
 %!%-
 define edt_find()
 {
@@ -241,12 +234,11 @@ define edt_find()
 
 %!%+
 %\function{edt_findnxt}
-%\synopsis{edt_findnxt}
+%\synopsis{FNDNXT - (PF3)}
 %\description
-% FNDNXT - (PF3)
-% Searches for the next occurrence of the search string previously entered with
-% the FIND key.  The direction of the search is the current one (ADVANCE or
-% BACKUP).
+%  Searches for the next occurrence of the search string previously entered with
+%  the FIND key.  The direction of the search is the current one (ADVANCE or
+%  BACKUP).
 %!%-
 define edt_findnxt()
 {
@@ -289,12 +281,11 @@ define edt_go_up_n (n)
 
 %!%+
 %\function{edt_sect}
-%\synopsis{edt_sect}
+%\synopsis{SECT - (8)}
 %\description
-% SECT - (8)
-% Moves the cursor 16 lines (one section) forward or backward, depending on the
-% current direction (see ADVANCE and BACKUP).  The cursor is moved to the
-% beginning of the appropriate line.
+%  Moves the cursor 16 lines (one section) forward or backward, depending on the
+%  current direction (see ADVANCE and BACKUP).  The cursor is moved to the
+%  beginning of the appropriate line.
 %!%-
 define edt_sect()
 {
@@ -342,12 +333,11 @@ define edt_reset()
 
 %!%+
 %\function{edt_page}
-%\synopsis{edt_page}
+%\synopsis{PAGE - (7)}
 %\description
-% PAGE - (7)
-% Moves the cursor to the top of a page.  A page is defined by a delimiter
-% string, which can be set by the SET ENTITY command.  The default page
-% delimiter is the formfeed character (CTRL/L).
+%  Moves the cursor to the top of a page.  A page is defined by a delimiter
+%  string, which can be set by the SET ENTITY command.  The default page
+%  delimiter is the formfeed character (CTRL/L).
 %!%-
 define edt_page()
 {
@@ -376,13 +366,12 @@ define edt_paste()
 %% Although not documented in EDT online help, this deletes the region.
 %!%+
 %\function{edt_append}
-%\synopsis{edt_append}
+%\synopsis{APPEND - (9)}
 %\description
-% APPEND - (9)
-% Moves the select range to the end of the PASTE buffer.  The select range is all
-% the text between the selected position (see SELECT) and the current cursor
-% position.  If no SELECT has been made and the cursor is positioned on the
-% current search string, that string is appended.
+%  Moves the select range to the end of the PASTE buffer.  The select range is all
+%  the text between the selected position (see SELECT) and the current cursor
+%  position.  If no SELECT has been made and the cursor is positioned on the
+%  current search string, that string is appended.
 %!%-
 define edt_append()
 {
@@ -442,11 +431,10 @@ define edt_chgcase()
 %% is this a better defn of what edt_replace should be?
 %!%+
 %\function{edt_replace}
-%\synopsis{edt_replace}
+%\synopsis{REPLACE - (GOLD 9)}
 %\description
-% REPLACE - (GOLD 9)
-% Deletes the select range and replaces it with the contents of the PASTE
-% buffer.
+%  Deletes the select range and replaces it with the contents of the PASTE
+%  buffer.
 %!%-
 define edt_replace()
 {

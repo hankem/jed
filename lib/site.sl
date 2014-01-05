@@ -46,8 +46,8 @@ public variable _Jed_Default_Color_Scheme = "black3";
 %\variable{Tab_Always_Inserts_Tab}
 %\synopsis{Configure the tab key}
 %\description
-% If this variable is non-zero, then the tab key will insert tab characters
-% into the buffer.  It is possible to override this setting via a mode hook.
+%  If this variable is non-zero, then the tab key will insert tab characters
+%  into the buffer.  It is possible to override this setting via a mode hook.
 %\seealso{local_setkey}
 %!%-
 public variable Tab_Always_Inserts_Tab = 0;
@@ -65,7 +65,7 @@ variable Null_String = "";
 %\variable{Info_Directory}
 %\synopsis{Info_Directory}
 %\description
-% A comma-separated list of info directories to search.
+%  A comma-separated list of info directories to search.
 %!%-
 variable Info_Directory;
 variable Jed_Bin_Dir;
@@ -97,13 +97,13 @@ variable Jed_Highlight_Cache_Dir;      %  dir where NEW files kept
 %\synopsis{C_CONTINUED_OFFSET}
 %\usage{Integer C_CONTINUED_OFFSET = 2;}
 %\description
-% This variable controls the indentation of statements that are continued
-% onto the next line as in the following example:
+%  This variable controls the indentation of statements that are continued
+%  onto the next line as in the following example:
 %#v+
-%  if (something)
-%    continued_statement ();
-%  else
-%    another_continued_statement ();
+%   if (something)
+%     continued_statement ();
+%   else
+%     another_continued_statement ();
 %#v-
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_INDENT, C_Colon_Offset}
 %!%-
@@ -111,11 +111,10 @@ variable C_CONTINUED_OFFSET = 2;
 
 %!%+
 %\variable{C_Colon_Offset}
-%\synopsis{C_Colon_Offset}
+%\usage{Integer C_Colon_Offset = 1;}
 %\description
-% Integer C_Colon_Offset = 1;
-% This variable may be changed to adjust the indentation of \var{case} statements
-% in C-Mode.
+%  This variable may be changed to adjust the indentation
+%  of \var{case} statements in C-Mode.
 %\seealso{c_mode}
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_INDENT, C_Colon_Offset}
 %!%-
@@ -126,8 +125,8 @@ variable C_Colon_Offset = 1;
 %\synopsis{C_Preprocess_Indent}
 %\usage{Integer C_Preprocess_Indent = 1;}
 %\description
-% This variable controls the indentation of preprocessor directives in
-% C-mode.
+%  This variable controls the indentation of preprocessor directives
+%  in C-mode.
 %\seealso{c_mode}
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_INDENT, C_Colon_Offset}
 %!%-
@@ -135,9 +134,9 @@ variable C_Preprocess_Indent = 1;
 
 %!%+
 %\variable{C_Comment_Column}
-%\synopsis{C_Comment_Column}
+%\usage{Integer C_Comment_Column = 40;}
 %\description
-% Column to begin a C comment--- used by c_make_comment
+%  Column to begin a C comment--- used by \sfun{c_make_comment}.
 %!%-
 variable C_Comment_Column = 40;
 
@@ -157,8 +156,8 @@ variable C_INDENT = 3;
 %\synopsis{C_BRACE}
 %\usage{Integer C_BRACE = 2;}
 %\description
-% This is a C-mode variable that specifies how much an opening brace
-% should be indented compared its surrounding block.
+%  This is a C-mode variable that specifies how much an opening brace
+%  should be indented compared its surrounding block.
 %\seealso{C_INDENT, C_BRA_NEWLINE}
 %!%-
 variable C_BRACE = 2;
@@ -168,10 +167,10 @@ variable C_BRACE = 2;
 %\synopsis{C_BRA_NEWLINE}
 %\usage{Integer C_BRA_NEWLINE = 1;}
 %\description
-% This variable is used by the indentation routines for the C language.
-% If it is non-zero, the \exmp{'\{'} character will be placed on a line by
-% itself when one presses the \exmp{'\{'} character.  For K&R indentation style,
-% set this variable to zero.
+%  This variable is used by the indentation routines for the C language.
+%  If it is non-zero, the \exmp{'\{'} character will be placed on a line by
+%  itself when one presses the \exmp{'\{'} character.  For K&R indentation style,
+%  set this variable to zero.
 %\seealso{C_INDENT, C_BRACE}
 %!%-
 variable C_BRA_NEWLINE = 1;
@@ -188,13 +187,13 @@ variable LAST_SEARCH = Null_String;
 %\synopsis{custom_variable}
 %\usage{custom_variable (String_Type name, Any_Type value)}
 %\description
-% This function is used to create a new public global variable called
-% \var{name}, initialized to \var{value}, unless it exists. If the variable
-% already exists but is not initialized, then it is initialized to
-% \var{value}. This is quite useful for slang files with user configurable
-% variables. These variables can be defined and initialized by users
-% before evaluating the file, or can be defined and initialized to
-% a default value in a file using this function.
+%  This function is used to create a new public global variable called
+%  \var{name}, initialized to \var{value}, unless it exists.  If the variable
+%  already exists but is not initialized, then it is initialized to
+%  \var{value}.  This is quite useful for slang files with user configurable
+%  variables.  These variables can be defined and initialized by users
+%  before evaluating the file, or can be defined and initialized to a
+%  default value in a file using this function.
 %\seealso{custom_color}
 %!%-
 public define custom_variable (name, value)
@@ -230,8 +229,8 @@ public define custom_variable (name, value)
 %\synopsis{str_replace_all}
 %\usage{String str_replace_all (str, old, new);}
 %\description
-% Replace all occurences of \var{old} in \var{str} with \var{new} and return the
-% result.
+%  Replace all occurences of \var{old} in \var{str} with \var{new} and return the
+%  result.
 %\seealso{str_replace, replace_cmd}
 %!%-
 define str_replace_all (str, old, new)
@@ -290,8 +289,8 @@ define compile_parse_errors ();
 %\synopsis{vinsert}
 %\usage{Void vinsert (String, fmt,...);}
 %\description
-% This function is like \var{insert} except that it takes a variable number
-% of arguments and a format string.
+%  This function is like \var{insert} except that it takes a variable number
+%  of arguments and a format string.
 %\seealso{insert, sprintf, insert_char}
 %!%-
 define vinsert ()
@@ -335,9 +334,9 @@ private define compress_dir_slashes (dir)
 %\synopsis{Merge a directory name and file name}
 %\usage{String_Type = dircat (String_Type a, String_Type b);}
 %\description
-%  The \var{dircat} function may be used to obtain the path name of a file with
-%  filename \var{b} in directory \var{a}.  It performs this function in an
-%  operating system dependent manner.
+%   The \var{dircat} function may be used to obtain the path name of a file
+%   with filename \var{b} in directory \var{a}.  It performs this function in an
+%   operating system dependent manner.
 %!%-
 define dircat(dir, file)
 {
@@ -394,9 +393,9 @@ define dircat(dir, file)
 %\synopsis{bol_skip_white}
 %\usage{Void bol_skip_white ();}
 %\description
-% This function combines the two functions \var{bol} and \var{skip_white} into a
-% single operation.  That is, it moves the point to the beginning of the
-% line and then skips over whitespace to the first non-whitespace character.
+%  This function combines the two functions \var{bol} and \var{skip_white} into a
+%  single operation.  That is, it moves the point to the beginning of the
+%  line and then skips over whitespace to the first non-whitespace character.
 %\seealso{bol, skip_white, skip_chars}
 %!%-
 define bol_skip_white ()
@@ -412,8 +411,8 @@ define bol_skip_white ()
 %\synopsis{bskip_white}
 %\usage{Void bskip_white ();}
 %\description
-% This function skips backward over whitespace.
-% Note: it does not cross lines.
+%  This function skips backward over whitespace.
+%  Note: it does not cross lines.
 %\seealso{skip_white, bskip_chars}
 %!%-
 define bskip_white ()
@@ -430,11 +429,11 @@ define bskip_white ()
 %\synopsis{buffer_filename}
 %\usage{String_Type buffer_filename ([String_Type bufname])}
 %\description
-% When called with no arguments, this function returns the name of the
-% file associated with the current buffer.  If called with a string
-% argument representing the name of a buffer, it will return the name
-% of the file associated with that buffer.  If no file is associated
-% with the specified buffer, the empty string will be returned.
+%  When called with no arguments, this function returns the name of the
+%  file associated with the current buffer.  If called with a string
+%  argument representing the name of a buffer, it will return the name
+%  of the file associated with that buffer.  If no file is associated
+%  with the specified buffer, the empty string will be returned.
 %\seealso{getbuf_info}
 %!%-
 define buffer_filename ()
@@ -471,7 +470,7 @@ define path2list ()
 %\function{file_type}
 %\synopsis{file_type}
 %\description
-% returns type of file.  e.g., /usr/a.b/file.c --> c
+%  returns type of file.  e.g., /usr/a.b/file.c --> c
 %\seealso{path_extname}
 %!%-
 define file_type(file)
@@ -489,13 +488,12 @@ define file_type(file)
 %\synopsis{search_path_for_file}
 %\usage{String_Type search_path_for_file (path, file [,delim])}
 %\description
-% The \var{search_path_for_file} function searches the directories
-% specified by the delimiter-separated set of directories \var{path}
-% for the filename \var{file}. If the file exists, it returns the
-% expanded filename, otherwise it returns \NULL.  The optional
-% parameter may be used to specify the path delimiter.  The default
-% delimiter is system-dependent and is the same as that returned by
-% the \ifun{path_get_delimiter} function.
+%  The \var{search_path_for_file} function searches the directories specified
+%  by the delimiter-separated set of directories \var{path} for the filename
+%  \var{file}.  If the file exists, it returns the expanded filename,
+%  otherwise it returns \NULL.  The optional parameter may be used to
+%  specify the path delimiter.  The default delimiter is system-dependent
+%  and is the same as that returned by the \ifun{path_get_delimiter} function.
 %!%-
 define search_path_for_file ()
 {
@@ -521,10 +519,10 @@ define search_path_for_file ()
 %{{{ expand_jedlib_file (f)
 %!%+
 %\function{expand_jedlib_file}
-%\synopsis{expand_jedlib_file}
+%\usage{expand_jedlib_file (file)}
 %\description
-% Search for FILE in jed lib search directories and return
-% expanded pathname if found or the Null string otherwise.
+%  Search for \exmp{file} in jed lib search directories and return
+%  expanded pathname if found or the \NULL string otherwise.
 %!%-
 define expand_jedlib_file (f)
 {
@@ -538,10 +536,10 @@ define expand_jedlib_file (f)
 %{{{ find_jedlib_file(file)
 %!%+
 %\function{find_jedlib_file}
-%\synopsis{find_jedlib_file}
+%\usage{find_jedlib_file (file)}
 %\description
-% find a file from JED_LIBRARY, returns number of lines read or 0 if not
-% found.
+%  Find a file from JED_LIBRARY, returns number of lines read
+%  or 0 if not found.
 %!%-
 define find_jedlib_file(file)
 {
@@ -555,13 +553,12 @@ define find_jedlib_file(file)
 %{{{ parse_filename(fn)
 %!%+
 %\function{parse_filename}
-%\synopsis{parse_filename}
+%\synopsis{Breaks a filespec into dir filename}
 %\usage{(dir, file) = parse_filename(fn)}
 %\description
-% breaks a filespec into dir filename---
-% this routine returns dir and filename such that a simple strcat will
-% suffice to put them together again.  For example, on Unix, /a/b/c
-% returns /a/b/ and c
+%  This routine returns dir and filename such that a simple strcat will
+%  suffice to put them together again.  For example, on Unix, /a/b/c
+%  returns /a/b/ and c.
 %!%-
 define parse_filename(fn)
 {
@@ -601,8 +598,8 @@ private define dir_exists (dir)
 %\synopsis{Prepend a directory to the load-path}
 %\usage{prepend_to_slang_load_path (String_Type dir)}
 %\description
-% This function adds a directory to the beginning of the interpreter's
-% load-path.
+%  This function adds a directory to the beginning of the interpreter's
+%  load-path.
 %\seealso{append_to_slang_load_path, set_slang_load_path}
 %!%-
 public define prepend_to_slang_load_path (p)
@@ -616,8 +613,8 @@ public define prepend_to_slang_load_path (p)
 %\synopsis{Append a directory to the load-path}
 %\usage{append_to_slang_load_path (String_Type dir)}
 %\description
-% This function adds a directory to the end of the interpreter's
-% load-path.
+%  This function adds a directory to the end of the interpreter's
+%  load-path.
 %\seealso{prepend_to_slang_load_path, set_slang_load_path}
 %!%-
 public define append_to_slang_load_path (p)
@@ -918,91 +915,76 @@ _autoload("reg_insert_register",	"register",
 
 %!%+
 %\function{go_up}
-%\synopsis{go_up}
+%\synopsis{Move up \var{n} lines}
 %\usage{Void go_up (Integer n);}
-%\description
-% Move up 'n' lines.
 %\seealso{up, go_down}
 %!%-
 define go_up() { () = up(); }
 
 %!%+
 %\function{up_1}
-%\synopsis{up_1}
-%\usage{Void up_1 ();}
+%\synopsis{Move up 1 line.}
+%\usage{Int_Type up_1 ();}
 %\description
-% Move up 1 line.  If successful, returns 1 otherwise it returns 0.
+%  If successful, returns 1, otherwise it returns 0.
 %\seealso{up, go_down, go_up, go_up_1}
 %!%-
 define up_1() { return up(1); }
 
 %!%+
 %\function{go_up_1}
-%\synopsis{go_up_1}
+%\synopsis{Move up exactly 1 line if possible}
 %\usage{Void go_up_1 ();}
-%\description
-% Move up exactly 1 line if possible.
 %\seealso{up, go_down}
 %!%-
 define go_up_1 () { () = up_1(); }
 
 %!%+
 %\function{go_down}
-%\synopsis{go_down}
+%\synopsis{Move down \var{n} lines}
 %\usage{Void go_down (Integer n);}
-%\description
-% Move down 'n' lines.
 %\seealso{go_up, down}
 %!%-
 define go_down() { () = down(); }
 
 %!%+
 %\function{down_1}
-%\synopsis{down_1}
+%\synopsis{Move down exactly one line}
 %\usage{Int_Type down_1 ();}
 %\description
-% Move down exactly one line.  If successful, 1 is returned otherwise
-% zero is returned.
+%  If successful, 1 is returned, otherwise zero is returned.
 %\seealso{go_up, down, go_down_1}
 %!%-
 define down_1 () {  return down (1); }
 
 %!%+
 %\function{go_down_1}
-%\synopsis{go_down_1}
+%\synopsis{Move down one line}
 %\usage{Void go_down_1 ();}
-%\description
-% Move down one lines.
 %\seealso{go_up, down}
 %!%-
 define go_down_1 () { () = down_1(); }
 
 %!%+
 %\function{go_left}
-%\synopsis{go_left}
+%\synopsis{Move backward \var{n} characters}
 %\usage{Void go_left (Integer n);}
-%\description
-% Move backward 'n' characters.
 %\seealso{left, go_right}
 %!%-
 define go_left() { () = left();}
 
 %!%+
 %\function{go_right}
-%\synopsis{go_right}
+%\synopsis{Move forward \var{n} characters}
 %\usage{Void go_right (Integer n);}
-%\description
-% Move forward 'n' characters.
 %\seealso{right, go_left}
 %!%-
 define go_right() { () = right();}
 
 %!%+
 %\function{go_right_1}
-%\synopsis{go_right_1}
+%\synopsis{Move forward 1 character}
 %\usage{Void go_right_1 ();}
-%\description
-% Move forward 1 characters.
 %\seealso{right, go_left}
 %!%-
 define go_right_1() { go_right (1); }
@@ -1017,10 +999,8 @@ define go_left_1() { go_left (1); }
 
 %!%+
 %\function{newline}
-%\synopsis{newline}
+%\synopsis{Insert a newline in the buffer at point}
 %\usage{Void newline (Void);}
-%\description
-% insert a newline in the buffer at point.
 %\seealso{insert, insert_char}
 %!%-
 define newline ()
@@ -1030,9 +1010,7 @@ define newline ()
 
 %!%+
 %\function{insert_single_space}
-%\synopsis{insert_single_space}
-%\description
-% insert a single space into the buffer.
+%\synopsis{Insert a single space into the buffer}
 %!%-
 define insert_single_space ()
 {
@@ -1044,9 +1022,9 @@ define insert_single_space ()
 %\synopsis{looking_at_char}
 %\usage{Integer looking_at_char (Integer ch);}
 %\description
-% This function returns non-zero if the character at the current editing
-% point is 'ch' otherwise it returns zero.  This function performs a case
-% sensitive comparison.
+%  This function returns non-zero if the character at the current editing
+%  point is \var{ch} otherwise it returns zero.  This function performs a case
+%  sensitive comparison.
 %!%-
 define looking_at_char ()
 {
@@ -1060,9 +1038,9 @@ define looking_at_char ()
 %\synopsis{local_setkey}
 %\usage{Void local_setkey (String fun, String key);}
 %\description
-% This function is like 'setkey' but unlike 'setkey' which operates on the
-% global keymap, 'local_setkey' operates on the current keymap which may or
-% may not be the global one.
+%  This function is like \sfun{setkey} but unlike \sfun{setkey} which operates on the
+%  global keymap, \sfun{local_setkey} operates on the current keymap which may
+%  or may not be the global one.
 %\seealso{setkey, definekey, local_unsetkey}
 %!%-
 define local_setkey ()
@@ -1075,9 +1053,9 @@ define local_setkey ()
 %\synopsis{local_unsetkey}
 %\usage{Void local_unsetkey (String key);}
 %\description
-% This function is like 'unsetkey' but unlike 'unsetkey' which unsets a key
-% from the global keymap, 'local_unsetkey' operates on the current keymap
-% which may or may not be the global one.
+%  This function is like \sfun{unsetkey} but unlike \sfun{unsetkey} which unsets a key
+%  from the global keymap, 'local_unsetkey' operates on the current keymap
+%  which may or may not be the global one.
 %\seealso{unsetkey, undefinekey, local_setkey}
 %!%-
 define local_unsetkey ()
@@ -1158,10 +1136,10 @@ define runhooks ()
 %\synopsis{Run the user's mode hooks for the specified mode}
 %\usage{run_mode_hooks (mode_hook_name)}
 %\description
-% This function should be called at the end of the mode setting
-% function to allow the user to hook into the function.  It takes a
-% single parameter: the name of the mode hook.  Prior to call the
-% specified user-hook, this function calls \sfun{global_mode_hook}.
+%  This function should be called at the end of the mode setting
+%  function to allow the user to hook into the function.  It takes a
+%  single parameter: the name of the mode hook.  Prior to call the
+%  specified user-hook, this function calls \sfun{global_mode_hook}.
 %\seealso{runhooks, global_mode_hook}
 %!%-
 define run_mode_hooks (hook)
@@ -1194,8 +1172,8 @@ add_to_hook ("_jed_exit_hooks", &run_user_exit_hook);
 %\synopsis{Directory used to hold temporary files}
 %\usage{Jed_Tmp_Directory = "/tmp";}
 %\description
-% This variable is used by the \sfun{make_tmp_file} function to create
-% temporary filenames.
+%  This variable is used by the \sfun{make_tmp_file} function to create
+%  temporary filenames.
 %\seealso{make_tmp_file, make_tmp_buffer_name, open_unique_filename}
 %!%-
 variable Jed_Tmp_Directory = NULL;
@@ -1210,8 +1188,8 @@ Jed_Tmp_Directory = "/tmp";
 %\synopsis{pop_mark_0}
 %\usage{Void pop_mark_0 ();}
 %\description
-% Since \var{pop_mark} is used so often with an argument of \var{0}, this function
-% is simply equivalent to \var{pop_mark(0)}.
+%  Since \sfun{pop_mark} is used so often with an argument of \var{0}, this function
+%  is simply equivalent to \var{pop_mark(0)}.
 %\seealso{pop_mark, pop_mark_1}
 %!%-
 define pop_mark_0 ()
@@ -1224,8 +1202,8 @@ define pop_mark_0 ()
 %\synopsis{pop_mark_1}
 %\usage{Void pop_mark_1 ();}
 %\description
-% Since \var{pop_mark} is used so often with an argument of \var{1}, this function
-% is simply equivalent to \var{pop_mark(1)}.
+%  Since \sfun{pop_mark} is used so often with an argument of \var{1}, this function
+%  is simply equivalent to \var{pop_mark(1)}.
 %\seealso{pop_mark, pop_mark_0}
 %!%-
 define pop_mark_1 ()
@@ -1238,8 +1216,8 @@ define pop_mark_1 ()
 %\synopsis{goto_spot}
 %\usage{Void goto_spot ();}
 %\description
-% This function returns to the position of the last pushed spot.  The spot
-% is not popped.
+%  This function returns to the position of the last pushed spot.  The spot
+%  is not popped.
 %\seealso{push_spot, pop_spot, create_user_mark}
 %!%-
 define goto_spot ()
@@ -1253,8 +1231,8 @@ define goto_spot ()
 %\synopsis{push_spot_bob}
 %\usage{Void push_spot_bob ();}
 %\description
-% The function sequence \var{push_spot (); bob ();} occurs so often that
-% it makes sense to have a single function that performs this task.
+%  The function sequence \var{push_spot (); bob ();} occurs so often that
+%  it makes sense to have a single function that performs this task.
 %\seealso{push_spot, bob, pop_spot, push_spot_bol}
 %!%-
 define push_spot_bob ()
@@ -1268,8 +1246,8 @@ define push_spot_bob ()
 %\synopsis{push_spot_bol}
 %\usage{Void push_spot_bol ();}
 %\description
-% The function sequence \var{push_spot (); bol ();} occurs so often that
-% it makes sense to have a single function that performs this task.
+%  The function sequence \var{push_spot (); bol ();} occurs so often that
+%  it makes sense to have a single function that performs this task.
 %\seealso{push_spot, bol, pop_spot, push_spot_bob}
 %!%-
 define push_spot_bol ()
@@ -1283,8 +1261,8 @@ define push_spot_bol ()
 %\synopsis{push_mark_eol}
 %\usage{Void push_mark_eol ();}
 %\description
-% The function sequence \var{push_mark (); eol ();} occurs so often that
-% it makes sense to have a single function that performs this task.
+%  The function sequence \var{push_mark (); eol ();} occurs so often that
+%  it makes sense to have a single function that performs this task.
 %\seealso{push_mark, eol, pop_mark, push_mark_eob}
 %!%-
 define push_mark_eol ()
@@ -1298,8 +1276,8 @@ define push_mark_eol ()
 %\synopsis{push_mark_eob}
 %\usage{Void push_mark_eob ();}
 %\description
-% The function sequence \var{push_mark (); eob ();} occurs so often that
-% it makes sense to have a single function that performs this task.
+%  The function sequence \var{push_mark (); eob ();} occurs so often that
+%  it makes sense to have a single function that performs this task.
 %\seealso{push_mark, eob, pop_mark, push_mark_eob}
 %!%-
 define push_mark_eob ()
@@ -1313,8 +1291,8 @@ define push_mark_eob ()
 %\synopsis{mark_buffer}
 %\usage{mark_buffer ();}
 %\description
-% This function marks the whole buffer leaving the point at the end
-% of the buffer.
+%  This function marks the whole buffer leaving the point at the end
+%  of the buffer.
 %\seealso{push_mark, pop_mark, bob, eob}
 %!%-
 define mark_buffer ()
@@ -1328,8 +1306,8 @@ define mark_buffer ()
 %\synopsis{bufsubstr_delete}
 %\usage{String bufsubstr_delete ()}
 %\description
-% This functions returns the contents of a region defined my the mark
-% and the current point.  The region will be deleted.
+%  This functions returns the contents of a region defined my the mark
+%  and the current point.  The region will be deleted.
 %\seealso{bufsubstr}
 %!%-
 define bufsubstr_delete ()
@@ -1343,7 +1321,7 @@ define bufsubstr_delete ()
 %\synopsis{del_eol}
 %\usage{Void del_eol ();}
 %\description
-% This function deletes from the current position to the end of the line.
+%  This function deletes from the current position to the end of the line.
 %\seealso{del, delete_line, del_through_eol}
 %!%-
 define del_eol ()
@@ -1357,8 +1335,8 @@ define del_eol ()
 %\synopsis{del_through_eol}
 %\usage{del_through_eol ();}
 %\description
-% This function deletes all text from the current point through the end of
-% the line.
+%  This function deletes all text from the current point through the end of
+%  the line.
 %\seealso{del, del_eol, del_region}
 %!%-
 define del_through_eol ()
@@ -1372,9 +1350,9 @@ define del_through_eol ()
 %\synopsis{line_as_string}
 %\usage{String line_as_string ()}
 %\description
-% This function returns the current line as a string.  This does not include
-% the newline character at the end of the line.  The editing point is left
-% at the end of the line.  That is, this function does not preserve the point.
+%  This function returns the current line as a string.  This does not include
+%  the newline character at the end of the line.  The editing point is left
+%  at the end of the line.  That is, this function does not preserve the point.
 %\seealso{bufsubstr}
 %!%-
 define line_as_string ()
@@ -1386,10 +1364,10 @@ define line_as_string ()
 %\function{double_line}
 %\synopsis{Duplicate the current line}
 %\description
-% This function inserts a line into the buffer at the position of the
-% current line that is a copy of the current line.  If the position of
-% the editing point was originally one line N column C, then the
-% editing point will be left on line (N+1) column C.
+%  This function inserts a line into the buffer at the position of the
+%  current line that is a copy of the current line.  If the position of
+%  the editing point was originally one line N column C, then the
+%  editing point will be left on line (N+1) column C.
 %\seealso{line_as_string}
 %!%-
 define double_line ()
@@ -1403,10 +1381,8 @@ define double_line ()
 
 %!%+
 %\function{bol_trim}
-%\synopsis{bol_trim}
+%\synopsis{Move to beginning of line and remove whitespace}
 %\usage{Void bol_trim ();}
-%\description
-% Move to beginning of line and remove whitespace.
 %\seealso{bol, trim}
 %!%-
 define bol_trim ()
@@ -1416,10 +1392,8 @@ define bol_trim ()
 
 %!%+
 %\function{eol_trim}
-%\synopsis{eol_trim}
+%\synopsis{Move to end of line and remove whitespace}
 %\usage{Void eol_trim ();}
-%\description
-% Move to end of line and remove whitespace.
 %\seealso{eol, trim}
 %!%-
 define eol_trim ()
@@ -1490,13 +1464,12 @@ define get_blocal_var ()
 %\synopsis{Create and initialize a buffer local variable}
 %\usage{define_blocal_var (name, value)}
 %\description
-%  This function may be used to create a buffer-local variable named
-%  \exmp{name} and set it to \exmp{value}.  A buffer-local variable is a
-%  variable whose value is local to the current buffer.
+%  This function may be used to create a buffer-local variable
+%  named \exmp{name} and set it to \exmp{value}.  A buffer-local variable
+%  is a variable whose value is local to the current buffer.
 %\notes
-%  The order of the \var{name} and \var{value} arguments to this
-%  function are the reverse from that of the \ifun{set_blocal_var}
-%  function.
+%  The order of the \exmp{name} and \exmp{value} arguments to this function
+%  are the reverse from that of the \ifun{set_blocal_var} function.
 %\seealso{get_blocal_var, create_blocal_var, set_blocal_var}
 %!%-
 define define_blocal_var (name, value)
@@ -1669,9 +1642,8 @@ define next_wind_dn()
 
 %!%+
 %\function{whatpos}
-%\synopsis{whatpos}
-%\description
-% display row and column information in minibuffer
+%\synopsis{Display row and column information in minibuffer}
+%\usage{Void whatpos (Void);}
 %!%-
 define whatpos ()
 {
@@ -1699,9 +1671,9 @@ define goto_bottom_of_window ()
 %\synopsis{Undo the last undo}
 %\usage{redo()}
 %\description
-% Undo the last undo. This works only one step, however
-% as any undo is appended to the end of the undo buffer, you can
-% actually roll the whole history back.
+%  Undo the last \sfun{undo}.  This works only one step,
+%  however as any undo is appended to the end of the undo buffer,
+%  you can actually roll the whole history back.
 %\seealso{undo}
 %!%-
 public define redo ()
@@ -1742,10 +1714,10 @@ define _function_return_1 () {return 1;}
 %\variable{Mode_Hook_Pointer}
 %\synopsis{Mode_Hook_Pointer}
 %\description
-% This is a reference to a function that is called from mode_hook.
-% If the function returns non-zero, then the mode is assumed to have
-% been set.  Otherwise, a non-zero value is returned meaning that the
-% function did not set the mode.
+%  This is a reference to a function that is called from mode_hook.
+%  If the function returns non-zero, then the mode is assumed to have
+%  been set.  Otherwise, a non-zero value is returned meaning that the
+%  function did not set the mode.
 %!%-
 variable Mode_Hook_Pointer = &_function_pop_0;
 
@@ -1755,30 +1727,31 @@ variable Mode_Hook_Pointer = &_function_pop_0;
 %\synopsis{A list of functions to call to set the mode for a buffer}
 %\usage{list_append (Mode_Hook_Pointer_List, &my_func)}
 %\description
-% The value of this variable is a list of functions to be called to
-% set the mode of a buffer.  Each function in the list will be called
-% with two parameters: The base filename of the buffer and the
-% extension.  If the function sets the mode of the buffer, then it
-% must return 1.  Otherwise, the function must return 0 indicating
-% that it did not set the mode of the buffer.
+%  The value of this variable is a list of functions to be called to
+%  set the mode of a buffer.  Each function in the list will be called
+%  with two parameters: The base filename of the buffer and the
+%  extension.  If the function sets the mode of the buffer, then it
+%  must return 1.  Otherwise, the function must return 0 indicating
+%  that it did not set the mode of the buffer.
 %\example
 %#v+
-% private define my_mode_setting_hook (base, ext)
-% {
-%    if ((base == "README") || (base == "NOTES")
-%      {
-%         text_mode ();
-%         return 1;
-%      }
-%    if ((base == "Makefile") || (ext == ".mak"))
-%      {
-%         make_mode ();
-%         return 1;
-%      }
-%    return 0;
-% }
+%  private define my_mode_setting_hook (base, ext)
+%  {
+%     if ((base == "README") || (base == "NOTES")
+%       {
+%          text_mode ();
+%          return 1;
+%       }
+%     if ((base == "Makefile") || (ext == ".mak"))
+%       {
+%          make_mode ();
+%          return 1;
+%       }
+%     return 0;
+%  }
+%
+%  list_append (Mode_Hook_Pointer_List, &my_mode_setting_hook);
 %#v-
-% list_append (Mode_Hook_Pointer_List, &my_mode_setting_hook);
 %\notes
 %  The functions in this list get called AFTER searching for the mode
 %  tag embedded in the file itself.
@@ -1794,10 +1767,10 @@ variable Default_Mode = &text_mode;
 
 %!%+
 %\function{modeline_hook}
-%\synopsis{modeline_hook}
+%\usage{Int_Type modeline_hook (Void_Type)}
 %\description
-% check first line for the simplest Emacs mode statement
-% -*- modename -*-
+%  Check first line for the simplest Emacs mode statement
+%  -*- modename -*-
 %!%-
 define modeline_hook()
 {
@@ -1899,10 +1872,10 @@ Mode_List_Modes += ",text,text,text,slang";
 %\synopsis{add_mode_for_extension}
 %\usage{Void add_mode_for_extension (String mode, String ext);}
 %\description
-% This function modifies Mode_List in such a way that when a file with
-% filename extension `ext' is read in, function strcat (mode, "_mode")
-% will be called to set the mode.   That is, the first parameter 'mode'
-% is the name of a mode without the '_mode' added to the end of it.
+%  This function modifies Mode_List in such a way that when a file with
+%  filename extension \var{ext} is read in, function strcat (mode, "_mode")
+%  will be called to set the mode.   That is, the first parameter \var{mode}
+%  is the name of a mode without the '_mode' added to the end of it.
 %!%-
 define add_mode_for_extension (mode, ext)
 {
@@ -1912,13 +1885,12 @@ define add_mode_for_extension (mode, ext)
 
 %!%+
 %\function{mode_hook}
-%\synopsis{mode_hook}
+%\usage{Void mode_hook (String ext)}
 %\description
-% This is a hook called by find_file routines to set the mode
-% for the buffer. This function takes one parameter, the filename extension
-% and returns nothing.
+%  This is a hook called by find_file routines to set the mode
+%  for the buffer.  This function takes one parameter,
+%  the filename extension, and returns nothing.
 %!%-
-
 define mode_hook (ext)
 {
    variable n, mode;
@@ -2020,10 +1992,11 @@ define _toggle_buffer_flag (f)
 
 %!%+
 %\function{set_buffer_modified_flag}
-%\synopsis{set_buffer_modified_flag}
+%\synopsis{Sets buffer modified flag}
+%\usage{set_buffer_modified_flag}
 %\description
-% sets buf modified flag. If argument is 1, mark
-% buffer as modified.  If argument is 0, mark buffer as unchanged.
+%  If argument is 1, mark buffer as modified.
+%  If argument is 0, mark buffer as unchanged.
 %!%-
 define set_buffer_modified_flag ()
 {
@@ -2035,9 +2008,10 @@ define set_buffer_modified_flag ()
 %\synopsis{buffer_modified}
 %\usage{Int_Type buffer_modified ()}
 %\description
-%  returns non-zero if the buffer modified flag is set.  It returns zero
-%  if the buffer modified flag is not been set.  This works on the
-%  current buffer.  See also 'set_buffer_modified_flag'.
+%  Returns non-zero if the buffer modified flag is set.
+%  It returns zero if the buffer modified flag is not been set.
+%  This works on the current buffer.
+%\seealso{set_buffer_modified_flag}
 %!%-
 define buffer_modified ()
 {
@@ -2046,9 +2020,9 @@ define buffer_modified ()
 
 %!%+
 %\function{set_buffer_undo}
-%\synopsis{set_buffer_undo}
+%\synopsis{Set undo mode for buffer}
 %\description
-% set undo mode for buffer.  If argument is 1, undo is on.  0 turns it off
+%  If argument is 1, undo is on.  0 turns it off
 %!%-
 define set_buffer_undo ()
 {
@@ -2059,8 +2033,8 @@ define set_buffer_undo ()
 %\function{set_readonly}
 %\synopsis{set_readonly}
 %\description
-% Takes 1 parameter: 0 turn off readonly
-%                    1 turn on readonly
+%  Takes 1 parameter: 0 turn off readonly
+%                     1 turn on readonly
 %!%-
 define set_readonly ()
 {
@@ -2072,8 +2046,8 @@ define set_readonly ()
 %\synopsis{Test whether or not the buffer is in read-only mode}
 %\usage{Int_Type is_readonly ()}
 %\description
-% This function returns a non-zero value if the buffer is read-only;
-% otherwise it returns 0.
+%  This function returns a non-zero value if the buffer is read-only;
+%  otherwise it returns 0.
 %\seealso{set_readonly, getbuf_info, setbuf_info}
 %!%-
 define is_readonly ()
@@ -2086,8 +2060,8 @@ define is_readonly ()
 %\synopsis{Checks whether or not the buffer is in overwrite mode}
 %\usage{Int_Type is_overwrite_mode ()}
 %\description
-% This function returns a non-zero value if the buffer is in overwrite-mode;
-% otherwise it returns 0.
+%  This function returns a non-zero value if the buffer is in overwrite-mode;
+%  otherwise it returns 0.
 %\seealso{toggle_overwrite, getbuf_info, setbuf_info}
 %!%-
 define is_overwrite_mode ()
@@ -2100,8 +2074,8 @@ define is_overwrite_mode ()
 %\synopsis{set_overwrite}
 %\usage{set_overwrite (Int_Type x)}
 %\description
-% If the parameter \var{x} is non-zero, the buffer will be put in overwrite
-% mode; otherwise it will be ut in insert mode.
+%  If the parameter \var{x} is non-zero, the buffer will be put in overwrite
+%  mode; otherwise it will be ut in insert mode.
 %\seealso{toggle_overwrite, is_overwrite_mode, getbuf_info, setbuf_info}
 %!%-
 define set_overwrite ()
@@ -2114,8 +2088,8 @@ define set_overwrite ()
 %\synopsis{Toggle the buffer line endings between CRLF and LF}
 %\usage{toggle_crmode ()}
 %\description
-% The \var{toggle_crmode} function causes the line endings of the buffer to
-% alternate between CRLF and LF characters.
+%  The \sfun{toggle_crmode} function causes the line endings of the buffer
+%  to alternate between CRLF and LF characters.
 %\seealso{getbuf_info, setbuf_info}
 %!%-
 define toggle_crmode ()
@@ -2129,8 +2103,8 @@ define toggle_crmode ()
 %\synopsis{Toggle the readonly status of the buffer}
 %\usage{toggle_readonly ()}
 %\description
-% The \var{toggle_readonly} function toggles the read-only status of the
-% current buffer.
+%  The \sfun{toggle_readonly} function toggles the read-only status of the
+%  current buffer.
 %\seealso{set_readonly, is_readonly, getbuf_info, setbuf_info}
 %!%-
 define toggle_readonly()
@@ -2143,8 +2117,8 @@ define toggle_readonly()
 %\synopsis{Toggle the overwrite mode of the buffer}
 %\usage{toggle_overwrite ()}
 %\description
-% The \var{toggle_overwrite} function toggles the overwrite mode of the
-% current buffer.
+%  The \sfun{toggle_overwrite} function toggles the overwrite mode of the
+%  current buffer.
 %\seealso{set_overwrite, is_overwrite_mode, getbuf_info, setbuf_info}
 %!%-
 define toggle_overwrite()
@@ -2157,8 +2131,8 @@ define toggle_overwrite()
 %\synopsis{Toggle the undo mode of the buffer}
 %\usage{toggle_undo ()}
 %\description
-% The \var{toggle_undo} function toggles the undo mode of the
-% current buffer.
+%  The \sfun{toggle_undo} function toggles the undo mode of the
+%  current buffer.
 %\seealso{getbuf_info, setbuf_info}
 %!%-
 define toggle_undo()
@@ -2194,10 +2168,8 @@ define set_buffer_no_autosave ()
 
 %!%+
 %\function{toggle_line_number_mode}
-%\synopsis{toggle_line_number_mode}
+%\synopsis{Toggle the line number display state}
 %\usage{Void toggle_line_number_mode ();}
-%\description
-% This function toggles the line number display state on or off.
 %\seealso{set_line_number_mode}
 %!%-
 define toggle_line_number_mode ()
@@ -2248,9 +2220,9 @@ define set_color_scheme (scheme)
 %\synopsis{Create a color object to be customized by the user}
 %\usage{custom_color (color, fg, bg)}
 %\description
-% This function may be used to create a specified color object.  If the object
-% does not already exist, it will be given the specified foreground and
-% background colors.
+%  This function may be used to create a specified color object.
+%  If the object does not already exist, it will be given the
+%  specified foreground and background colors.
 %\seealso{custom_variable}
 %!%-
 define custom_color (color, fg, bg)
@@ -2281,8 +2253,8 @@ define set_emailaddress (s)
 %\variable{help_for_help_string}
 %\synopsis{help_for_help_string}
 %\description
-% string to display at bottom of screen upon JED startup and when
-% user executes the help function.
+%  String to display at bottom of screen upon JED startup and when
+%  user executes the help function.
 %!%-
 variable help_for_help_string;
 
@@ -2290,9 +2262,9 @@ help_for_help_string =
 #ifdef VMS
   "-> Help:H  Menu:?  Info:I  Apropos:A  Key:K  Where:W  Fnct:F  VMSHELP:M  Var:V";
 #elifdef IBMPC_SYSTEM
-"-> Help:H  Menu:?  Info:I  Apropos:A  Key:K  Where:W  Fnct:F  Var:V  Mem:M";
+  "-> Help:H  Menu:?  Info:I  Apropos:A  Key:K  Where:W  Fnct:F  Var:V  Mem:M";
 #else
-"-> Help:H  Menu:?  Info:I  Apropos:A  Key:K  Where:W  Fnct:F  Var:V  Man:M";
+  "-> Help:H  Menu:?  Info:I  Apropos:A  Key:K  Where:W  Fnct:F  Var:V  Man:M";
 #endif
 
 %%
@@ -2301,9 +2273,7 @@ help_for_help_string =
 
 %!%+
 %\variable{Help_File}
-%\synopsis{Help_File}
-%\description
-% name of the file to load when the help function is called.
+%\synopsis{Name of the file to load when the help function is called}
 %!%-
 variable Help_File = "jed.hlp";   %% other modes will override this.
 
@@ -2311,12 +2281,11 @@ variable Help_File = "jed.hlp";   %% other modes will override this.
 
 %!%+
 %\function{help}
-%\synopsis{help}
+%\synopsis{Pop up a window containing the specified help file}
 %\usage{Void help ([String_Type help_file])}
 %\description
-% This function pops up a window containing the specified help file.  If the
-% function was called with no arguments, the the file given by the \var{Help_File}
-% variable will be used.
+%  If the function was called with no arguments,
+%  then the file given by the \var{Help_File} variable will be used.
 %!%-
 define help ()
 {
@@ -2410,12 +2379,11 @@ ifnot (BATCH)
 %for compatability with older versions
 %!%+
 %\function{read_file_from_mini}
-%\synopsis{read_file_from_mini}
+%\synopsis{Prompt the user for a file name}
 %\usage{String read_file_from_mini (String p);}
 %\description
-% This function prompts the user for a file name using \var{p} as a prompt.
-% It reads a filename with completion from the mini-buffer and returns
-% it.
+%  This function reads a filename with completion from the mini-buffer
+%  and returns it. \var{p} is used as a prompt.
 %\seealso{read_with_completion, read_mini}
 %!%-
 define read_file_from_mini ()
@@ -2428,10 +2396,10 @@ define read_file_from_mini ()
 %\synopsis{read_string_with_completion}
 %\usage{String read_string_with_completion (prompt, dflt, list)}
 %\description
-% This function takes 3 String parameters and returns a String.  The
-% first parameter is used as the prompt, the second parameter is the
-% default value to be returned and the third parameter is a list to be used
-% for completions.  This list is simply a comma separated list of strings.
+%  This function takes 3 String parameters and returns a String.  The
+%  first parameter is used as the prompt, the second parameter is the
+%  default value to be returned and the third parameter is a list to be used
+%  for completions.  This list is simply a comma separated list of strings.
 %!%-
 define read_string_with_completion (prompt, dflt, list)
 {
@@ -2447,8 +2415,8 @@ define read_string_with_completion (prompt, dflt, list)
 %\variable{Startup_With_File}
 %\synopsis{Startup_With_File}
 %\description
-% If non-zero, startup by asking user for a filename if one was
-% not specified on the command line.
+%  If non-zero, startup by asking user for a filename if one was
+%  not specified on the command line.
 %!%-
 variable Startup_With_File = 0;
 
@@ -2457,9 +2425,9 @@ variable Startup_With_File = 0;
 %\function{jed_startup_hook}
 %\synopsis{jed_startup_hook}
 %\description
-% Function that gets executed right before JED enters its main editing
-% loop.  This is for last minute modifications of data structures that
-% did not exist when startup files were loaded.
+%  Function that gets executed right before JED enters its main editing
+%  loop.  This is for last minute modifications of data structures that
+%  did not exist when startup files were loaded.
 %!%-
 define jed_startup_hook()
 {
@@ -2601,10 +2569,8 @@ _add_completion ("toggle_undo", "calendar", "trim_buffer",
 %{{{ save_buffer()
 %!%+
 %\function{save_buffer}
-%\synopsis{save_buffer}
+%\synopsis{Save current buffer}
 %\usage{Void save_buffer ();}
-%\description
-% Save current buffer.
 %!%-
 define save_buffer()
 {
@@ -2712,9 +2678,9 @@ define downcase_word()
 %\synopsis{push_visible_mark}
 %\usage{Void push_visible_mark ();}
 %\description
-% This function is performs the same task as \var{push_mark} except that the
-% region between this mark and the cursor position will be highlighted.
-% Such a mark is said to be a visible mark.
+%  This function is performs the same task as \sfun{push_mark} except that the
+%  region between this mark and the cursor position will be highlighted.
+%  Such a mark is said to be a visible mark.
 %\seealso{push_mark, pop_mark, set_mark_cmd}
 %!%-
 define push_visible_mark ()
@@ -2728,9 +2694,9 @@ define push_visible_mark ()
 %\synopsis{set_mark_cmd}
 %\usage{Void set_mark_cmd ();}
 %\description
-% If a mark is already set, and that mark is a visible mark, then this
-% function will remove that mark.  It will then push a visible mark onto
-% the mark stack.
+%  If a mark is already set, and that mark is a visible mark, then this
+%  function will remove that mark.  It will then push a visible mark onto
+%  the mark stack.
 %\seealso{push_visible_mark, pop_mark, smart_set_mark_cmd}
 %!%-
 define set_mark_cmd ()
@@ -2746,9 +2712,9 @@ define set_mark_cmd ()
 %\synopsis{smart_set_mark_cmd}
 %\usage{Void smart_set_mark_cmd ();}
 %\description
-% If the top mark is a visible mark, this function will remove that mark;
-% otherwise it will push a visible mark onto the mark stack.  Use of
-% this function has the effect of toggling a highlighted region.
+%  If the top mark is a visible mark, this function will remove that mark;
+%  otherwise it will push a visible mark onto the mark stack.  Use of
+%  this function has the effect of toggling a highlighted region.
 %\seealso{set_mark_cmd, push_mark, push_visible_mark}
 %!%-
 define smart_set_mark_cmd ()
@@ -2766,11 +2732,10 @@ define smart_set_mark_cmd ()
 %{{{ buffer_format_in_columns()
 %!%+
 %\function{buffer_format_in_columns}
-%\synopsis{buffer_format_in_columns}
+%\usage{Void buffer_format_in_columns (Void);}
 %\description
-% Prototype Void buffer_format_in_columns();
-% takes a buffer consisting of a single column of items and converts the
-% buffer to a multi-column format.
+%  Takes a buffer consisting of a single column of items and converts the
+%  buffer to a multi-column format.
 %!%-
 define buffer_format_in_columns()
 {
@@ -2825,8 +2790,8 @@ define set_fill_column ()
 %\synopsis{Rename the current buffer}
 %\usage{rename_buffer (String_Type new_name)}
 %\description
-% This function may be used to change the name of the current buffer to the
-% one specified by the \var{new_name} parameter.
+%  This function may be used to change the name of the current buffer to the
+%  one specified by the \var{new_name} parameter.
 %\seealso{setbuf_info, whatbuf}
 %!%-
 define rename_buffer (name)
@@ -2840,10 +2805,8 @@ define rename_buffer (name)
 %{{{ deln (n)
 %!%+
 %\function{deln}
-%\synopsis{deln}
+%\synopsis{Delete the next \var{n} characters.}
 %\usage{Void deln (Integer n);}
-%\description
-% delete the next 'n' characters.
 %!%-
 define deln (n)
 {
@@ -2986,8 +2949,8 @@ define find_file_read_only ()
 %\description
 %  This function may be used to enable the use of DFA syntax highlighting
 %  for one or more specified modes.  Each of the String_Type arguments must
-%  be the name of a mode.  The name of a buffer's mode is usually displayed on
-%  the status line.
+%  be the name of a mode.  The name of a buffer's mode is usually displayed
+%  on the status line.
 %\example
 %  To enable DFA syntax highlighting for perl and postscript modes, use
 %#v+
@@ -3011,8 +2974,8 @@ define enable_dfa_syntax_for_mode ()
 %\description
 %  This function may be used to disable the use of DFA syntax highlighting
 %  for one or more specified modes.  Each of the String_Type arguments must
-%  be the name of a mode.  The name of a buffer's mode is usually displayed on
-%  the status line.
+%  be the name of a mode.  The name of a buffer's mode is usually displayed
+%  on the status line.
 %\example
 %  To disable DFA syntax highlighting for C and S-Lang modes, use
 %#v+

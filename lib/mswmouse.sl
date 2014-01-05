@@ -165,10 +165,10 @@ custom_variable ("Mouse_Save_Point_Mode", 1);
 %\synopsis{Mouse_Save_Point_Mode}
 %\usage{Integer Mouse_Save_Point_Mode = 1;}
 %\description
-% If this variable is non-zero, the editing point will be restored to its
-% original position when the left button is used to copy a region to the
-% cutbuffer.  If the variable is zero, the current point is left at the
-% end of the copied region.
+%  If this variable is non-zero, the editing point will be restored to its
+%  original position when the left button is used to copy a region to the
+%  cutbuffer.  If the variable is zero, the current point is left at the
+%  end of the copied region.
 %!%-
 
 private variable Mouse_Save_Point_Window;

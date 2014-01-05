@@ -12,11 +12,11 @@
 \synopsis{Set the column at which wrapping occurs}
 \usage{Int_Type WRAP}
 \description
- The \var{WRAP} variable determines the column number at which
- wrapping will occur.  When entering text, if the current point goes
- beyond this column, the text will automatically wrap to the next
- line.  This will only happen for those buffers for which the wrap flag
- is set. 
+  The \var{WRAP} variable determines the column number at which
+  wrapping will occur.  When entering text, if the current point goes
+  beyond this column, the text will automatically wrap to the next
+  line.  This will only happen for those buffers for which the wrap flag
+  is set.
 \seealso{WRAP_INDENTS, getbuf_info, set_mode}
 \done
 
@@ -24,10 +24,10 @@
 \synopsis{Control indentation after wrapping}
 \usage{Int_Type WRAP_INDENTS}
 \description
- If this variable is non-zero, after a line is wrapped, the new line
- will start at the same indentation as the current one.  On the other
- hand, if the value of \var{WRAP_INDENTS} is zero, the new line will
- begin in the first column.
+  If this variable is non-zero, after a line is wrapped, the new line
+  will start at the same indentation as the current one.  On the other
+  hand, if the value of \var{WRAP_INDENTS} is zero, the new line will
+  begin in the first column.
 \done
 
 \function{del}
@@ -107,7 +107,7 @@
 \synopsis{Insert a character at the current position}
 \usage{Void insert_char (ULong_Type ch)}
 \description
- This function inserts the specified character into the buffer.
+  This function inserts the specified character into the buffer.
 \seealso{what_char, insert, insert_byte}
 \done
 
@@ -115,8 +115,8 @@
 \synopsis{Insert a byte into the buffer}
 \usage{Void insert_byte (UChar_Type ch)}
 \description
- This function inserts the specified byte into the buffer at the
- current position.
+  This function inserts the specified byte into the buffer at the
+  current position.
 \seealso{what_char, insert_char, insert}
 \done
 

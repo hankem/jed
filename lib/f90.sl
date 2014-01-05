@@ -998,11 +998,11 @@ public define f90_fixed_format_mode ()
 
 %!%+
 %\function{f90_mode}
-%\synopsis{f90_mode}
+%\usage{f90_mode}
 %\description
-% Mode designed for the purpose of editing F90 files.
-% After the mode is loaded, the hook 'f90_hook' is called.
-% Useful functions include:
+%  Mode designed for the purpose of editing F90 files.
+%  After the mode is loaded, the hook 'f90_hook' is called.
+%  Useful functions include:
 %#v+
 %  Function:                    Default Binding:
 %   f90_continue_newline          ESC RETURN
@@ -1026,7 +1026,7 @@ public define f90_fixed_format_mode ()
 %   f90_mark_subprogram           ESC ^H
 %     mark the current subroutine/function
 %#v-
-% Variables include:
+%  Variables include:
 %#v+
 %   F90_Continue_Char   --- character used as a continuation character.
 %     By default, its value is "&"

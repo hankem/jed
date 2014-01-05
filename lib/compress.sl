@@ -115,12 +115,11 @@ add_to_hook ("_jed_set_mode_hooks", &compressed_set_mode_hook);
 %\synopsis{Toggle auto-compression-mode}
 %\usage{auto_compression_mode ([Int_Type state [,&prev_state]])}
 %\description
-% The \var{auto_compression_mode} function toggles the auto-compression-mode
-% on or off. When on, files whose names end with \exmp{.gz}, \exmp{.Z}, or
-% \exmp{.bz2} will automatically uncompressed when read in, and compressed
-% when written out.
+%  The \sfun{auto_compression_mode} function toggles the auto-compression-mode
+%  on or off. When on, files whose names end with \exmp{.gz}, \exmp{.Z}, or \exmp{.bz2}
+%  will automatically uncompressed when read in, and compressed when
+%  written out.
 %!%-
-
 public define auto_compression_mode ()
 {
    if (_NARGS)

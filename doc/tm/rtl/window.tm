@@ -12,14 +12,14 @@
 \synopsis{Set the display mode for eight-bit characters}
 \usage{Int_Type DISPLAY_EIGHT_BIT}
 \description
- This variable determines how characters with the high bit set are to
- be displayed.  Specifically, any character whose value is greater than
- or equal to the value of \var{DISPLAY_EIGHT_BIT} is output to the terminal
- as is.  Characters with the high bit set but less than this value are
- sent to the terminal in a multiple character representation. For Unix
- and VMS systems the value should be set to 160.  This is because many
- terminals use the characters with values between 128 and 160 as eight
- bit control characters.  For other systems, it can be set to zero.
+  This variable determines how characters with the high bit set are to
+  be displayed.  Specifically, any character whose value is greater than
+  or equal to the value of \var{DISPLAY_EIGHT_BIT} is output to the terminal
+  as is.  Characters with the high bit set but less than this value are
+  sent to the terminal in a multiple character representation. For Unix
+  and VMS systems the value should be set to 160.  This is because many
+  terminals use the characters with values between 128 and 160 as eight
+  bit control characters.  For other systems, it can be set to zero.
 \seealso{META_CHAR}
 \done
 
@@ -27,10 +27,10 @@
 \synopsis{Control the display of the current time}
 \usage{Int_Type DISPLAY_TIME}
 \description
- If this variable is non-zero, the current time will be displayed on the
- status line if the format for the status line permits it.  If it is zero,
- the time will not be displayed even if the \exmp{%t} format string is part
- of the status line format.
+  If this variable is non-zero, the current time will be displayed on the
+  status line if the format for the status line permits it.  If it is zero,
+  the time will not be displayed even if the \exmp{%t} format string is part
+  of the status line format.
 \seealso{set_status_line}
 \done
 
@@ -59,7 +59,7 @@
 \usage{Int_Type HORIZONTAL_PAN}
 \description
   If the value of this variable is non-zero, the window will pan when
-  the cursor goes outside the border of the window.  More precisely, 
+  the cursor goes outside the border of the window.  More precisely,
   if the value is less than zero, the entire window will pan.  If the
   value is positive, only the current line will pan.  The
   absolute value of the number determines the panning increment.
@@ -95,9 +95,9 @@
 \synopsis{The string used for the status line}
 \usage{String_Type Status_Line_String}
 \description
- \var{Status_Line_String} is a read-only string variable that
- specifies the format of the status line for newly created buffers.
- To set the status line format, use the function \var{set_status_line}.
+  \var{Status_Line_String} is a read-only string variable that
+  specifies the format of the status line for newly created buffers.
+  To set the status line format, use the function \var{set_status_line}.
 \seealso{set_status_line}
 \done
 
@@ -105,9 +105,9 @@
 \synopsis{Set the current buffer TAB width}
 \usage{Int_Type TAB}
 \description
- This variable controls the tab width associated with the current
- buffer.  A value of zero means that tab characters are not expanded
- and that tabs are never used to produce whitespace.
+  This variable controls the tab width associated with the current
+  buffer.  A value of zero means that tab characters are not expanded
+  and that tabs are never used to produce whitespace.
 \seealso{TAB_DEFAULT, USE_TABS}
 \done
 
@@ -115,12 +115,12 @@
 \synopsis{Set the default tab width}
 \usage{Int_Type TAB_DEFAULT}
 \description
- The value of \var{TAB_DEFAULT} is the default tab setting given to
- all newly created buffers.  A value of zero means that tab characters
- are not expanded and that tabs are never used to produce whitespace.
+  The value of \var{TAB_DEFAULT} is the default tab setting given to
+  all newly created buffers.  A value of zero means that tab characters
+  are not expanded and that tabs are never used to produce whitespace.
 \notes
- A related variable \var{TAB} may be used to change the current
- buffer's tab setting.
+  A related variable \var{TAB} may be used to change the current
+  buffer's tab setting.
 \seealso{TAB, USE_TABS, TAB_DEFAULT}
 \done
 
@@ -128,9 +128,9 @@
 \synopsis{Top window's starting row}
 \usage{Int_Type}
 \description
- This read-only variable gives the value of the starting row of the top
- window.  If a menubar is present, the value will be \2, otherwise it
- will be \1.
+  This read-only variable gives the value of the starting row of the top
+  window.  If a menubar is present, the value will be \2, otherwise it
+  will be \1.
 \seealso{enable_top_status_line, window_info}
 \done
 
@@ -138,10 +138,10 @@
 \synopsis{Control the display of the end of buffer indicator}
 \usage{Int_Type}
 \description
- If this value of this variable is non-zero, the end of buffer
- indicator \exmp{"[EOB]"} will be displayed at the end of the buffer.  Such
- an indicator is used for various editor emulations such as the
- VAX/VMS EDT editor.
+  If this value of this variable is non-zero, the end of buffer
+  indicator \exmp{"[EOB]"} will be displayed at the end of the buffer.
+  Such an indicator is used for various editor emulations such as the
+  VAX/VMS EDT editor.
 \done
 
 \variable{WANT_SYNTAX_HIGHLIGHT}
@@ -340,7 +340,7 @@
 \synopsis{Get the scroll column for the current window}
 \usage{Int_Type get_scroll_column ()}
 \description
- This function returns the scroll column for the current window.
+  This function returns the scroll column for the current window.
 \seealso{set_scroll_column}
 \done
 
@@ -348,7 +348,7 @@
 \synopsis{Set the scroll column for the current window}
 \usage{set_scroll_column (Int_Type col)}
 \description
- This function may be used to set the scroll column of the current
- window.
+  This function may be used to set the scroll column of the current
+  window.
 \seealso{get_scroll_column}
 \done

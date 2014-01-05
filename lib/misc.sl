@@ -6,8 +6,8 @@
 %\synopsis{make_tmp_buffer_name}
 %\usage{String make_tmp_buffer_name (String base);}
 %\description
-% Generates a unique buffer name using the string 'base' for the beginning
-% of the name.  The buffer name is returned.  The buffer is not created.
+%  Generates a unique buffer name using the string \var{base} for the beginning
+%  of the name.  The buffer name is returned.  The buffer is not created.
 %!%-
 define make_tmp_buffer_name (tmp)
 {
@@ -53,9 +53,9 @@ define misc_do_write_to_file (str, file, write_function)
 %\synopsis{append_string_to_file}
 %\usage{Integer append_string_to_file (String str, String file);}
 %\description
-% The string 'str' is appended to file 'file'.  This function returns -1
-% upon failure or the number of lines written upon success.
-% See append_region_to_file for more information.
+%  The string \var{str} is appended to file \var{file}.  This function returns -1
+%  upon failure or the number of lines written upon success.
+%  See append_region_to_file for more information.
 %!%-
 define append_string_to_file (str, file)
 {
@@ -67,9 +67,9 @@ define append_string_to_file (str, file)
 %\synopsis{write_string_to_file}
 %\usage{Integer write_string_to_file (String str, String file);}
 %\description
-% The string 'str' is written to file 'file'.  This function returns -1
-% upon failure or the number of lines written upon success.
-% This function does not modify a buffer visiting the file.
+%  The string \var{str} is written to file \var{file}.  This function returns -1
+%  upon failure or the number of lines written upon success.
+%  This function does not modify a buffer visiting the file.
 %!%-
 define write_string_to_file (str, file)
 {
@@ -186,4 +186,3 @@ define directory (dirspec)
      ;
    length (files);
 }
-

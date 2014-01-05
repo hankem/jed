@@ -2,7 +2,7 @@
 \synopsis{Replace the rectangle defined by point and mark with spaces}
 \usage{Void blank_rect ()}
 \description
-   The \var{blank_rect} function replaces all text in the rectangle defined by
+  The \var{blank_rect} function replaces all text in the rectangle defined by
   the current editing point and the mark by spaces.
 \seealso{push_mark, kill_rect, insert_rect, copy_rect}
 \done

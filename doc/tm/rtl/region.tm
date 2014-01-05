@@ -2,13 +2,13 @@
 \synopsis{The size of the internal kill buffer array}
 \usage{Int_Type KILL_ARRAY_SIZE}
 \description
- This variable contains the value of the size of the internal kill
- array of character strings.  Any number from zero up to but not
- including the value of \var{KILL_ARRAY_SIZE} may be used as an
- argument in the functions that manipulate this array.
+  This variable contains the value of the size of the internal kill
+  array of character strings.  Any number from zero up to but not
+  including the value of \var{KILL_ARRAY_SIZE} may be used as an
+  argument in the functions that manipulate this array.
 \notes
- This variable is a read-only variable and may not available on 16
- bit systems.
+  This variable is a read-only variable and may not available on 16
+  bit systems.
 \seealso{insert_from_kill_array, copy_region_to_kill_array, append_region_to_kill_array}
 \done
 
@@ -183,7 +183,7 @@
   characters in a region based on the mapping defined by the array.
   If an array element is \var{NULL}, then the corresponding character
   will not be replaced.
-  
+
   The \var{translate_region} function leaves the editing point at the
   end of the region.
 \example
@@ -197,7 +197,7 @@
     translate_region (a);
 #v-
   uses \var{translate_region} to replace the characters \var{'&'},
-  \var{'<'}, \var{'>'}, and \var{'$'} by the strings 
+  \var{'<'}, \var{'>'}, and \var{'$'} by the strings
   \exmp{"&amp;"}, \exmp{"&lt;"}, \exmp{"&gt;"}, and \exmp{"&dollar;"},
   respectively.
 \seealso{insert, delete, what_char, replace}

@@ -22,9 +22,9 @@ autoload ("c_indent_buffer", "krconv");
 %\variable{C_Autoinsert_CPP_Comments}
 %\synopsis{Control insertion of C++ comments}
 %\description
-% In c-mode, if a line starts with //, then pressing return will cause the
-% next line to also start with //.  This feature is useful for writing
-% multiple comment lines using C++ style comments.
+%  In c-mode, if a line starts with //, then pressing return will cause
+%  the next line to also start with //.  This feature is useful for writing
+%  multiple comment lines using C++ style comments.
 %\seealso{c_mode}
 %!%-
 custom_variable ("C_Autoinsert_CPP_Comments", 1);
@@ -34,10 +34,11 @@ custom_variable ("C_Autoinsert_CPP_Comments", 1);
 %\synopsis{Additional indentation to switch blocks}
 %\usage{C_Switch_Offset = 0}
 %\description
-% This function may be used to increase the indentation of code
-% within a \exmp{switch} block.  Since this also affects the
-% indentation of \exmp{case} statements, \svar{C_Colon_Offset} may
-% need to be adjusted.
+%  This function may be used to increase the indentation of code
+%  within a \exmp{switch} block.  Since this also affects the
+%  indentation of \exmp{case} statements, \svar{C_Colon_Offset} may
+%  need to be adjusted.
+%\seealso{c_mode}
 %\seealso{C_Colon_Offset}
 %!%-
 custom_variable ("C_Switch_Offset", 0);
@@ -47,23 +48,20 @@ custom_variable ("C_Switch_Offset", 0);
 %\synopsis{Indentation offset for code in an outer block}
 %\usage{C_Outer_Block_Offset = 0}
 %\description
-% The value of this variable may be used to adjust the indentation of
-% code in an outer block.  An outer block is one that has its opening
-% brace at the start of a line.  The values of this variable does not
-% affect the indentation of C++ classes and namespaces.
-%\example
-%\notes
-%\seealso{}
+%  The value of this variable may be used to adjust the indentation of
+%  code in an outer block.  An outer block is one that has its opening
+%  brace at the start of a line.  The values of this variable does not
+%  affect the indentation of C++ classes and namespaces.
+%\seealso{c_mode}
 %!%-
 custom_variable ("C_Outer_Block_Offset", 0);
 
 %!%+
 %\variable{C_Namespace_Offset}
-%\synopsis{C_Namespace_Offset}
+%\usage{Integer C_Namespace_Offset = 3;}
 %\description
-% Integer C_Namespace_Offset = 3;
-% This variable may be changed to adjust the indentation of members
-% inside of a class declaration block.
+%  This variable may be changed to adjust the indentation of members
+%  inside of a class declaration block.
 %\seealso{c_mode}
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_Class_Offset, C_INDENT, C_Namespace_Offset}
 %!%-
@@ -71,11 +69,10 @@ custom_variable ("C_Namespace_Offset", 3);
 
 %!%+
 %\variable{C_Class_Offset}
-%\synopsis{C_Class_Offset}
+%\usage{Integer C_Class_Offset = 3;}
 %\description
-% Integer C_Class_Offset = 3;
-% This variable may be changed to adjust the indentation of members
-% inside of a class declaration block.
+%  This variable may be changed to adjust the indentation of members
+%  inside of a class declaration block.
 %\seealso{c_mode}
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_INDENT, C_Namespace_Offset}
 %!%-
@@ -86,12 +83,12 @@ custom_variable ("C_Class_Offset", 3);
 %\synopsis{Control indentation of continued parameter list}
 %\usage{Integer C_Param_Offset_Max = -1}
 %\description
-% This variable may be changed to adjust the indentation of parameters
-% in a function call that extends over multiple lines.
+%  This variable may be changed to adjust the indentation of parameters
+%  in a function call that extends over multiple lines.
 %
-% If the value is less than 0, the feature is off, otherwise
-% it holds the max number of spaces to indent the parameters on
-% the continuation line(s).
+%  If the value is less than 0, the feature is off, otherwise
+%  it holds the max number of spaces to indent the parameters on
+%  the continuation line(s).
 %\seealso{c_mode}
 %\seealso{C_BRA_NEWLINE, C_BRACE, C_INDENT}
 %!%-
@@ -102,9 +99,8 @@ custom_variable ("C_Param_Offset_Max", -1);
 %\synopsis{Control indentation of pre-processor macros}
 %\usage{Integer C_Macro_Indent = 3}
 %\description
-% This variable may be changed to adjust the indentation of
-% pre-processor macros.
-%
+%  This variable may be changed to adjust the indentation of
+%  pre-processor macros.
 %\seealso{c_mode}
 %\seealso{C_INDENT}
 %!%-
@@ -115,20 +111,19 @@ custom_variable ("C_Macro_Indent", 3);
 %\synopsis{Control indentation within lone brackets}
 %\usage{Integer C_Bracket_Indent = 4}
 %\description
-% Control the alignment of within parenthetic content that start with a lone
-% left parenthesis. A value greater than zero uses C_INDENT to determine the
-% indentation level. Additionally, common operators are outdented.
+%  Control the alignment of within parenthetic content that start with a lone
+%  left parenthesis. A value greater than zero uses C_INDENT to determine the
+%  indentation level. Additionally, common operators are outdented.
 %
-% e.g.,
-%    while
-%    (
-%        expr1
-%      + expr2
-%     == expr3
-%    ) ...
+%  e.g.,
+%     while
+%     (
+%         expr1
+%       + expr2
+%      == expr3
+%     ) ...
 %
-% A value less than 1 turns this feature off.
-%
+%  A value less than 1 turns this feature off.
 %\seealso{c_mode}
 %\seealso{C_INDENT}
 %!%-
@@ -139,11 +134,12 @@ custom_variable ("C_Bracket_Indent", 4);
 %\synopsis{Set labels to indent relative to block}
 %\usage{C_Label_Indents_Relative = 0;}
 %\description
-% If the value of this variable is non-zero, then label statements
-% (goto targets) will get indented by the value of the
-% \svar{C_Label_Offset} variable relative to the enclosing block.
-% Otherwise, \svar{C_Label_Offset} will be interpreted as an absolute
-% offset from the beginning of the line.
+%  If the value of this variable is non-zero, then label statements
+%  (goto targets) will get indented by the value of the
+%  \svar{C_Label_Offset} variable relative to the enclosing block.
+%  Otherwise, \svar{C_Label_Offset} will be interpreted as an absolute
+%  offset from the beginning of the line.
+%\seealso{c_mode}
 %\seealso{C_Label_Offset, C_Colon_Offset}
 %!%-
 custom_variable ("C_Label_Indents_Relative", 0);
@@ -153,10 +149,11 @@ custom_variable ("C_Label_Indents_Relative", 0);
 %\synopsis{Controls the indentation of label statements}
 %\usage{C_Label_Offset = 0;}
 %\description
-% The value of this variable controls the indentation of (goto) label
-% statements.  It is interpreted as an absolute or relative offset
-% according to the \svar{C_Label_Indents_Relative} variable.  It does
-% not affect the indentation of \exmp{case} statements.
+%  The value of this variable controls the indentation of (goto) label
+%  statements.  It is interpreted as an absolute or relative offset
+%  according to the \svar{C_Label_Indents_Relative} variable.  It does
+%  not affect the indentation of \exmp{case} statements.
+%\seealso{c_mode}
 %\seealso{C_Label_Indents_Relative, C_Colon_Offset}
 %!%-
 custom_variable ("C_Label_Offset", 0);
@@ -1664,34 +1661,33 @@ define c_mode_common ()
 %\synopsis{c_mode}
 %\usage{Void cmode ();}
 %\description
-% This is a mode that is dedicated to facilitate the editing of C language files.
-% Functions that affect this mode include:
+%  This is a mode that is dedicated to facilitate the editing of C language files.
+%  Functions that affect this mode include:
 %#v+
-%  function:             default binding:
-%  c_insert_bra               {
-%  c_insert_ket               }
-%  newline_and_indent         RETURN
-%  indent_line                TAB
-%  goto_match                 Ctrl-\
-%  c_make_comment             ESC ;
-%  c_top_of_function          ESC Ctrl-A
-%  c_end_of_function          ESC Ctrl-E
-%  c_mark_function            ESC Ctrl-H
+%   function:             default binding:
+%   c_insert_bra               {
+%   c_insert_ket               }
+%   newline_and_indent         RETURN
+%   indent_line                TAB
+%   goto_match                 Ctrl-\
+%   c_make_comment             ESC ;
+%   c_top_of_function          ESC Ctrl-A
+%   c_end_of_function          ESC Ctrl-E
+%   c_mark_function            ESC Ctrl-H
 %#v-
-% Variables affecting indentation include:
+%  Variables affecting indentation include:
 %#v+
-%  C_INDENT
-%  C_BRACE
-%  C_BRA_NEWLINE
-%  C_CONTINUED_OFFSET
-%  C_Comment_Column  (used by c_make_comment)
-%  C_Class_Offset
-%  C_Switch_Offset
-%  C_Colon_Offset
-%  C_Namespace_Offset
+%   C_INDENT
+%   C_BRACE
+%   C_BRA_NEWLINE
+%   C_CONTINUED_OFFSET
+%   C_Comment_Column  (used by c_make_comment)
+%   C_Class_Offset
+%   C_Switch_Offset
+%   C_Colon_Offset
+%   C_Namespace_Offset
 %#v-
-%
-% Hooks: \var{c_mode_hook}
+%  Hooks: \var{c_mode_hook}
 %\seealso{c_set_style}
 %!%-
 define c_mode ()
@@ -1712,8 +1708,8 @@ define c_mode ()
 %\synopsis{Set the indentation style for C mode}
 %\usage{Void c_set_style (style)}
 %\description
-% This function sets the C mode indentation variables appropriate for
-% a common indentation style.  Currently supported styles include:
+%  This function sets the C mode indentation variables appropriate for
+%  a common indentation style.  Currently supported styles include:
 %#v+
 %    "gnu"      Style advocated by GNU
 %    "k&r"      Style popularized by Kernighan and Ritchie

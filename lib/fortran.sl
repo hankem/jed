@@ -408,11 +408,11 @@ set_fortran_comment_chars ($1, "^0-9 \t\n");
 
 %!%+
 %\function{fortran_mode}
-%\synopsis{fortran_mode}
+%\usage{fortran_mode}
 %\description
-% Mode designed for the purpose of editing FORTRAN files.
-% After the mode is loaded, the hook 'fortran_hook' is called.
-% Useful functions include
+%  Mode designed for the purpose of editing FORTRAN files.
+%  After the mode is loaded, the hook 'fortran_hook' is called.
+%  Useful functions include
 %
 %  Function:                    Default Binding:
 %   fortran_continue_newline          ESC RETURN
@@ -436,7 +436,7 @@ set_fortran_comment_chars ($1, "^0-9 \t\n");
 %   fortran_mark_subprogram           ESC ^H
 %     mark the current subroutine/function
 %
-% Variables include:
+%  Variables include:
 %   Fortran_Continue_Char   --- character used as a continuation character.
 %     By default, its value is "&"
 %   Fortran_Comment_String  --- string used by 'fortran_comment' to

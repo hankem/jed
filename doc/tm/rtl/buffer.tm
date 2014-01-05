@@ -267,7 +267,7 @@
            setbuf_info (file, dir, name, flags);
         }
 #v-
-  may be used to turn on overwrite mode for the current buffer. 
+  may be used to turn on overwrite mode for the current buffer.
 
   Advanced S-Lang programmers exploit the fact that S-Lang is a stack
   based language and simply write the above function as:

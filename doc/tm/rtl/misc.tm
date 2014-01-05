@@ -2,11 +2,11 @@
 \synopsis{Non-Zero if in Batch Mode}
 \usage{Int_Type BATCH (read-only)}
 \description
- The value of \var{BATCH} will be 0 if the editor is run
- in interactive or full-screen mode.  It will be \1 if the editor is
- in batch mode (via the \exmp{-batch} comment line argument).  If the
- editor is in script mode (via \exmp{-script}), then the value of
- \var{BATCH} will be \2.
+  The value of \var{BATCH} will be 0 if the editor is run
+  in interactive or full-screen mode.  It will be \1 if the editor is
+  in batch mode (via the \exmp{-batch} comment line argument).  If the
+  editor is in script mode (via \exmp{-script}), then the value of
+  \var{BATCH} will be \2.
 \done
 
 \variable{JED_ROOT}
@@ -181,13 +181,13 @@
 \synopsis{Quit the editor immediately: no autosave, no hooks}
 \usage{Void quit_jed ([ status ])}
 \description
- This function quits the editor immediately without saving any buffers
- and without any exit hooks called.  The function \ifun{exit_jed}
- should be called when it is desired to exit in a safe way.
+  This function quits the editor immediately without saving any buffers
+  and without any exit hooks called.  The function \ifun{exit_jed}
+  should be called when it is desired to exit in a safe way.
 
- The exit status of the program may be specified via the optional
- integer argument.  If called with no argument, a value of 0 will be
- used as the exit status.
+  The exit status of the program may be specified via the optional
+  integer argument.  If called with no argument, a value of 0 will be
+  used as the exit status.
 \seealso{exit_jed}
 \done
 
@@ -229,10 +229,10 @@
 \synopsis{Add the current position to the undo stack}
 \usage{set_undo_position ()}
 \description
- This function adds the current position to the buffer's undo stack.
- Occasionally this may be necessary when using \ifun{narrow_to_region}
- to prevent the cursor from moving to the beginning or the end
- of a previously narrowed region during "undo".
+  This function adds the current position to the buffer's undo stack.
+  Occasionally this may be necessary when using \ifun{narrow_to_region}
+  to prevent the cursor from moving to the beginning or the end
+  of a previously narrowed region during "undo".
 \seealso{narrow_to_region}
 \done
 

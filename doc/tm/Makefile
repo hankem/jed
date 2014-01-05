@@ -51,3 +51,16 @@ install: $(HLP_FILES)
 	$(CP) $(HLP_FILES) ../hlp
 clean:
 	-rm -f *~ *.dvi *.log *.aux *.toc rtl/*.BAK rtl/*~ *.html *.txt *.hlp
+check: help
+	@awk 'NF>0 {					\
+  if(substr($$0,1,1)!=" ")				\
+    topic = $$1;					\
+  else if(substr($$0,1,2)!="  "				\
+	&& $$0!=" SYNOPSIS"				\
+	&& $$0!=" USAGE"				\
+	&& $$0!=" DESCRIPTION"				\
+	&& $$0!=" EXAMPLE"				\
+	&& $$0!=" NOTES"				\
+	&& $$0!=" SEE ALSO")				\
+    printf("%s @ %s\n%s\n", topic, FILENAME, $$0);	\
+} ' $(HLP_FILES)

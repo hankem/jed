@@ -23,8 +23,8 @@
     _jed_suspend_hooks
     _jed_write_region_hooks
 #v-
- See the file \var{hooks.txt} in the main \jed distribution for more
- information.
+  See the file \var{hooks.txt} in the main \jed distribution for more
+  information.
 \seealso{append_to_hook, remove_from_hook}
 \done
 
@@ -51,20 +51,20 @@
 \synopsis{Execute the functions in a hook chain}
 \usage{_jed_run_hooks (String_Type hook_name, Integer_Type mode [,Array_Type args])}
 \description
- \ifun{_jed_run_hooks} executes the functions registered for \var{hook_name}.
- The argument \exmp{mode} defines which functions are called:
+  \ifun{_jed_run_hooks} executes the functions registered for \var{hook_name}.
+  The argument \exmp{mode} defines which functions are called:
 #v+
   JED_HOOKS_RUN_ALL
      all functions; no function should return a value.
   JED_HOOKS_RUN_UNTIL_0
-     Run until a function returns the value 0; every function must return 
-     an integer value.
+     Run until a function returns the value 0;
+     every function must return an integer value.
   JED_HOOKS_RUN_UNTIL_NON_0
-     Run until a function returns a non-zero
-      value; every function must return an integer value.
+     Run until a function returns a non-zero value;
+     every function must return an integer value.
 #v-
- If the third argument is given, then it must be an array of strings
- to be passed as arguments to the the hook-functions. 
+  If the third argument is given, then it must be an array of strings
+  to be passed as arguments to the the hook-functions.
 \seealso{append_to_hook, add_to_hook}
 \done
 
@@ -122,7 +122,6 @@
               movement functions would have generated an end of buffer or beginning of
               buffer error.  It is passed an integer that indicates which function
               would have generated the error.  Specifically:
-       
                        -1  previous_line_cmd
                        -2  previous_char_cmd
                        -3  page_up
@@ -138,7 +137,7 @@
          "forward_paragraph_hook", "backward_paragraph_hook"
          "format_paragraph_hook"
 #v-
- See the file jed/doc/hooks.txt for more information and examples.
+  See the file jed/doc/hooks.txt for more information and examples.
 \seealso{unset_buffer_hook, mouse_set_default_hook, get_buffer_hook}
 \done
 

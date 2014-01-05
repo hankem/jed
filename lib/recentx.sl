@@ -1,10 +1,10 @@
-% This file is like recent.sl, except that it logs files according to 
+% This file is like recent.sl, except that it logs files according to
 % filename extension.  It draws upon the ideas in recent.sl, as well
 % as upon those of the version at
 % <http://jedmodes.sourceforge.net/mode/recent>.
 %
 % To make use of this file, put the following in your .jedrc file:
-% 
+%
 %    require ("recentx");
 %    Recentx_Cache_Filename = ".jedrecent";
 %    Recentx_Max_Files = 15;     % The number of files per extension
@@ -21,13 +21,13 @@ custom_variable ("Recentx_Cache_Filename", ".jedrecent");
 %\synopsis{The name of the file used for the recent file cache}
 %\usage{Recentx_Cache_Filename = ".jedrecent";}
 %\description
-% This value of this variable specifies the name of the cache file
-% used for recently accessed files.  If the filename is given
-% as a relative path, it will be taken as relative to value of the
-% Jed_Home_Directory variable, which typically coincides with the
-% user's HOME directory.
+%  This value of this variable specifies the name of the cache file
+%  used for recently accessed files.  If the filename is given as
+%  a relative path, it will be taken as relative to value of the
+%  \var{Jed_Home_Directory} variable, which typically coincides with
+%  the user's HOME directory.
 %\notes
-% This variable is defined in \file{recentx.sl}.
+%  This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Exclude_Patterns, Recentx_Max_Files, Recentx_Use_Cache}
 %!%-
 
@@ -35,12 +35,12 @@ custom_variable ("Recentx_Use_Cache", 1);
 %!%+
 %\variable{Recentx_Use_Cache}
 %\synopsis{Turn on/off caching of recent filenames}
-%\usage{Recentx_Use_Cache=1;}
+%\usage{Recentx_Use_Cache = 1;}
 %\description
-% If non-zero, the recent-filename-cache will be enabled.  Otherwise,
-% caching will be turned off.
+%  If non-zero, the recent-filename-cache will be enabled.  Otherwise,
+%  caching will be turned off.
 %\notes
-% This variable is defined in \file{recentx.sl}. 
+%  This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Exclude_Patterns, Recentx_Max_Files, Recentx_Cache_Filename}
 %!%-
 
@@ -48,14 +48,14 @@ custom_variable ("Recentx_Max_Files", 15);
 %!%+
 %\variable{Recentx_Max_Files}
 %\synopsis{Set the maximum number of recent-files to cache per extension}
-%\usage{Recentx_Max_Files=15;}
+%\usage{Recentx_Max_Files = 15;}
 %\description
-% The value of this variable specifies the maximum number of number of
-% files per extension to store in the recent-files-cache.  The maximum number
-% of filenames in the cache will be the product of the number of
-% extensions and the value of this variable.
+%  The value of this variable specifies the maximum number of number of
+%  files per extension to store in the recent-files-cache.  The maximum
+%  number of filenames in the cache will be the product of the number of
+%  extensions and the value of this variable.
 %\notes
-% This variable is defined in \file{recentx.sl}.
+%  This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Exclude_Patterns, Recentx_Cache_Filename, Recentx_Use_Cache}
 %!%-
 
@@ -66,8 +66,8 @@ custom_variable ("Recentx_Cache_Exclude_Patterns", {});
 %\usage{Recentx_Cache_Exclude_Patterns = \{...\};}
 %\description
 %  The value of this variable is a list of regular expressions such that
-%  if a pathname matches any of the patterns, the file will be
-%  excluded from the recent-files-cache.
+%  if a pathname matches any of the patterns, the file will be excluded
+%  from the recent-files-cache.
 %\example
 %#v+
 %   variable Recentx_Cache_Exclude_Patterns = {"^/tmp/", "\\.tmp$"};
@@ -75,7 +75,7 @@ custom_variable ("Recentx_Cache_Exclude_Patterns", {});
 %  This example excludes any file in the /tmp directory, or any file
 %  name with the extension ".tmp".
 %\notes
-% This variable is defined in \file{recentx.sl}.
+%  This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Ext_Exclude_Patterns, Recentx_Max_Files, Recentx_Cache_Filename, Recentx_Use_Cache}
 %!%-
 
@@ -95,7 +95,7 @@ custom_variable ("Recentx_Cache_Ext_Exclude_Patterns", {});
 %  This example excludes any file whose extension ends in \exmp{~}, or
 %  is \exmp{"tmp"}, or consists entirely of digits.
 %\notes
-% This variable is defined in \file{recentx.sl}.
+%  This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Exclude_Patterns, Recentx_Cache_Filename, Recentx_Use_Cache}
 %!%-
 
@@ -282,7 +282,7 @@ private define display_recent_files_menu (popup, files)
    foreach (files)
      {
 	variable file = ();
-	menu_append_item (popup, sprintf ("&%c %s", i, file), 
+	menu_append_item (popup, sprintf ("&%c %s", i, file),
 			  &menu_select_file_callback, file);
 	% check - what should we use?
 	switch (i)

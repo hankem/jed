@@ -259,27 +259,27 @@ definekey ("bufed_help",	"?",	$1);
 
 %!%+
 %\function{bufed}
-%\synopsis{bufed}
+%\usage{bufed}
 %\description
-% Mode designed to aid in navigating through multiple buffers
-% patterned somewhat after dired.
+%  Mode designed to aid in navigating through multiple buffers
+%  patterned somewhat after dired.
 %
-% To invoke Bufed, do \var{M-x bufed} or bind to \var{C-x C-b} (emacs)
+%  To invoke Bufed, do \var{M-x bufed} or bind to \var{C-x C-b} (emacs)
 %
-% \var{g}	Update the buffer listing.
+%  \var{g}	Update the buffer listing.
 %
-% \var{k}	Kill the buffer described on the current line, like typing
-% 	\var{M-x kill_buffer} and supplying that buffer name.
+%  \var{k}	Kill the buffer described on the current line, like typing
+%	\var{M-x kill_buffer} and supplying that buffer name.
 %
-% \var{s}	Save the buffer described on the current line.
+%  \var{s}	Save the buffer described on the current line.
 %
-% \var{f}, \var{SPC}, \var{CR}, \var{TAB}
-% 	Visit the buffer described on the current line.
-% 	\var{f} and \var{SPC} will create a new window if required.
-% 	\var{CR} will use the current window.
-% 	\var{TAB} will revert to a single window.
+%  \var{f}, \var{SPC}, \var{CR}, \var{TAB}
+%	Visit the buffer described on the current line.
+%	\var{f} and \var{SPC} will create a new window if required.
+%	\var{CR} will use the current window.
+%	\var{TAB} will revert to a single window.
 %
-% \var{Q}	Quit bufed mode.
+%  \var{Q}	Quit bufed mode.
 %!%-
 define bufed ()
 {

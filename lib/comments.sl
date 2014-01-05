@@ -18,20 +18,20 @@ private define extract_major_mode (mode)
 %\synopsis{Get comment information according to mode}
 %\usage{Struct_Type = get_comment_info ( [mode] ); }
 %\description
-% Retrieves the comment information according to the optional \exmp{mode}
-% argument, or for the present mode if \exmp{mode} is not present.
-% Every mode that wants to use this function should provide comment information
-% using the \sfun{set_comment_info} function.
+%  Retrieves the comment information according to the optional \exmp{mode}
+%  argument, or for the present mode if \exmp{mode} is not present.
+%  Every mode that wants to use this function should provide comment information
+%  using the \sfun{set_comment_info} function.
 %
-% The returned value is a structure with the following fields:
+%  The returned value is a structure with the following fields:
 %#v+
 %     cbeg       % begin comment string
 %     cend       % end comment string
 %     flags      % flags
 %     column     % preferred column for comments
 %#v-
-% If comment information does not exist for the mode, then \ivar{NULL} will
-% be returned.
+%  If comment information does not exist for the mode, then \ivar{NULL} will
+%  be returned.
 %\seealso{set_comment_info, comment_region, comment_line, uncomment_region}
 %!%-
 public define get_comment_info ()
@@ -58,13 +58,13 @@ public define get_comment_info ()
 %\synopsis{Set comment information for a mode}
 %\usage{set_comment_info ([mode,] cbeg, cend, flags)}
 %\description
-% This function sets comment information for a specified mode. If the
-% optional mode argument is not present, the current mode will be used.  The
-% other 3 required arguments represent the comment start string (\exmp{cbeg}),
-% the comment end string (\exmp{cend}), and an integer flags argument that
-% indications how these strings are to be used by the \sfun{comment_region}
-% function.  In particular, \exmp{flags} is a bitmapped integer whose bits
-% have the following meaning:
+%  This function sets comment information for a specified mode.  If the
+%  optional mode argument is not present, the current mode will be used.
+%  The other 3 required arguments represent the comment start string
+%  (\exmp{cbeg}), the comment end string (\exmp{cend}), and an integer flags argument
+%  that indications how these strings are to be used by the \sfun{comment_region}
+%  function.  In particular, \exmp{flags} is a bitmapped integer whose bits
+%  have the following meaning:
 %#v+
 %     0x01  :  Comments will start at column defined by the region start,
 %               otherwise comments will be indented to the level of the

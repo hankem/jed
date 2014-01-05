@@ -27,11 +27,11 @@
 \synopsis{Set the input mode for 8 bit control characters}
 \usage{Int_Type DEC_8BIT_HACK}
 \description
- If set to a non-zero value, a input character between 128 and 160
- will be converted into a two character sequence: \var{ESC} and the
- character itself stripped of the high bit + 64.  The motivation
- behind this variable is to enable the editor to work with VTxxx
- terminals that are in eight bit mode.
+  If set to a non-zero value, a input character between 128 and 160
+  will be converted into a two character sequence: \var{ESC} and the
+  character itself stripped of the high bit + 64.  The motivation
+  behind this variable is to enable the editor to work with VTxxx
+  terminals that are in eight bit mode.
 \seealso{META_CHAR}
 \done
 
@@ -61,7 +61,7 @@
   generate a two character sequence: the first character is the
   value of the \var{FN_CHAR} itself followed by the character pressed.
 \notes
-   This variable is available only for Microsoft window systems.
+  This variable is available only for Microsoft window systems.
 \seealso{ALT_CHAR, META_CHAR}
 \done
 
@@ -69,10 +69,10 @@
 \synopsis{Control keyboard interrupt processing}
 \usage{Int_Type IGNORE_USER_ABORT}
 \description
- If set to a non-zero value, the keyboard interrupt character, e.g., 
- \exmp{Ctrl-G} will not trigger a S-Lang error.  When JED starts up,
- this value is set to \1 so that the user cannot interrupt the loading 
- of site.sl.  Later, it is set to 0.
+  If set to a non-zero value, the keyboard interrupt character, e.g.,
+  \exmp{Ctrl-G} will not trigger a S-Lang error.  When JED starts up,
+  this value is set to \1 so that the user cannot interrupt the loading
+  of site.sl.  Later, it is set to 0.
 \seealso{set_abort_char}
 \done
 
@@ -111,13 +111,13 @@
 \synopsis{Specify the meta-character}
 \usage{Int_Type META_CHAR}
 \description
- This variable determines how input characters with the high bit set
- are to be treated.  If \var{META_CHAR} is less than zero, the character
- is passed through un-processed.  However, if \var{META_CHAR} is greater
- than or equal to zero, an input character with the high bit set is
- mapped to a two character sequence.  The first character of the
- sequence is the character whose ascii value is \var{META_CHAR} and the
- second character is the input with its high bit stripped off.
+  This variable determines how input characters with the high bit set
+  are to be treated.  If \var{META_CHAR} is less than zero, the character
+  is passed through un-processed.  However, if \var{META_CHAR} is greater
+  than or equal to zero, an input character with the high bit set is
+  mapped to a two character sequence.  The first character of the
+  sequence is the character whose ascii value is \var{META_CHAR} and the
+  second character is the input with its high bit stripped off.
 \seealso{DISPLAY_EIGHT_BIT, DEC_8BIT_HACK}
 \done
 

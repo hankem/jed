@@ -338,27 +338,26 @@ ifnot (keymap_p ($1))
 
 %!%+
 %\function{tcl_mode}
-%\synopsis{tcl_mode}
+%\usage{Void tcl_mode ();}
 %\description
-% Protoytype: Void tcl_mode ();
-% This is a mode that is dedicated to facilitate the editing of Tcl language files.
-% See the source (tclmode.sl) for more info.
-% Functions that affect this mode include:
+%  This is a mode that is dedicated to facilitate the editing of Tcl language files.
+%  See the source (tclmode.sl) for more info.
+%  Functions that affect this mode include:
 %#v+
-%  function:             default binding:
-%  tcl_insert_bra             {
-%  tcl_insert_ket             }
-%  tcl_insert_comment         #
-%  newline_and_indent         RETURN
-%  indent_line                TAB
-%  tcl_indent_region          Ctrl-C Ctrl-Q
+%   function:             default binding:
+%   tcl_insert_bra             {
+%   tcl_insert_ket             }
+%   tcl_insert_comment         #
+%   newline_and_indent         RETURN
+%   indent_line                TAB
+%   tcl_indent_region          Ctrl-C Ctrl-Q
 %#v-
-% Variables affecting indentation include:
+%  Variables affecting indentation include:
 %#v+
-%  C_INDENT
-%  C_CONTINUED_OFFSET
+%   C_INDENT
+%   C_CONTINUED_OFFSET
 %#v-
-% Hooks: \var{tcl_mode_hook}
+%  Hooks: \var{tcl_mode_hook}
 %!%-
 define tcl_mode ()
 {

@@ -4,7 +4,7 @@
 \description
   The \var{gpm_disable_mouse} function may be used to inactivate
   support for the GPM mouse.
-\notes 
+\notes
   This function may not be available on all systems.
 \seealso{mouse_get_event_info}
 \done

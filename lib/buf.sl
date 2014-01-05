@@ -8,11 +8,11 @@
 
 %!%+
 %\function{save_buffers}
-%\synopsis{save_buffers}
+%\synopsis{Save all buffers associcated with a file}
 %\usage{Void save_buffers ();}
 %\description
-% Save all modified buffers that are associated with a file without
-% user intervention.
+%  Save all modified buffers that are associated with a file
+%  without user intervention.
 %!%-
 define save_buffers ()
 {
@@ -88,9 +88,9 @@ define recover_file ()
 %\synopsis{Cycle through the list of buffers}
 %\usage{Void next_buffer ()}
 %\description
-%   Switches to the next in the list of buffers.
+%  Switches to the next in the list of buffers.
 %\notes
-%   (This is the same function as mouse_next_buffer in mouse.sl)
+%  (This is the same function as mouse_next_buffer in mouse.sl)
 %\seealso{buffer_list, list_buffers}
 %!%-
 public define next_buffer ()

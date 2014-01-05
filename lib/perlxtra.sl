@@ -28,14 +28,14 @@
 %\synopsis{Perl_Flags}
 %\usage{String Perl_Flags = "-w";}
 %\description
-% Extra (or 'expert') command-line options (switches) for running Perl.
-% e.g., \var{'-I'} or \var{'-M'}.
-% You only need these if you know why you need these.
+%  Extra (or 'expert') command-line options (switches) for running Perl.
+%  e.g., \var{'-I'} or \var{'-M'}.
+%  You only need these if you know why you need these.
 %
-% Warnings are *always* enabled, regardless of what you try here.
-% If your code doesn't run with \var{'-w'}, re-write it so it does
-% or you're an expert and know which sections of code should have
-% warnings disabled anyhow.
+%  Warnings are *always* enabled, regardless of what you try here.
+%  If your code doesn't run with \var{'-w'}, re-write it so it does
+%  or you're an expert and know which sections of code should have
+%  warnings disabled anyhow.
 %!%-
 custom_variable("Perl_Flags", Null_String);
 
@@ -44,20 +44,18 @@ custom_variable("Perl_Flags", Null_String);
 %\synopsis{Perl_Indent}
 %\usage{Integer Perl_Indent = 4;}
 %\description
-% This value determines the number of columns the current line is indented
-% past the previous line containing an opening \exmp{'\{'} character.
-% e.g.,
+%  This value determines the number of columns the current line is indented
+%  past the previous line containing an opening \exmp{'\{'} character.
+%  e.g.,
 %#v+
-%  if (test) {
-%      statement();
-%  }
-%  else {
-%      statement();
-%  }
+%   if (test) {
+%       statement();
+%   }
+%   else {
+%       statement();
+%   }
 %#v-
-%
-% The default value (4) corresponds to the default for \var{perltidy}
-%
+%  The default value (4) corresponds to the default for \var{perltidy}.
 %\seealso{C_INDENT, Perl_Continued_Offset}
 %!%-
 custom_variable("Perl_Indent", 4);
@@ -72,23 +70,23 @@ static variable
 %-------------------------------------------------------------------------
 %!%+
 %\function{perltidy}
-%\synopsis{Void perltidy (Void)}
+%\usage{Void perltidy (Void)}
 %\description
-% Runs the \var{perltidy} program on a region, buffer or narrowed buffer.
-% The \var{perltidy} program (available from \var{http://perltidy.sourceforge.net})
-% must be installed for this to work!
+%  Runs the \var{perltidy} program on a region, buffer or narrowed buffer.
+%  The \var{perltidy} program (available from \var{http://perltidy.sourceforge.net})
+%  must be installed for this to work!
 %
-% With a numerical prefix argument (e.g., Ctrl-U), prompts for extra flags
-% for \var{perltidy}.
+%  With a numerical prefix argument (e.g., Ctrl-U), prompts for extra flags
+%  for \var{perltidy}.
 %
-% The following style preferences settings in \var{~/.perltidyrc} seem to
-% give good results:
+%  The following style preferences settings in \var{~/.perltidyrc} seem to
+%  give good results:
 %#v+
-%   -et=8       # standard tabs
-%   -nola       # no outdent labels
-%   -wba="."    # break after string concatenation
-%   -se         # errors to standard error output
-%   -sbt=2      # very tight square brackets
+%    -et=8       # standard tabs
+%    -nola       # no outdent labels
+%    -wba="."    # break after string concatenation
+%    -se         # errors to standard error output
+%    -sbt=2      # very tight square brackets
 %#v-
 %\seealso{perl_indent_region, perl_indent_buffer, perl_mode}
 %!%-
@@ -297,12 +295,12 @@ static define do_perl (opts, prompt)
 
 %!%+
 %\function{perl_exec}
-%\synopsis{Void perl_exec (Void)}
+%\usage{Void perl_exec (Void)}
 %\description
-% This function runs \var{perl} on a region, buffer or narrowed buffer.
-% With a numerical prefix argument (eg Ctrl-U), also prompts for
-% extra Perl flags.
-% Display output in *shell-output* buffer window.
+%  This function runs \var{perl} on a region, buffer or narrowed buffer.
+%  With a numerical prefix argument (eg Ctrl-U), also prompts for
+%  extra Perl flags.
+%  Display output in *shell-output* buffer window.
 %\seealso{perl_check, perl_mode}
 %!%-
 define perl_exec()  {   % <AUTOLOAD>
@@ -311,10 +309,10 @@ define perl_exec()  {   % <AUTOLOAD>
 
 %!%+
 %\function{perl_check}
-%\synopsis{Void perl_check (Void)}
+%\usage{Void perl_check (Void)}
 %\description
-% This function runs a perl \var{-CT} check on a region, buffer or narrowed buffer.
-% Display output in *shell-output* buffer window.
+%  This function runs a perl \var{-CT} check on a region, buffer or narrowed buffer.
+%  Display output in *shell-output* buffer window.
 %\seealso{perl_exec, perltidy, perl_mode}
 %!%-
 define perl_check() {
@@ -378,7 +376,7 @@ static define help_for_perl (what)
 %% %\synopsis{extract_word}
 %% %\usage{String extract_word (String Word_Chars)}
 %% %\description
-%% % extract a word defined by \var{Word_Chars} from the current buffer
+%% %  Extract a word defined by \var{Word_Chars} from the current buffer
 %% %!%-
 static define extract_word (chars)
 {
@@ -396,19 +394,19 @@ static define extract_word (chars)
 
 %!%+
 %\function{perl_info}
-%\synopsis{Void perl_info (Void)}
+%\usage{Void perl_info (Void)}
 %\description
-% displays the perl settings \var{perl -V} in the help buffer
+%  displays the perl settings \var{perl -V} in the help buffer
 %!%-
 %\seealso{perldoc, perl_help}
 define perl_info () { perl_get_help("perl -V"); }       % <AUTOLOAD>
 
 %!%+
 %\function{perl_help}
-%\synopsis{Void perl_help (Void)}
+%\usage{Void perl_help (Void)}
 %\description
-% extract an alphanumeric keyword (a function) and display help
-% via perldoc for it
+%  Extract an alphanumeric keyword (a function) and display help
+%  via perldoc for it.
 %!%-
 %\seealso{perldoc, perl_mode}
 define perl_help ()     % <AUTOLOAD>
@@ -431,19 +429,19 @@ define perl_help ()     % <AUTOLOAD>
 
 %!%+
 %\function{perldoc}
-%\synopsis{Void perldoc (void)}
+%\synopsis{Use perldoc to find information}
+%\usage{Void perldoc (void)}
 %\description
-% use perldoc to find information
-% The '-f' option is inferred for lowercase strings not starting with 'perl'
+%  The '-f' option is inferred for lowercase strings not starting with 'perl'
 %
-% perldoc [options] PageName|ModuleName|ProgramName...
-% perldoc [options] -f BuiltinFunction
-% perldoc [options] -q FAQRegex
+%  perldoc [options] PageName|ModuleName|ProgramName...
+%  perldoc [options] -f BuiltinFunction
+%  perldoc [options] -q FAQRegex
 %
-% Options:
-%  -u   Display unformatted pod text
-%  -m   Display module's file in its entirety
-%  -q   Search the text of questions (not answers) in perlfaq[1-9]
+%  Options:
+%   -u   Display unformatted pod text
+%   -m   Display module's file in its entirety
+%   -q   Search the text of questions (not answers) in perlfaq[1-9]
 %\seealso{perl_help, perl_mode}
 %!%-
 define perldoc ()       % <AUTOLOAD> <COMPLETE>
@@ -454,4 +452,3 @@ define perldoc ()       % <AUTOLOAD> <COMPLETE>
 
 provide ("perlxtra");
 % -------------------------------------------------------- [end of S-Lang]
-

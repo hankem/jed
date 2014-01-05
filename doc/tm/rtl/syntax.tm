@@ -223,7 +223,7 @@
   the name of a previously defined syntax table, and \var{list}
   denotes the set of characters that specify the fortran-style
   comment.
-  
+
   The string \var{list} is simply a set of characters and may include
   character ranges.  If the first character of \var{list} is
   \var{'^'}, then the meaning is that only those characters that do
@@ -238,7 +238,7 @@
   newline characters will denote a comment.
 \notes
   The usefulness of this function is not limited to fortran modes.  In
-  fact, many languages have fortran-style comments.  
+  fact, many languages have fortran-style comments.
 
   This function is meaningful only if the syntax table has
   fortran-style comments as specified via the \var{set_syntax_flags}
@@ -278,11 +278,11 @@
   \var{set_fortran_comment_chars} function.
 
   If the \exmp{0x04} bit is set, then whitespace at the beginning of a
-  line in a C comment preceding a \exmp{'*'} character will not be 
+  line in a C comment preceding a \exmp{'*'} character will not be
   highlighted.
 
   A TeX-like keyword is any word that follows the quote character.
-  
+
   An EOL style comment is one that ends at the end of the line.
 \seealso{define_syntax, set_fortran_comment_chars}
 \done

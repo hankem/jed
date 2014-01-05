@@ -177,18 +177,16 @@ define matlab_comment ()
 
 %!%+
 %\function{matlab_mode}
-%\synopsis{matlab_mode}
+%\usage{Void matlab_mode ();}
 %\description
-% Protoytype: Void matlab_mode ();
-% This is a mode that is dedicated to facilitate the editing of
-% Matlab/Octave language files.
-% Functions that affect this mode include:
+%  This is a mode that is dedicated to facilitate the editing of
+%  Matlab/Octave language files.
+%  Functions that affect this mode include:
 %#v+
-%  function:             default binding:
-%  matlab_indent         RETURN
+%   function:             default binding:
+%   matlab_indent         RETURN
 %#v-
-% Variables affecting indentation include:
-% Hooks: \var{matlab_mode_hook}
+%  Hooks: \var{matlab_mode_hook}
 %!%-
 define matlab_mode ()
 {

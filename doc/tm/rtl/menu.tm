@@ -19,7 +19,7 @@
    The \var{menu_append_item} function appends a menu item called
    \var{name} to the menu \var{menu}.  If called with \3 arguments,
    the third argument must be a string that will get executed or
-   called when the menu item is selected.  
+   called when the menu item is selected.
 
    When called with \4 arguments, the \var{fun} argument may be either
    a string or a reference to a function.  When the item is selected,
@@ -101,23 +101,23 @@
     Any_Type client_data;
 #v-
 \description
-   The \var{menu_insert_item} function inserts a menu item called
-   \var{name} to the menu \var{menu} at a specified position.
-   
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within \var{parent_menu}.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The \var{menu_insert_item} function inserts a menu item called
+  \var{name} to the menu \var{menu} at a specified position.
 
-   If called with \4 arguments, the third argument must be a string
-   that will get executed or called when the menu item is selected.
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within \var{parent_menu}.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 
-   When called with \5 arguments, the \var{fun} argument may be either
-   a string or a reference to a function.  When the item is selected,
-   the function will be called and \var{client_data} will be passed to
-   it.
+  If called with \4 arguments, the third argument must be a string
+  that will get executed or called when the menu item is selected.
+
+  When called with \5 arguments, the \var{fun} argument may be either
+  a string or a reference to a function.  When the item is selected,
+  the function will be called and \var{client_data} will be passed to
+  it.
 \seealso{menu_append_item, menu_insert_popup, menu_insert_separator}
 \done
 
@@ -129,16 +129,16 @@
     String_Type parent_menu, popup_name;
 #v-
 \description
-   The \var{menu_insert_popup} function will insert a popup menu with
-   name \var{popup_name} into a pre-existing popup menu or menu bar 
-   with name given by {parent_menu}.  
+  The \var{menu_insert_popup} function will insert a popup menu with
+  name \var{popup_name} into a pre-existing popup menu or menu bar
+  with name given by {parent_menu}.
 
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within \var{parent_menu}.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within \var{parent_menu}.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 \seealso{menu_append_popup, menu_insert_item, menu_insert_separator}
 \done
 
@@ -150,18 +150,18 @@
    String_Type parent_menu;
 #v-
 \description
-   The \var{menu_insert_separator} function inserts a separator
-   into a pre-existing popup menu or menu bar with name given 
-   by \var{parent_menu}.
-   
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within \var{parent_menu}.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The \var{menu_insert_separator} function inserts a separator
+  into a pre-existing popup menu or menu bar with name given
+  by \var{parent_menu}.
+
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within \var{parent_menu}.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 \seealso{menu_append_separator, menu_insert_item, menu_insert_popup}
-\done   
+\done
 
 \function{menu_select_menu}
 \synopsis{Select a menu item}
@@ -175,7 +175,7 @@
     menu_select_menu ("Global.&File");
     menu_select_menu ("Global.&File.Save &Buffers");
 \seealso{menu_insert_item}
-\done   
+\done
 
 \function{menu_set_init_menubar_callback}
 \synopsis{Set the initialize menu bar callback}
@@ -228,7 +228,7 @@
   specify a function that should be called just before a popup menu is
   displayed.  The callback function must be defined to take a single
   argument, namely the name of the popup menu.
-  
+
   The basic purpose of this function is to allow the creation of a
   dynamic popup menu.  For this reason, the popup menu will have its
   items deleted before the callback function is executed.

@@ -728,12 +728,12 @@ set_color
   set_color (String_Type obj, String_Type fg, String_Type bg)
 
  DESCRIPTION
- This function sets the foreground and background colors of an object
- specified by the string `obj' to `fg' and `bg'.  The exact values of
- the strings `fg' and `bg' are system dependent.  For the X-Window
- system, they can be any string that the server understands, e.g.,
- `"SteelBlue"'.  For other systems, the color must be one of the
- following:
+  This function sets the foreground and background colors of an object
+  specified by the string `obj' to `fg' and `bg'.  The exact values of
+  the strings `fg' and `bg' are system dependent.  For the X-Window
+  system, they can be any string that the server understands, e.g.,
+  `"SteelBlue"'.  For other systems, the color must be one of the
+  following:
 
    "black"            "gray"
    "red"              "brightred"
@@ -745,32 +745,32 @@ set_color
    "lightgray"        "white"
    "default"
 
- On most terminals, the values in the second column have no effect
- when used as the background color.
+  On most terminals, the values in the second column have no effect
+  when used as the background color.
 
- Using "default" as a foreground or background color instructs the
- editor to tell the terminal to use the default foreground and
- background colors of the window.  If you use a terminal that uses a
- transparent background, then you need to specify "default" as the
- background color.  Not all terminals support the notion of the
- "default" color.
+  Using "default" as a foreground or background color instructs the
+  editor to tell the terminal to use the default foreground and
+  background colors of the window.  If you use a terminal that uses a
+  transparent background, then you need to specify "default" as the
+  background color.  Not all terminals support the notion of the
+  "default" color.
 
- The valid names for `obj' are:
+  The valid names for `obj' are:
 
-   "normal"      Default foreground/background
-   "status"      The status window line
-   "region"      Highlighted Regions
-   "cursor"      Text Cursor (X-Windows)
-   "cursorovr"   Text Cursor in overwrite mode (X-Windows)
-   "menu"        The menu bar
-   "error"       Error messages
-   "message"     Other messages
-   "dollar"      Color of the indicator that text extends beyond the
-                 boundary of the window.
-   "linenum"     Line number field
+    "normal"      Default foreground/background
+    "status"      The status window line
+    "region"      Highlighted Regions
+    "cursor"      Text Cursor (X-Windows)
+    "cursorovr"   Text Cursor in overwrite mode (X-Windows)
+    "menu"        The menu bar
+    "error"       Error messages
+    "message"     Other messages
+    "dollar"      Color of the indicator that text extends beyond the
+                  boundary of the window.
+    "linenum"     Line number field
 
- If color syntax highlighting is enabled, the following object names
- are also meaningful:
+  If color syntax highlighting is enabled, the following object names
+  are also meaningful:
 
    "number"      Numbers in C-mode and Equations in TeX-mode
    "delimiter"   Commas, semi-colons, etc...
@@ -792,12 +792,12 @@ set_color
    "trailing_whitespace"
    "html"        <html> and '<' syntax objects.
 
- If line attributes are available, then you may also specify the color
- of the hidden line indicator:
+  If line attributes are available, then you may also specify the color
+  of the hidden line indicator:
 
-   "..."         Hidden line indicator
+    "..."         Hidden line indicator
 
- The color of the menu objects may be specified via
+  The color of the menu objects may be specified via
 
    "menu_char"              Menu item key-shortcut color
    "menu_shadow"            Color of the shadow
@@ -805,7 +805,7 @@ set_color
    "menu_popup"             Color of the popup box
    "menu_selection_char"    Selected menu item key-shortcut color
 
- Xjed defines the following objects:
+  Xjed defines the following objects:
 
    "mouse"                  Mouse cursor color
    "border"                 Window border color
@@ -917,11 +917,11 @@ evalbuffer
   Void evalbuffer ([String_Type namespace])
 
  DESCRIPTION
- This function causes the current buffer to be sent to the S-Lang
- interpreter for evaluation.  If the optional namespace argument is
- given, the buffer will be evaluated in the specified namespace.  If an
- error is encountered while parsing the buffer, the cursor will be
- placed at the location of the error.
+  This function causes the current buffer to be sent to the S-Lang
+  interpreter for evaluation.  If the optional namespace argument is
+  given, the buffer will be evaluated in the specified namespace.  If an
+  error is encountered while parsing the buffer, the cursor will be
+  placed at the location of the error.
 
  SEE ALSO
   evalfile, require
@@ -973,10 +973,10 @@ BACKUP_BY_COPYING
   Int_Type BACKUP_BY_COPYING
 
  DESCRIPTION
- If non-zero, backup files will be made by copying the original file
- to the backup file.  If zero, the backup file will be created by
- renaming the original file to the backup file.  The default for
- `BACKUP_BY_COPYING' is zero because it is fastest.
+  If non-zero, backup files will be made by copying the original file
+  to the backup file.  If zero, the backup file will be created by
+  renaming the original file to the backup file.  The default for
+  `BACKUP_BY_COPYING' is zero because it is fastest.
 
  SEE ALSO
   rename_file, copy_file
@@ -1064,8 +1064,8 @@ directory
 
  DESCRIPTION
    returns the number of files and a list of files which match filename.
-      On Unix, this defaults to filename*.  It is primarily useful for
-      DOS and VMS to expand wildcard filenames
+   On Unix, this defaults to filename*.  It is primarily useful for
+   DOS and VMS to expand wildcard filenames.
 
 --------------------------------------------------------------
 
@@ -1434,8 +1434,8 @@ add_to_hook
     _jed_suspend_hooks
     _jed_write_region_hooks
 
- See the file `hooks.txt' in the main jed distribution for more
- information.
+  See the file `hooks.txt' in the main jed distribution for more
+  information.
 
  SEE ALSO
   append_to_hook, remove_from_hook
@@ -1486,20 +1486,20 @@ _jed_run_hooks
   _jed_run_hooks (String_Type hook_name, Integer_Type mode [,Array_Type args])
 
  DESCRIPTION
- `_jed_run_hooks' executes the functions registered for `hook_name'.
- The argument `mode' defines which functions are called:
+  `_jed_run_hooks' executes the functions registered for `hook_name'.
+  The argument `mode' defines which functions are called:
 
   JED_HOOKS_RUN_ALL
      all functions; no function should return a value.
   JED_HOOKS_RUN_UNTIL_0
-     Run until a function returns the value 0; every function must return
-     an integer value.
+     Run until a function returns the value 0;
+     every function must return an integer value.
   JED_HOOKS_RUN_UNTIL_NON_0
-     Run until a function returns a non-zero
-      value; every function must return an integer value.
+     Run until a function returns a non-zero value;
+     every function must return an integer value.
 
- If the third argument is given, then it must be an array of strings
- to be passed as arguments to the the hook-functions.
+  If the third argument is given, then it must be an array of strings
+  to be passed as arguments to the the hook-functions.
 
  SEE ALSO
   append_to_hook, add_to_hook
@@ -1573,7 +1573,6 @@ set_buffer_hook
               movement functions would have generated an end of buffer or beginning of
               buffer error.  It is passed an integer that indicates which function
               would have generated the error.  Specifically:
-
                        -1  previous_line_cmd
                        -2  previous_char_cmd
                        -3  page_up
@@ -1589,7 +1588,7 @@ set_buffer_hook
          "forward_paragraph_hook", "backward_paragraph_hook"
          "format_paragraph_hook"
 
- See the file jed/doc/hooks.txt for more information and examples.
+  See the file jed/doc/hooks.txt for more information and examples.
 
  SEE ALSO
   unset_buffer_hook, mouse_set_default_hook, get_buffer_hook
@@ -1810,7 +1809,7 @@ what_line
      return what_line;
    }
 
- always returns 1.
+  always returns 1.
 
  SEE ALSO
   what_column, goto_line
@@ -1844,11 +1843,11 @@ WRAP
   Int_Type WRAP
 
  DESCRIPTION
- The `WRAP' variable determines the column number at which
- wrapping will occur.  When entering text, if the current point goes
- beyond this column, the text will automatically wrap to the next
- line.  This will only happen for those buffers for which the wrap flag
- is set.
+  The `WRAP' variable determines the column number at which
+  wrapping will occur.  When entering text, if the current point goes
+  beyond this column, the text will automatically wrap to the next
+  line.  This will only happen for those buffers for which the wrap flag
+  is set.
 
  SEE ALSO
   WRAP_INDENTS, getbuf_info, set_mode
@@ -1864,10 +1863,10 @@ WRAP_INDENTS
   Int_Type WRAP_INDENTS
 
  DESCRIPTION
- If this variable is non-zero, after a line is wrapped, the new line
- will start at the same indentation as the current one.  On the other
- hand, if the value of `WRAP_INDENTS' is zero, the new line will
- begin in the first column.
+  If this variable is non-zero, after a line is wrapped, the new line
+  will start at the same indentation as the current one.  On the other
+  hand, if the value of `WRAP_INDENTS' is zero, the new line will
+  begin in the first column.
 
 --------------------------------------------------------------
 
@@ -2001,7 +2000,7 @@ insert_char
   Void insert_char (ULong_Type ch)
 
  DESCRIPTION
- This function inserts the specified character into the buffer.
+  This function inserts the specified character into the buffer.
 
  SEE ALSO
   what_char, insert, insert_byte
@@ -2017,8 +2016,8 @@ insert_byte
   Void insert_byte (UChar_Type ch)
 
  DESCRIPTION
- This function inserts the specified byte into the buffer at the
- current position.
+  This function inserts the specified byte into the buffer at the
+  current position.
 
  SEE ALSO
   what_char, insert_char, insert
@@ -2168,11 +2167,11 @@ DEC_8BIT_HACK
   Int_Type DEC_8BIT_HACK
 
  DESCRIPTION
- If set to a non-zero value, a input character between 128 and 160
- will be converted into a two character sequence: `ESC' and the
- character itself stripped of the high bit + 64.  The motivation
- behind this variable is to enable the editor to work with VTxxx
- terminals that are in eight bit mode.
+  If set to a non-zero value, a input character between 128 and 160
+  will be converted into a two character sequence: `ESC' and the
+  character itself stripped of the high bit + 64.  The motivation
+  behind this variable is to enable the editor to work with VTxxx
+  terminals that are in eight bit mode.
 
  SEE ALSO
   META_CHAR
@@ -2226,7 +2225,7 @@ FN_CHAR
   value of the `FN_CHAR' itself followed by the character pressed.
 
  NOTES
-   This variable is available only for Microsoft window systems.
+  This variable is available only for Microsoft window systems.
 
  SEE ALSO
   ALT_CHAR, META_CHAR
@@ -2242,10 +2241,10 @@ IGNORE_USER_ABORT
   Int_Type IGNORE_USER_ABORT
 
  DESCRIPTION
- If set to a non-zero value, the keyboard interrupt character, e.g.,
- `Ctrl-G' will not trigger a S-Lang error.  When JED starts up,
- this value is set to 1 so that the user cannot interrupt the loading
- of site.sl.  Later, it is set to 0.
+  If set to a non-zero value, the keyboard interrupt character, e.g.,
+  `Ctrl-G' will not trigger a S-Lang error.  When JED starts up,
+  this value is set to 1 so that the user cannot interrupt the loading
+  of site.sl.  Later, it is set to 0.
 
  SEE ALSO
   set_abort_char
@@ -2316,13 +2315,13 @@ META_CHAR
   Int_Type META_CHAR
 
  DESCRIPTION
- This variable determines how input characters with the high bit set
- are to be treated.  If `META_CHAR' is less than zero, the character
- is passed through un-processed.  However, if `META_CHAR' is greater
- than or equal to zero, an input character with the high bit set is
- mapped to a two character sequence.  The first character of the
- sequence is the character whose ascii value is `META_CHAR' and the
- second character is the input with its high bit stripped off.
+  This variable determines how input characters with the high bit set
+  are to be treated.  If `META_CHAR' is less than zero, the character
+  is passed through un-processed.  However, if `META_CHAR' is greater
+  than or equal to zero, an input character with the high bit set is
+  mapped to a two character sequence.  The first character of the
+  sequence is the character whose ascii value is `META_CHAR' and the
+  second character is the input with its high bit stripped off.
 
  SEE ALSO
   DISPLAY_EIGHT_BIT, DEC_8BIT_HACK
@@ -3352,23 +3351,23 @@ menu_insert_item
 
 
  DESCRIPTION
-   The `menu_insert_item' function inserts a menu item called
-   `name' to the menu `menu' at a specified position.
+  The `menu_insert_item' function inserts a menu item called
+  `name' to the menu `menu' at a specified position.
 
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within `parent_menu'.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within `parent_menu'.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 
-   If called with 4 arguments, the third argument must be a string
-   that will get executed or called when the menu item is selected.
+  If called with 4 arguments, the third argument must be a string
+  that will get executed or called when the menu item is selected.
 
-   When called with 5 arguments, the `fun' argument may be either
-   a string or a reference to a function.  When the item is selected,
-   the function will be called and `client_data' will be passed to
-   it.
+  When called with 5 arguments, the `fun' argument may be either
+  a string or a reference to a function.  When the item is selected,
+  the function will be called and `client_data' will be passed to
+  it.
 
  SEE ALSO
   menu_append_item, menu_insert_popup, menu_insert_separator
@@ -3388,16 +3387,16 @@ menu_insert_popup
 
 
  DESCRIPTION
-   The `menu_insert_popup' function will insert a popup menu with
-   name `popup_name' into a pre-existing popup menu or menu bar
-   with name given by {parent_menu}.
+  The `menu_insert_popup' function will insert a popup menu with
+  name `popup_name' into a pre-existing popup menu or menu bar
+  with name given by {parent_menu}.
 
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within `parent_menu'.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within `parent_menu'.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 
  SEE ALSO
   menu_append_popup, menu_insert_item, menu_insert_separator
@@ -3417,16 +3416,16 @@ menu_insert_separator
 
 
  DESCRIPTION
-   The `menu_insert_separator' function inserts a separator
-   into a pre-existing popup menu or menu bar with name given
-   by `parent_menu'.
+  The `menu_insert_separator' function inserts a separator
+  into a pre-existing popup menu or menu bar with name given
+  by `parent_menu'.
 
-   The insertion position may be specified as an integer, or as the
-   name of a menu item within `parent_menu'.  When specified as an
-   integer, the insertion will take place at the corresponding
-   position of the menu, where zero denotes the first item.  If the
-   position specifier is the name of a menu item, the the insertion
-   will take place before that item.
+  The insertion position may be specified as an integer, or as the
+  name of a menu item within `parent_menu'.  When specified as an
+  integer, the insertion will take place at the corresponding
+  position of the menu, where zero denotes the first item.  If the
+  position specifier is the name of a menu item, the the insertion
+  will take place before that item.
 
  SEE ALSO
   menu_append_separator, menu_insert_item, menu_insert_popup
@@ -3697,8 +3696,8 @@ MINIBUFFER_ACTIVE
   Int_Type MINIBUFFER_ACTIVE
 
  DESCRIPTION
- The `MINIBUFFER_ACTIVE' variable will be non-zero if the
- mini-buffer is in use.
+  The `MINIBUFFER_ACTIVE' variable will be non-zero if the
+  mini-buffer is in use.
 
  SEE ALSO
   read_mini
@@ -3926,11 +3925,11 @@ BATCH
   Int_Type BATCH (read-only)
 
  DESCRIPTION
- The value of `BATCH' will be 0 if the editor is run
- in interactive or full-screen mode.  It will be 1 if the editor is
- in batch mode (via the `-batch' comment line argument).  If the
- editor is in script mode (via `-script'), then the value of
- `BATCH' will be 2.
+  The value of `BATCH' will be 0 if the editor is run
+  in interactive or full-screen mode.  It will be 1 if the editor is
+  in batch mode (via the `-batch' comment line argument).  If the
+  editor is in script mode (via `-script'), then the value of
+  `BATCH' will be 2.
 
 --------------------------------------------------------------
 
@@ -4209,13 +4208,13 @@ quit_jed
   Void quit_jed ([ status ])
 
  DESCRIPTION
- This function quits the editor immediately without saving any buffers
- and without any exit hooks called.  The function `exit_jed'
- should be called when it is desired to exit in a safe way.
+  This function quits the editor immediately without saving any buffers
+  and without any exit hooks called.  The function `exit_jed'
+  should be called when it is desired to exit in a safe way.
 
- The exit status of the program may be specified via the optional
- integer argument.  If called with no argument, a value of 0 will be
- used as the exit status.
+  The exit status of the program may be specified via the optional
+  integer argument.  If called with no argument, a value of 0 will be
+  used as the exit status.
 
  SEE ALSO
   exit_jed
@@ -4279,10 +4278,10 @@ set_undo_position
   set_undo_position ()
 
  DESCRIPTION
- This function adds the current position to the buffer's undo stack.
- Occasionally this may be necessary when using `narrow_to_region'
- to prevent the cursor from moving to the beginning or the end
- of a previously narrowed region during "undo".
+  This function adds the current position to the buffer's undo stack.
+  Occasionally this may be necessary when using `narrow_to_region'
+  to prevent the cursor from moving to the beginning or the end
+  of a previously narrowed region during "undo".
 
  SEE ALSO
   narrow_to_region
@@ -5103,10 +5102,10 @@ send_process
   Void send_process (Int_Type id, String s)
 
  DESCRIPTION
- This function sends the string `s' to the standard input of the
- process with the ID `id'.  With this function and
- `set_process' with the argument `output'' you can establish a
- bi-directional communication with the process.
+  This function sends the string `s' to the standard input of the
+  process with the ID `id'.  With this function and
+  `set_process' with the argument `output'' you can establish a
+  bi-directional communication with the process.
 
  SEE ALSO
   open_process, set_process, send_process_eof
@@ -5235,7 +5234,7 @@ blank_rect
   Void blank_rect ()
 
  DESCRIPTION
-   The `blank_rect' function replaces all text in the rectangle defined by
+  The `blank_rect' function replaces all text in the rectangle defined by
   the current editing point and the mark by spaces.
 
  SEE ALSO
@@ -5327,14 +5326,14 @@ KILL_ARRAY_SIZE
   Int_Type KILL_ARRAY_SIZE
 
  DESCRIPTION
- This variable contains the value of the size of the internal kill
- array of character strings.  Any number from zero up to but not
- including the value of `KILL_ARRAY_SIZE' may be used as an
- argument in the functions that manipulate this array.
+  This variable contains the value of the size of the internal kill
+  array of character strings.  Any number from zero up to but not
+  including the value of `KILL_ARRAY_SIZE' may be used as an
+  argument in the functions that manipulate this array.
 
  NOTES
- This variable is a read-only variable and may not available on 16
- bit systems.
+  This variable is a read-only variable and may not available on 16
+  bit systems.
 
  SEE ALSO
   insert_from_kill_array, copy_region_to_kill_array, append_region_to_kill_array
@@ -5742,10 +5741,10 @@ CASE_SEARCH
   Int_Type CASE_SEARCH
 
  DESCRIPTION
- If the value of `CASE_SEARCH' is non-zero, text searches
- performed in the current buffer will be case-sensitive, otherwise
- case-insensitive searches will be performed.  The value of this
- variable may vary from buffer to buffer.
+  If the value of `CASE_SEARCH' is non-zero, text searches
+  performed in the current buffer will be case-sensitive, otherwise
+  case-insensitive searches will be performed.  The value of this
+  variable may vary from buffer to buffer.
 
  SEE ALSO
   CASE_SEARCH_DEFAULT, fsearch, ffind
@@ -5761,10 +5760,10 @@ CASE_SEARCH_DEFAULT
   Int_Type CASE_SEARCH_DEFAULT
 
  DESCRIPTION
- Searches in a buffer are performed according to the value of the
- `CASE_SEARCH' variable.  Newly created buffers are given a
- `CASE_SEARCH' value of `CASE_SEARCH_DEFAULT'.  The default
- value of `CASE_SEARCH_DEFAULT' is 0.
+  Searches in a buffer are performed according to the value of the
+  `CASE_SEARCH' variable.  Newly created buffers are given a
+  `CASE_SEARCH' value of `CASE_SEARCH_DEFAULT'.  The default
+  value of `CASE_SEARCH_DEFAULT' is 0.
 
  SEE ALSO
   CASE_SEARCH, fsearch, ffind
@@ -6932,8 +6931,8 @@ get_realname
   String_Type get_realname
 
  DESCRIPTION
- The `get_realname' returns the user's real name.  If the editor
- is unable to determine this value, an empty string is returned.
+  The `get_realname' returns the user's real name.  If the editor
+  is unable to determine this value, an empty string is returned.
 
  SEE ALSO
   set_realname, get_username, get_hostname
@@ -6949,9 +6948,9 @@ get_username
   String_Type get_username ()
 
  DESCRIPTION
- The `get_username' function returns the username associated with
- the current process.  If is is unable to determine this value,
- `"unknown"' will be returned.
+  The `get_username' function returns the username associated with
+  the current process.  If is is unable to determine this value,
+  `"unknown"' will be returned.
 
  SEE ALSO
   set_username, get_realname, get_hostname
@@ -6967,8 +6966,8 @@ set_hostname
   set_hostname (String_Type hostname)
 
  DESCRIPTION
- `set_hostname' may be used to set set the name of the host that
- the editor will associate with the current process.
+  `set_hostname' may be used to set set the name of the host that
+  the editor will associate with the current process.
 
  SEE ALSO
   get_hostname, set_username, set_realname
@@ -6984,9 +6983,9 @@ set_realname
   set_realname (String_Type realname)
 
  DESCRIPTION
- The `set_realname' function sets the editor's notion of what the
- user's real name is such that subsequent calls to `get_realname'
- will return the specified value.
+  The `set_realname' function sets the editor's notion of what the
+  user's real name is such that subsequent calls to `get_realname'
+  will return the specified value.
 
  SEE ALSO
   get_realname, get_username, set_username, set_hostname
@@ -7002,8 +7001,8 @@ set_username
   set_username (String_Type username)
 
  DESCRIPTION
- This function may be used to specify the username associated with the
- editor process.
+  This function may be used to specify the username associated with the
+  editor process.
 
  SEE ALSO
   get_username, set_realname, set_hostname
@@ -7035,14 +7034,14 @@ DISPLAY_EIGHT_BIT
   Int_Type DISPLAY_EIGHT_BIT
 
  DESCRIPTION
- This variable determines how characters with the high bit set are to
- be displayed.  Specifically, any character whose value is greater than
- or equal to the value of `DISPLAY_EIGHT_BIT' is output to the terminal
- as is.  Characters with the high bit set but less than this value are
- sent to the terminal in a multiple character representation. For Unix
- and VMS systems the value should be set to 160.  This is because many
- terminals use the characters with values between 128 and 160 as eight
- bit control characters.  For other systems, it can be set to zero.
+  This variable determines how characters with the high bit set are to
+  be displayed.  Specifically, any character whose value is greater than
+  or equal to the value of `DISPLAY_EIGHT_BIT' is output to the terminal
+  as is.  Characters with the high bit set but less than this value are
+  sent to the terminal in a multiple character representation. For Unix
+  and VMS systems the value should be set to 160.  This is because many
+  terminals use the characters with values between 128 and 160 as eight
+  bit control characters.  For other systems, it can be set to zero.
 
  SEE ALSO
   META_CHAR
@@ -7058,10 +7057,10 @@ DISPLAY_TIME
   Int_Type DISPLAY_TIME
 
  DESCRIPTION
- If this variable is non-zero, the current time will be displayed on the
- status line if the format for the status line permits it.  If it is zero,
- the time will not be displayed even if the `%t' format string is part
- of the status line format.
+  If this variable is non-zero, the current time will be displayed on the
+  status line if the format for the status line permits it.  If it is zero,
+  the time will not be displayed even if the `%t' format string is part
+  of the status line format.
 
  SEE ALSO
   set_status_line
@@ -7173,9 +7172,9 @@ Status_Line_String
   String_Type Status_Line_String
 
  DESCRIPTION
- `Status_Line_String' is a read-only string variable that
- specifies the format of the status line for newly created buffers.
- To set the status line format, use the function `set_status_line'.
+  `Status_Line_String' is a read-only string variable that
+  specifies the format of the status line for newly created buffers.
+  To set the status line format, use the function `set_status_line'.
 
  SEE ALSO
   set_status_line
@@ -7191,9 +7190,9 @@ TAB
   Int_Type TAB
 
  DESCRIPTION
- This variable controls the tab width associated with the current
- buffer.  A value of zero means that tab characters are not expanded
- and that tabs are never used to produce whitespace.
+  This variable controls the tab width associated with the current
+  buffer.  A value of zero means that tab characters are not expanded
+  and that tabs are never used to produce whitespace.
 
  SEE ALSO
   TAB_DEFAULT, USE_TABS
@@ -7209,13 +7208,13 @@ TAB_DEFAULT
   Int_Type TAB_DEFAULT
 
  DESCRIPTION
- The value of `TAB_DEFAULT' is the default tab setting given to
- all newly created buffers.  A value of zero means that tab characters
- are not expanded and that tabs are never used to produce whitespace.
+  The value of `TAB_DEFAULT' is the default tab setting given to
+  all newly created buffers.  A value of zero means that tab characters
+  are not expanded and that tabs are never used to produce whitespace.
 
  NOTES
- A related variable `TAB' may be used to change the current
- buffer's tab setting.
+  A related variable `TAB' may be used to change the current
+  buffer's tab setting.
 
  SEE ALSO
   TAB, USE_TABS, TAB_DEFAULT
@@ -7231,9 +7230,9 @@ TOP_WINDOW_ROW
   Int_Type
 
  DESCRIPTION
- This read-only variable gives the value of the starting row of the top
- window.  If a menubar is present, the value will be 2, otherwise it
- will be 1.
+  This read-only variable gives the value of the starting row of the top
+  window.  If a menubar is present, the value will be 2, otherwise it
+  will be 1.
 
  SEE ALSO
   enable_top_status_line, window_info
@@ -7249,10 +7248,10 @@ WANT_EOB
   Int_Type
 
  DESCRIPTION
- If this value of this variable is non-zero, the end of buffer
- indicator `"[EOB]"' will be displayed at the end of the buffer.  Such
- an indicator is used for various editor emulations such as the
- VAX/VMS EDT editor.
+  If this value of this variable is non-zero, the end of buffer
+  indicator `"[EOB]"' will be displayed at the end of the buffer.
+  Such an indicator is used for various editor emulations such as the
+  VAX/VMS EDT editor.
 
 --------------------------------------------------------------
 
@@ -7589,7 +7588,7 @@ get_scroll_column
   Int_Type get_scroll_column ()
 
  DESCRIPTION
- This function returns the scroll column for the current window.
+  This function returns the scroll column for the current window.
 
  SEE ALSO
   set_scroll_column
@@ -7605,8 +7604,8 @@ set_scroll_column
   set_scroll_column (Int_Type col)
 
  DESCRIPTION
- This function may be used to set the scroll column of the current
- window.
+  This function may be used to set the scroll column of the current
+  window.
 
  SEE ALSO
   get_scroll_column
@@ -7622,8 +7621,8 @@ x_copy_region_to_cutbuffer
   x_copy_region_to_cutbuffer ()
 
  DESCRIPTION
-    places a copy of the region to the X cutbuffer for insertion in other
-    X-window programs. In wjed the region is copies to the clipboard.
+   places a copy of the region to the X cutbuffer for insertion in other
+   X-window programs. In wjed the region is copies to the clipboard.
 
  SEE ALSO
   x_copy_region_to_selection
@@ -7639,8 +7638,8 @@ x_copy_region_to_selection
   x_copy_region_to_selection ()
 
  DESCRIPTION
-    places a copy of the region to the X selection for insertion in other
-    X-window programs. This function is only available in xjed.
+   places a copy of the region to the X selection for insertion in other
+   X-window programs. This function is only available in xjed.
 
  SEE ALSO
   x_copy_region_to_cutbuffer
@@ -7656,10 +7655,8 @@ x_insert_cutbuffer
   Int_Type x_insert_cutbuffer ()
 
  DESCRIPTION
- Inserts cutbuffer (in wjed the clipboard) into the current buffer and
- returns the number of characters inserted.
-
- SEE ALSO
+  Inserts cutbuffer (in wjed the clipboard) into the current buffer and
+  returns the number of characters inserted.
 
 --------------------------------------------------------------
 
@@ -7672,11 +7669,9 @@ x_insert_selection
   Int_Type x_insert_selection ()
 
  DESCRIPTION
- This function only requests selection data from the selection owner.
- If Xjed received EVENT, Xjed inserts selection data into the current buffer
- and returns the number of characters inserted.
-
- SEE ALSO
+  This function only requests selection data from the selection owner.
+  If Xjed received EVENT, Xjed inserts selection data into the current buffer
+  and returns the number of characters inserted.
 
 --------------------------------------------------------------
 
@@ -7718,28 +7713,28 @@ x_set_keysym
   x_set_keysym (Int_Type keysym, Int_Type shift, String_Type str)
 
  DESCRIPTION
- This function may be used to associate a string `str' with a key
- `keysym' modified by mask `shift'. Pressing the key
- associated with `keysym' will then generate the keysequence
- given by `str'. The function keys are mapped to integers in the
- range `0xFF00' to `0xFFFF'. On most systems, the keys that
- these mappings refer to are located in the file
- `/usr/include/X11/keysymdef.h'. For example, on my system, the
- keysyms for the function keys `XK_F1' to `XK_F35' fall in
- the range `0xFFBE' to `0xFFE0'. So to make the `F1'
- key correspond to the string given by the two characters
- `Ctrl-X' `Ctrl-C', simply use:
+  This function may be used to associate a string `str' with a key
+  `keysym' modified by mask `shift'. Pressing the key
+  associated with `keysym' will then generate the keysequence
+  given by `str'. The function keys are mapped to integers in the
+  range `0xFF00' to `0xFFFF'. On most systems, the keys that
+  these mappings refer to are located in the file
+  `/usr/include/X11/keysymdef.h'. For example, on my system, the
+  keysyms for the function keys `XK_F1' to `XK_F35' fall in
+  the range `0xFFBE' to `0xFFE0'. So to make the `F1'
+  key correspond to the string given by the two characters
+  `Ctrl-X' `Ctrl-C', simply use:
 
     x_set_keysym (0xFFBE, 0, "^X^C");
 
- The `shift' argument is an integer with the
- following meanings:
+  The `shift' argument is an integer with the
+  following meanings:
 
     0   : unmodified key
     '$' : shifted
     '^' : control
 
- Any other value for shift will default to 0 (unshifted).
+  Any other value for shift will default to 0 (unshifted).
 
  SEE ALSO
   x_set_meta_keys
@@ -7788,16 +7783,16 @@ x_toggle_visibility
   x_toggle_visibility([Integer_Type hide])
 
  DESCRIPTION
- Makes the window visible or invisible. If the argument `hide' is
- not given, the visibility of the windows is toggled, e.g. if the window
- is invisible it becomes visible and vice versa. If the optional
- argument `hide' is given the state to the window becomes visible
- if `hide' is non-zero or invisible if `hide' is zero,
- independent of the current state.
+  Makes the window visible or invisible. If the argument `hide' is
+  not given, the visibility of the windows is toggled, e.g. if the window
+  is invisible it becomes visible and vice versa. If the optional
+  argument `hide' is given the state to the window becomes visible
+  if `hide' is non-zero or invisible if `hide' is zero,
+  independent of the current state.
 
  NOTES
- You can also hide the window by calling `suspend', but you can not show
- it, if the window doesn't have the focus.
+  You can also hide the window by calling `suspend', but you can not show
+  it, if the window doesn't have the focus.
 
  SEE ALSO
   suspend

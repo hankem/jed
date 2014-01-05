@@ -1243,43 +1243,43 @@ definekey ("tex_insert_quote", "'", $1);
 %\synopsis{docbook_mode}
 %\usage{Void docbook_mode ();}
 %\description
-% This mode is designed to facilitate the editing of Docbook 3.1 SGML files.
-% If a region is defined (i.e., if a mark is set), many SGML tags will
-% insert around the region; e.g. '<emphasis>' and '</emphasis>'. Tags are
-% inserted either using the Mode menu, or with a key combination resembling
-% the menu entry, e.g. ^Cce inserts <emphasis> (M&ode/&Character/<&emphasis>).
-% Functions that affect this mode include (Emacs mode assumed - IDE mode
-% uses ^Z instead of ^C):
+%  This mode is designed to facilitate the editing of Docbook 3.1 SGML files.
+%  If a region is defined (i.e., if a mark is set), many SGML tags will insert
+%  around the region; e.g. '<emphasis>' and '</emphasis>'.  Tags are inserted
+%  either using the Mode menu, or with a key combination resembling the menu
+%  entry, e.g. ^Cce inserts <emphasis> (M&ode/&Character/<&emphasis>).
+%  Functions that affect this mode include (Emacs mode assumed - IDE mode
+%  uses ^Z instead of ^C):
 %#v+
-%  sgml_bskip_tag            ^C^B
-%  sgml_skip_tag             ^C^F
-%  sgml_para                 ^CP
-%  sgml_section              ^CS
-%  sgml_sect                 ^CN
-%  insert &dollar;           ^C$
-%  insert &amp;              ^C&
-%  insert &hellip;           ^C.
-%  insert &lt;               ^C<
-%  insert &gt;               ^C>
+%   sgml_bskip_tag            ^C^B
+%   sgml_skip_tag             ^C^F
+%   sgml_para                 ^CP
+%   sgml_section              ^CS
+%   sgml_sect                 ^CN
+%   insert &dollar;           ^C$
+%   insert &amp;              ^C&
+%   insert &hellip;           ^C.
+%   insert &lt;               ^C<
+%   insert &gt;               ^C>
 %#v-
-% Variables affecting this mode include:
+%  Variables affecting this mode include:
 %#v+
-%  Variable                  Default value
+%   Variable                  Default value
 %
-%  SGML_INDENT               2
-%  Sgml_Compile_PS_Cmd       "db2ps"
-%  Sgml_Compile_Pdf_Cmd      "db2pdf"
-%  Sgml_Compile_Html_Cmd     "db2html"
-%  Sgml_View_PS_Cmd          "gv"
-%  Sgml_View_Pdf_Cmd         "gv"
-%  Sgml_View_Html_Cmd        "netscape"
+%   SGML_INDENT               2
+%   Sgml_Compile_PS_Cmd       "db2ps"
+%   Sgml_Compile_Pdf_Cmd      "db2pdf"
+%   Sgml_Compile_Html_Cmd     "db2html"
+%   Sgml_View_PS_Cmd          "gv"
+%   Sgml_View_Pdf_Cmd         "gv"
+%   Sgml_View_Html_Cmd        "netscape"
 %#v-
-% To change the value of a variable, define that variable in .jedrc
-% before loading docbook.sl. For example:
+%  To change the value of a variable, define that variable in .jedrc
+%  before loading docbook.sl. For example:
 %#v+
-%  variable SGML_INDENT = 3;
+%   variable SGML_INDENT = 3;
 %#v-
-% Hooks: \var{sgml_mode_hook}
+%  Hooks: \var{sgml_mode_hook}
 %!%-
 define docbook_mode ()
 {

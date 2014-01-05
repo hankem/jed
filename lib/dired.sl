@@ -645,56 +645,56 @@ define dired_rename ()
 
 %!%+
 %\function{dired}
-%\synopsis{dired}
+%\usage{dired}
 %\description
-% Mode designed for maintaining and editing a directory.
+%  Mode designed for maintaining and editing a directory.
 %
-% To invoke Dired, do \var{M-x dired} or \var{C-x d} (emacs)
+%  To invoke Dired, do \var{M-x dired} or \var{C-x d} (emacs)
 %
-% Dired will prompt for a directory name and get a listing of files in the
-% requested directory.
+%  Dired will prompt for a directory name and get a listing of files in the
+%  requested directory.
 %
-% The primary use of Dired is to "flag" files for deletion and then delete
-% the previously flagged files.
+%  The primary use of Dired is to "flag" files for deletion and then delete
+%  the previously flagged files.
 %
-% \var{d}	Flag this file for deletion.
-% \var{u}	Remove deletion flag on this line.
-% DEL	Move point to previous line and remove deletion flag.
-% \var{~}	Flag all backup files for deletion.
+%  \var{d}	Flag this file for deletion.
+%  \var{u}	Remove deletion flag on this line.
+%  DEL	Move point to previous line and remove deletion flag.
+%  \var{~}	Flag all backup files for deletion.
 %
-% \var{x}	eXpunge all flagged files.  Dired will show a list of the
-% 	files tagged for deletion and ask for confirmation before actually
-% 	deleting the files.
+%  \var{x}	eXpunge all flagged files.  Dired will show a list of the
+%	files tagged for deletion and ask for confirmation before actually
+%	deleting the files.
 %
-% \var{r}	Rename file on the current line; prompts for a new name
-% \var{m}	Move tagged files to a new dir; prompts for dir name
+%  \var{r}	Rename file on the current line; prompts for a new name
+%  \var{m}	Move tagged files to a new dir; prompts for dir name
 %
-% \var{g}	Update the entire contents of the Dired buffer
+%  \var{g}	Update the entire contents of the Dired buffer
 %
-% \var{f}	Visit the file described on the current line, like typing
-% 	\var{M-x find_file} and supplying that file name.  If current line is a
-% 	directory, runs dired on the directory and the old buffer is killed.
+%  \var{f}	Visit the file described on the current line, like typing
+%	\var{M-x find_file} and supplying that file name.  If current line is a
+%	directory, runs dired on the directory and the old buffer is killed.
 %
-% \var{v}	View the file described on the current line in MOST mode.
+%  \var{v}	View the file described on the current line in MOST mode.
 %
-% \var{q}	Quit dired mode.
+%  \var{q}	Quit dired mode.
 %
-% \var{M-x dired_search}
-% 	use fsearch to perform a search through the files listed in the
-% 	dired buffer from the current point forward.  \var{M-x dired_search}
-% 	from the visited file will revert to the dired buffer and continue
-% 	the search from the next file in the list.
+%  \var{M-x dired_search}
+%	use fsearch to perform a search through the files listed in the
+%	dired buffer from the current point forward.  \var{M-x dired_search}
+%	from the visited file will revert to the dired buffer and continue
+%	the search from the next file in the list.
 %
-% all the usual motion commands plus some extras:
+%  all the usual motion commands plus some extras:
 %
-% \var{C-n} \var{n} SPC
-% 	move point to the next line (at the beginning of the file name)
+%  \var{C-n} \var{n} SPC
+%	move point to the next line (at the beginning of the file name)
 %
-% \var{C-p} \var{p}
-% 	move point to the previous line (at the beginning of the file name)
+%  \var{C-p} \var{p}
+%	move point to the previous line (at the beginning of the file name)
 %
-% \var{M-x dired_kill_line}	\var{^K} (emacs)
-% 	removes a line from the dired buffer
+%  \var{M-x dired_kill_line}	\var{^K} (emacs)
+%	removes a line from the dired buffer
 %!%-
 define dired ()
 {

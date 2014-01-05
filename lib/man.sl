@@ -4,9 +4,7 @@
 
 %!%+
 %\function{man_clean_manpage}
-%\synopsis{man_clean_manpage}
-%\description
-% remove _^H and ^H combinations and multiple blank lines (man page)
+%\synopsis{Remove _^H and ^H combinations and multiple blank lines (man page)}
 %!%-
 define man_clean_manpage ()
 {
@@ -46,9 +44,7 @@ define man_clean_manpage ()
 
 %!%+
 %\function{unix_man}
-%\synopsis{unix_man}
-%\description
-% retrieve a man page entry and use clean_manpage to clean it up
+%\synopsis{Retrieve a man page entry and use clean_manpage to clean it up}
 %!%-
 define unix_man ()
 {

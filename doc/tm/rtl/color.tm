@@ -30,12 +30,12 @@
 \synopsis{Set fore- and background colors of an object}
 \usage{set_color (String_Type obj, String_Type fg, String_Type bg)}
 \description
- This function sets the foreground and background colors of an object
- specified by the string \var{obj} to \var{fg} and \var{bg}.  The exact values of
- the strings \var{fg} and \var{bg} are system dependent.  For the X-Window
- system, they can be any string that the server understands, e.g.,
- \var{"SteelBlue"}.  For other systems, the color must be one of the
- following:
+  This function sets the foreground and background colors of an object
+  specified by the string \var{obj} to \var{fg} and \var{bg}.  The exact values of
+  the strings \var{fg} and \var{bg} are system dependent.  For the X-Window
+  system, they can be any string that the server understands, e.g.,
+  \var{"SteelBlue"}.  For other systems, the color must be one of the
+  following:
 #v+
    "black"            "gray"
    "red"              "brightred"
@@ -47,32 +47,32 @@
    "lightgray"        "white"
    "default"
 #v-
- On most terminals, the values in the second column have no effect
- when used as the background color.
+  On most terminals, the values in the second column have no effect
+  when used as the background color.
 
- Using "default" as a foreground or background color instructs the
- editor to tell the terminal to use the default foreground and
- background colors of the window.  If you use a terminal that uses a
- transparent background, then you need to specify "default" as the
- background color.  Not all terminals support the notion of the
- "default" color.
+  Using "default" as a foreground or background color instructs the
+  editor to tell the terminal to use the default foreground and
+  background colors of the window.  If you use a terminal that uses a
+  transparent background, then you need to specify "default" as the
+  background color.  Not all terminals support the notion of the
+  "default" color.
 
- The valid names for \var{obj} are:
+  The valid names for \var{obj} are:
 #v+
-   "normal"      Default foreground/background
-   "status"      The status window line
-   "region"      Highlighted Regions
-   "cursor"      Text Cursor (X-Windows)
-   "cursorovr"   Text Cursor in overwrite mode (X-Windows)
-   "menu"        The menu bar
-   "error"       Error messages
-   "message"     Other messages
-   "dollar"      Color of the indicator that text extends beyond the
-                 boundary of the window.
-   "linenum"     Line number field
+    "normal"      Default foreground/background
+    "status"      The status window line
+    "region"      Highlighted Regions
+    "cursor"      Text Cursor (X-Windows)
+    "cursorovr"   Text Cursor in overwrite mode (X-Windows)
+    "menu"        The menu bar
+    "error"       Error messages
+    "message"     Other messages
+    "dollar"      Color of the indicator that text extends beyond the
+                  boundary of the window.
+    "linenum"     Line number field
 #v-
- If color syntax highlighting is enabled, the following object names
- are also meaningful:
+  If color syntax highlighting is enabled, the following object names
+  are also meaningful:
 #v+
    "number"      Numbers in C-mode and Equations in TeX-mode
    "delimiter"   Commas, semi-colons, etc...
@@ -94,12 +94,12 @@
    "trailing_whitespace"
    "html"        <html> and '<' syntax objects.
 #v-
- If line attributes are available, then you may also specify the color
- of the hidden line indicator:
+  If line attributes are available, then you may also specify the color
+  of the hidden line indicator:
 #v+
-   "..."         Hidden line indicator
+    "..."         Hidden line indicator
 #v-
- The color of the menu objects may be specified via
+  The color of the menu objects may be specified via
 #v+
    "menu_char"              Menu item key-shortcut color
    "menu_shadow"            Color of the shadow
@@ -107,7 +107,7 @@
    "menu_popup"             Color of the popup box
    "menu_selection_char"    Selected menu item key-shortcut color
 #v-
- Xjed defines the following objects:
+  Xjed defines the following objects:
 #v+
    "mouse"                  Mouse cursor color
    "border"                 Window border color

@@ -108,8 +108,7 @@
 \usage{Int_Type what_line}
 \description
   The value of the \var{what_line} specifies the current line number.
-  Lines are numbered from one. 
-
+  Lines are numbered from one.
 \notes
   This is a read-only variable.
 
@@ -123,7 +122,7 @@
      return what_line;
    }
 #v-
- always returns 1.
+  always returns 1.
 \seealso{what_column, goto_line}
 \done
 

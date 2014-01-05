@@ -12,10 +12,10 @@ private variable Max_Num_Lines = 32; % The same as in 'mini.sl'
 %\synopsis{History_File}
 %\usage{String_Type History_File = "jed.his";}
 %\description
-% The variable \var{History_File} is used by the function \var{history_save}
-% to know the file name in which to store all non-blank lines of the
-% mini-buffer. Its default value is "~/.jed-history" under Unix and
-% "~/jed.his" on other platforms.
+%  The variable \var{History_File} is used by the function \sfun{history_save}
+%  to know the file name in which to store all non-blank lines of the
+%  mini-buffer. Its default value is "~/.jed-history" under Unix and
+%  "~/jed.his" on other platforms.
 %\seealso{history_load, history_save}
 %!%-
 custom_variable ("History_File",
@@ -33,29 +33,29 @@ custom_variable ("History_File",
 %\synopsis{history_load}
 %\usage{Void_Type history_load ();}
 %\description
-% This function reads a history file, i.e. each line of the file is
-% stored in the mini-buffer, but not evaluated. By default, historical
-% records are kept in a file whose name is stored in the \var{History_file}
-% variable. This file is written in the current working directory
-% associated with jed, i.e. the directory from which you started the jed
-% process. For example, to read your history file every time you start
-% jed and give an alternative name to the history file, put:
+%  This function reads a history file, i.e. each line of the file is
+%  stored in the mini-buffer, but not evaluated. By default, historical
+%  records are kept in a file whose name is stored in the \var{History_file}
+%  variable. This file is written in the current working directory
+%  associated with jed, i.e. the directory from which you started the jed
+%  process. For example, to read your history file every time you start
+%  jed and give an alternative name to the history file, put:
 %#v+
-%   variable History_File;
-%   if (BATCH == 0)
-%   {
-%      () = evalfile ("history");
-%      History_File = ".my-jed-history";
-%      history_load ();
-%   }
+%    variable History_File;
+%    if (BATCH == 0)
+%    {
+%       () = evalfile ("history");
+%       History_File = ".my-jed-history";
+%       history_load ();
+%    }
 %#v-
-% in your .jedrc (or jed.rc) file. The \var{History_File} variable can be
-% assigned either a file name or an absolute path+filename. In the first
-% case, a file will be saved in the current working directory (the one
-% you were in when you started jed), so you will find a history file in
-% every directory you work in. In the second one, only one file will be
-% created, but you can handle 'local' history files easily (see
-% \var{history_local_save} to know how to do it).
+%  in your .jedrc (or jed.rc) file. The \var{History_File} variable can be
+%  assigned either a file name or an absolute path+filename. In the first
+%  case, a file will be saved in the current working directory (the one
+%  you were in when you started jed), so you will find a history file in
+%  every directory you work in. In the second one, only one file will be
+%  created, but you can handle 'local' history files easily (see
+%  \sfun{history_local_save} to know how to do it).
 %\seealso{history_save, history_local_save, minued_mode}
 %\seealso{History_File}
 %!%-
@@ -87,14 +87,14 @@ define history_load ()
 %\synopsis{history_save}
 %\usage{Int_Type history_save ()}
 %\description
-% This function saves the contents of the mini-buffer (see \var{history_load}
-% for more information) to the file specified by the variable \var{History_File}
-% or to the local history file (see \var{history_local_save} for more
-% information). It returns -1 upon failure, or 0 upon success.
+%  This function saves the contents of the mini-buffer (see \sfun{history_load}
+%  for more information) to the file specified by the variable \var{History_File}
+%  or to the local history file (see \sfun{history_local_save} for more
+%  information). It returns -1 upon failure, or 0 upon success.
 %\notes
-% When history.sl is loaded, \var{history_save} will automatically get attached
-% to the editors exit hooks.  As a result, it is really not necessary to call
-% this function directly.
+%  When history.sl is loaded, \sfun{history_save} will automatically get attached
+%  to the editors exit hooks.  As a result, it is really not necessary to call
+%  this function directly.
 %\seealso{history_load, history_local_save}
 %\seealso{History_File}
 %!%-
@@ -151,12 +151,12 @@ define history_save ()
 %\synopsis{history_local_save}
 %\usage{Void_Type history_local_save ()}
 %\description
-% This function saves the contents of the mini-buffer at some arbitrary file.
-% If you give the same filename as in \var{History_File} but use a different
-% path, then \var{history_load} will load this file into the mini-buffer every
-% time you start jed from that (and only from that) directory. This behavior is
-% only useful when the value of \var{History_File} is an absolute filename
-% and you want a local history when you start jed from some specific directory.
+%  This function saves the contents of the mini-buffer at some arbitrary file.
+%  If you give the same filename as in \var{History_File} but use a different
+%  path, then \var{history_load} will load this file into the mini-buffer every
+%  time you start jed from that (and only from that) directory. This behavior is
+%  only useful when the value of \var{History_File} is an absolute filename
+%  and you want a local history when you start jed from some specific directory.
 %\seealso{history_load, history_save}
 %\seealso{History_File}
 %!%-

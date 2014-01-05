@@ -2,10 +2,10 @@
 \synopsis{Control the case-sensitivity for searches in the current buffer}
 \usage{Int_Type CASE_SEARCH}
 \description
- If the value of \var{CASE_SEARCH} is non-zero, text searches
- performed in the current buffer will be case-sensitive, otherwise
- case-insensitive searches will be performed.  The value of this
- variable may vary from buffer to buffer.
+  If the value of \var{CASE_SEARCH} is non-zero, text searches
+  performed in the current buffer will be case-sensitive, otherwise
+  case-insensitive searches will be performed.  The value of this
+  variable may vary from buffer to buffer.
 \seealso{CASE_SEARCH_DEFAULT, fsearch, ffind}
 \done
 
@@ -13,10 +13,10 @@
 \synopsis{The default CASE_SEARCH setting for newly created buffers}
 \usage{Int_Type CASE_SEARCH_DEFAULT}
 \description
- Searches in a buffer are performed according to the value of the
- \var{CASE_SEARCH} variable.  Newly created buffers are given a
- \var{CASE_SEARCH} value of \var{CASE_SEARCH_DEFAULT}.  The default
- value of \var{CASE_SEARCH_DEFAULT} is 0.
+  Searches in a buffer are performed according to the value of the
+  \var{CASE_SEARCH} variable.  Newly created buffers are given a
+  \var{CASE_SEARCH} value of \var{CASE_SEARCH_DEFAULT}.  The default
+  value of \var{CASE_SEARCH_DEFAULT} is 0.
 \seealso{CASE_SEARCH, fsearch, ffind}
 \done
 
@@ -42,7 +42,6 @@
 \seealso{fsearch_char, ffind_char, fsearch}
 \seealso{CASE_SEARCH}
 \done
-
 
 \function{blooking_at}
 \synopsis{Test if the characters immediately preceding the point match a string}

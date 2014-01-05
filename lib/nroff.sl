@@ -25,11 +25,10 @@ define_syntax (".a-zA-Z", 'w', $1);
 
 %!%+
 %\function{nroff_mode}
-%\synopsis{nroff_mode}
+%\usage{Void nroff_mode ();}
 %\description
-% Protoytype: Void nroff_mode ();
-% A primitive mode for editing nroff/troff files.
-% mostly to define the paragraph separator
+%  A primitive mode for editing nroff/troff files.
+%  mostly to define the paragraph separator
 %!%-
 define nroff_mode ()
 {
@@ -39,4 +38,3 @@ define nroff_mode ()
    set_buffer_hook ("par_sep", "nroff_parsep");
    run_mode_hooks ("nroff_mode_hook");
 }
-

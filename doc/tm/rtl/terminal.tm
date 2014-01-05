@@ -80,7 +80,7 @@
   be recentered if the cursor moves outside the top or bottom rows of
   the window.
 \notes
-  This variable is not available on all systems. 
+  This variable is not available on all systems.
 \seealso{TERM_CANNOT_INSERT}
 \done
 

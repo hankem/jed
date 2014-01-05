@@ -3,9 +3,9 @@
 %\synopsis{make_tmp_file}
 %\usage{String make_tmp_file (String base);}
 %\description
-% This function returns a unique file name that begins with \var{base}.
-% If \exmp{base} does not specify an absolute path, the value of
-% \svar{Jed_Tmp_Directory} will be used for the directory.
+%  This function returns a unique file name that begins with \exmp{base}.
+%  If \exmp{base} does not specify an absolute path, the value of
+%  \svar{Jed_Tmp_Directory} will be used for the directory.
 %!%-
 define make_tmp_file (base)
 {
@@ -33,23 +33,23 @@ define make_tmp_file (base)
 %\synopsis{Generate and unique filename and open the file}
 %\usage{structure = open_unique_filename (base, extname)}
 %\description
-% This function generates a unique filename of the form
-% \exmp{baseXXXXXX.extname} and returns a structure with fields
+%  This function generates a unique filename of the form
+%  \exmp{baseXXXXXX.extname} and returns a structure with fields
 %#v+
 %    filename     : The name of the file
 %    fd           : The FD_Type file descriptor
 %    fp           : The FP_Type file pointer
 %#v-
-% If \exmp{base} represents an absolute path, then the file
-% will be opened in the corresponding directory.  Otherwise the value
-% of the \svar{Jed_Tmp_Directory} variable will be used.
+%  If \exmp{base} represents an absolute path, then the file
+%  will be opened in the corresponding directory.  Otherwise the value
+%  of the \svar{Jed_Tmp_Directory} variable will be used.
 %
-% If this function fails, an exception will be thrown.
+%  If this function fails, an exception will be thrown.
 %\notes
-% The value of the \exmp{fp} structure field is generated from the
-% value of the \exmp{fd} field using the \ifun{fdopen} function.  See the
-% documentation of the \ifun{fdopen} function for the relationship of
-% these two types and their semantics.
+%  The value of the \exmp{fp} structure field is generated from the
+%  value of the \exmp{fd} field using the \ifun{fdopen} function.  See the
+%  documentation of the \ifun{fdopen} function for the relationship of
+%  these two types and their semantics.
 %\seealso{fdopen}
 %!%-
 define open_unique_filename (base, ext)

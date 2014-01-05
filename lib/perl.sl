@@ -165,16 +165,14 @@ require ("perlxtra");
 %\synopsis{Perl_Continued_Offset}
 %\usage{Integer Perl_Continued_Offset = 2;}
 %\description
-% This variable controls the indentation of statements that are continued
-% onto the next line as in the following example:
+%  This variable controls the indentation of statements that are continued
+%  onto the next line as in the following example:
 %#v+
 %  print
 %    "hallo ",
 %    " world\n";
 %#v-
-%
-% The default value (2) corresponds to the default for \var{perltidy}
-%
+%  The default value (2) corresponds to the default for \var{perltidy}
 %\seealso{C_CONTINUED_OFFSET, Perl_Indent}
 %!%-
 custom_variable("Perl_Continued_Offset", 2);
@@ -457,9 +455,8 @@ private define find_matching_brace_ignore_fold_marks (endch)
 
 %!%+
 %\function{perl_indent_line}
-%\synopsis{Void perl_indent_line (Void)}
-%\description
-% indents the line
+%\synopsis{Indents the line}
+%\usage{Void perl_indent_line (Void)}
 %\seealso{perl_indent_region, Perl_Indent, Perl_Continued_Offset, perl_mode}
 %!%-
 public define perl_indent_line()
@@ -676,9 +673,8 @@ public define perl_indent_line()
 
 %!%+
 %\function{perl_indent_region}
-%\synopsis{Void perl_indent_region (Void)}
-%\description
-% indents each line in the region
+%\synopsis{Indents each line in the region}
+%\usage{Void perl_indent_region (Void)}
 %\seealso{perl_indent_line, perl_indent_buffer, perltidy, perl_mode}
 %!%-
 public define perl_indent_region()
@@ -750,9 +746,10 @@ public define perl_indent_region()
 
 %!%+
 %\function{perl_indent_buffer}
-%\synopsis{Void perl_indent_buffer (Void)}
-%\description
-% indents the entire buffer (NB: using perltidy might be easier)
+%\synopsis{Indents the entire buffer}
+%\usage{Void perl_indent_buffer (Void)}
+%\notes
+%  Using \sfun{perltidy} might be easier.
 %\seealso{perl_indent_line, perl_indent_region, perltidy, perl_mode}
 %!%-
 public define perl_indent_buffer ()
@@ -787,11 +784,10 @@ define perl_next_chunk() { perl_pn_chunk(&down_1); }
 
 %!%+
 %\function{perl_beg_chunk}
-%\synopsis{Void perl_beg_chunk (Void)}
+%\usage{Void perl_beg_chunk (Void)}
 %\description
-% move to the beginning of a code chunk
-%   (starting with 'sub' in the first column)
-% or to the beginning of a POD chunk.
+%  Move to the beginning of a code chunk (starting with 'sub'
+%  in the first column) or to the beginning of a POD chunk.
 %\seealso{perl_end_chunk, perl_mark_chunk, perl_mode}
 %!%-
 define perl_beg_chunk()
@@ -805,9 +801,9 @@ define perl_beg_chunk()
 
 %!%+
 %\function{perl_end_chunk}
-%\synopsis{Void perl_end_chunk (Void)}
+%\usage{Void perl_end_chunk (Void)}
 %\description
-% move to the end of a code chunk or to the end of a POD chunk
+%  Move to the end of a code chunk or to the end of a POD chunk.
 %\seealso{perl_beg_chunk, perl_mark_chunk, perl_mode}
 %!%-
 define perl_end_chunk()
@@ -824,9 +820,8 @@ define perl_end_chunk()
 
 %!%+
 %\function{perl_mark_chunk}
-%\synopsis{Void perl_mark_chunk (Void)}
-%\description
-% marks the code/Pod code
+%\synopsis{Marks the code/Pod code}
+%\usage{Void perl_mark_chunk (Void)}
 %\seealso{perl_beg_chunk, perl_end_chunk, perl_mode}
 %!%-
 define perl_mark_chunk()
@@ -840,10 +835,10 @@ define perl_mark_chunk()
 
 %!%+
 %\function{perl_mark_matching}
-%\synopsis{Void perl_mark_matching (Void)}
+%\usage{Void perl_mark_matching (Void)}
 %\description
-% works mostly like find_matching_delimiter, except that it attempts
-% to be extra smart if starting out on whitespace
+%  Works mostly like \sfun{find_matching_delimiter}, except that it attempts
+%  to be extra smart if starting out on whitespace.
 %\seealso{find_matching_delimiter}
 %!%-
 define perl_mark_matching()
@@ -932,9 +927,8 @@ define perl_newline_and_indent()
 static variable Perlmode_Fill_Chars = "";
 %!%+
 %\function{perl_paragraph_sep}
-%\synopsis{Void perl_paragraph_sep (Void)}
-%\description
-% defines paragraphs for Perl mode
+%\synopsis{Defines paragraphs for Perl mode}
+%\usage{Void perl_paragraph_sep (Void)}
 %\seealso{parse_to_point}
 %!%-
 define perl_paragraph_sep()
@@ -955,9 +949,9 @@ define perl_paragraph_sep()
 
 %!%+
 %\function{perl_format_paragraph}
-%\synopsis{Void perl_format_paragraph (Void)}
+%\usage{Void perl_format_paragraph (Void)}
 %\description
-% should format a comment paragraph in Perl mode, but not entirely stable?
+%  Should format a comment paragraph in Perl mode, but not entirely stable?
 %\seealso{perl_mode}
 %!%-
 define perl_format_paragraph()
@@ -1009,47 +1003,46 @@ define perl_format_paragraph()
 %------------------------------------------------------------------------------
 %!%+
 %\function{perl_mode}
-%\synopsis{Void perl_mode (Void)}
+%\usage{Void perl_mode (Void)}
 %\description
-% This is a mode that is dedicated to editing Perl language files
-% including a bimodal Pod/Perl indentation mode.
-% The indentation style matches the results of perltidy(1) with
-% '-ci=2 -i=4 -en=8' fairly closely, except some of the closing brackets.
+%  This is a mode that is dedicated to editing Perl language files
+%  including a bimodal Pod/Perl indentation mode.
+%  The indentation style matches the results of perltidy(1) with
+%  '-ci=2 -i=4 -en=8' fairly closely, except some of the closing brackets.
 %
-% This seems to be missing, so you might want to add
-% add_mode_for_extension("perl", "pm");
+%  This seems to be missing, so you might want to add
+%  add_mode_for_extension("perl", "pm");
 %
-% Functions that affect this mode include:
+%  Functions that affect this mode include:
 %#v+
-%  function:             default binding:
-%  indent_line                TAB
-%  perl_beg_chunk             ESC Ctrl-A
-%  perl_end_chunk             ESC Ctrl-E
-%  perl_mark_chunk            ESC Ctrl-H
-%  perl_mark_matching         ESC Ctrl-M
-%  perl_next_chuck            ESC Ctrl-N
-%  perl_prev_chunk            ESC Ctrl-P
-%  perl_indent_region         ESC TAB
-%  perl_indent_region         Ctrl-C TAB
-%  perl_format_paragraph      ESC q
-%  perl_newline_and_indent    Ctrl-M (not bound)
-%  perl_indent_buffer         (not bound)
+%   function:                  default binding:
+%   indent_line                TAB
+%   perl_beg_chunk             ESC Ctrl-A
+%   perl_end_chunk             ESC Ctrl-E
+%   perl_mark_chunk            ESC Ctrl-H
+%   perl_mark_matching         ESC Ctrl-M
+%   perl_next_chuck            ESC Ctrl-N
+%   perl_prev_chunk            ESC Ctrl-P
+%   perl_indent_region         ESC TAB
+%   perl_indent_region         Ctrl-C TAB
+%   perl_format_paragraph      ESC q
+%   perl_newline_and_indent    Ctrl-M (not bound)
+%   perl_indent_buffer         (not bound)
 %
-%  perl_help                  Ctrl-C ?
-%  perl_check                 Ctrl-C c
-%  perl_indent_region	      Ctrl-TAB
-%  perl_exec                  Ctrl-C e
-%  perl_info                  Ctrl-C i
-%  perltidy                   Ctrl-C Ctrl-T
-%
+%   perl_help                  Ctrl-C ?
+%   perl_check                 Ctrl-C c
+%   perl_indent_region	       Ctrl-TAB
+%   perl_exec                  Ctrl-C e
+%   perl_info                  Ctrl-C i
+%   perltidy                   Ctrl-C Ctrl-T
 %#v-
-% Variables affecting this mode include:
+%  Variables affecting this mode include:
 %#v+
-%  Perl_Continued_Offset
-%  Perl_Flags
-%  Perl_Indent
+%   Perl_Continued_Offset
+%   Perl_Flags
+%   Perl_Indent
 %#v-
-% Hooks: \var{perl_mode_hook}
+%  Hooks: \var{perl_mode_hook}
 %\seealso{perldoc}
 %!%-
 define perl_mode ()	% <AUTOLOAD> <COMPLETE> <EXTS="pm">

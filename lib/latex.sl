@@ -933,31 +933,31 @@ private define init_menu (menu)
 %\synopsis{latex_mode}
 %\usage{Void latex_mode ();}
 %\description
-% This mode is designed to facilitate the task of editing latex files.
-% It calls the function \var{latex_mode_hook} if it is defined.  In addition,
-% if the abbreviation table \var{"TeX"} is defined, that table is used.
+%  This mode is designed to facilitate the task of editing latex files.
+%  It calls the function \sfun{latex_mode_hook} if it is defined.  In addition,
+%  if the abbreviation table "TeX" is defined, that table is used.
 %
-% The default key-bindings for this mode include:
+%  The default key-bindings for this mode include:
 %#v+
-%    "tex_insert_braces"       "^C{"
-%    "tex_font"                "^C^F"
-%    "latex_environment"       "^C^E"
-%    "latex_section"           "^C^S"
-%    "latex_close_environment" "^C]"
-%    "latex_insert_item"       "^C^J"
-%    "tex_comment_region"      "^C;"
-%    "tex_uncomment_region"    "^C:"
-%    "tex_comment_paragraph"   "^C%"
-%    "tex_mark_environment"    "^C."
-%    "tex_mark_section"        "^C*"
-%    "latex_toggle_math_mode"  "^C~"
-%    "tex_insert_macro"        "^C^M"
-%    "tex_complete_symbol"     "\e^I"
-%    "latex_help"              "^Ci"
-%    "latex_indent_next_line"   "^J"
-%    "latex_indent_region"      "^C^Q^R"
-%    "latex_indent_section"     "^C^Q^S"
-%    "latex_indent_environment" "^C^Q^E"
+%    tex_insert_braces         ^C{
+%    tex_font                  ^C^F
+%    latex_environment         ^C^E
+%    latex_section             ^C^S
+%    latex_close_environment   ^C]
+%    latex_insert_item         ^C^J
+%    tex_comment_region        ^C;
+%    tex_uncomment_region      ^C:
+%    tex_comment_paragraph     ^C%
+%    tex_mark_environment      ^C.
+%    tex_mark_section          ^C*
+%    latex_toggle_math_mode    ^C~
+%    tex_insert_macro          ^C^M
+%    tex_complete_symbol       \e^I
+%    latex_help                ^Ci
+%    latex_indent_next_line    ^J
+%    latex_indent_region       ^C^Q^R
+%    latex_indent_section      ^C^Q^S
+%    latex_indent_environment  ^C^Q^E
 %#v-
 %!%-
 define latex_mode ()

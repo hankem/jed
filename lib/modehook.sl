@@ -4,29 +4,29 @@
 %\variable{Enable_Mode_Hook_Eval}
 %\synopsis{Control the use of "eval" from a file's mode statement}
 %\description
-% When a file is read into a buffer, the editor will look for a line near the
-% top of the file containing \exmp{-*- TEXT -*-}, where \exmp{TEXT} usually
-% specifies the mode to be applied to the buffer, e.g.,
+%  When a file is read into a buffer, the editor will look for a line near
+%  the top of the file containing \exmp{-*- TEXT -*-}, where \exmp{TEXT} usually
+%  specifies the mode to be applied to the buffer, e.g.,
 %#v+
-%    /* -*- C -*- */
+%     /* -*- C -*- */
 %#v-
-% For this reason, such a line is referred to as the files mode statement.
-% In addition, an arbitrary \slang expression may be executed by
-% the mode statement through the use of \var{eval} and \var{evalfile}, e.g.,
+%  For this reason, such a line is referred to as the files mode statement.
+%  In addition, an arbitrary \slang expression may be executed by the mode
+%  statement through the use of \var{eval} and \var{evalfile}, e.g.,
 %#v+
-%   /* -*- mode: C; eval: set_buffer_no_backup; -*- */
+%    /* -*- mode: C; eval: set_buffer_no_backup; -*- */
 %#v-
-% This example would cause c-mode to be assigned to the buffer, and backups
-% for the file turned-off.  Obviously this poses a security risk, since it
-% permits the evaluation of arbitrary \slang code.
+%  This example would cause c-mode to be assigned to the buffer, and backups
+%  for the file turned-off.  Obviously this poses a security risk, since it
+%  permits the evaluation of arbitrary \slang code.
 %
-% The \var{Enable_Mode_Hook_Eval} variable may be used to control how
-% \var{eval}, and other potentially risky constructs are handled by the file's
-% mode statement.  If its value is 0, such statements will not get executed.
-% If the value of \var{Enable_Mode_Hook_Eval} is \NULL, then the editor will
-% query the user about whether to execute the statement, otherwise such
-% statements will get executed.  The default value is \NULL, i.e., to
-% query the user.
+%  The \var{Enable_Mode_Hook_Eval} variable may be used to control how \var{eval},
+%  and other potentially risky constructs are handled by the file's  mode
+%  statement.  If its value is 0, such statements will not get executed.
+%  If the value of \var{Enable_Mode_Hook_Eval} is \NULL, then the editor will
+%  query the user about whether to execute the statement, otherwise such
+%  statements will get executed.  The default value is \NULL, i.e., to
+%  query the user.
 %\seealso{modeline_hook2, eval, evalfile, set_mode}
 %!%-
 custom_variable ("Enable_Mode_Hook_Eval", NULL);
@@ -49,18 +49,18 @@ private define check_eval (checked)
 
 %!%+
 %\function{modeline_hook2}
-%\synopsis{modeline_hook2}
+%\usage{modeline_hook2}
 %\description
-% check for the following mode statements:
+%  Check for the following mode statements:
 %#v+
-% -*- mode: NAME -*-		set mode to NAME
-% -*- evalfile: FILE -*-	evaluate file FILE
-% -*- eval: expression -*-    evaluate expression
-% -*- VAR: VALUE -*-		set VAR = VALUE
+%  -*- mode: NAME -*-		set mode to NAME
+%  -*- evalfile: FILE -*-	evaluate file FILE
+%  -*- eval: expression -*-	evaluate expression
+%  -*- VAR: VALUE -*-		set VAR = VALUE
 %#v-
-% these statements may be combined:
+%  These statements may be combined:
 %#v+
-% -*- mode: NAME; evalfile: FILE; VAR: VALUE -*-
+%  -*- mode: NAME; evalfile: FILE; VAR: VALUE -*-
 %#v-
 %!%-
 define modeline_hook2 ()

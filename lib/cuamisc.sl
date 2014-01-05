@@ -9,18 +9,18 @@
 %!%+
 %\function{cua_delete_word}
 %\synopsis{Delete the current word (or a defined region)}
-%\usage{ Void cua_delete_word ()}
+%\usage{Void cua_delete_word ()}
 %\description
-%   cua_delete_word is somewhat context sensitive:
-%    * Delete from the current position to the end of a word.
-%    * If there is just whitespace following the editing point, delete it.
-%    * If there is any other non-word char, delete just one char.
-%    * If a region is defined, delete it (instead of the above actions).
-%   This way, you can do a "piecewise" deletion by repeatedly pressing
-%   the same key-combination.
+%  cua_delete_word is somewhat context sensitive:
+%   * Delete from the current position to the end of a word.
+%   * If there is just whitespace following the editing point, delete it.
+%   * If there is any other non-word char, delete just one char.
+%   * If a region is defined, delete it (instead of the above actions).
+%  This way, you can do a "piecewise" deletion by repeatedly pressing
+%  the same key-combination.
 %\notes
-%   This is actually the ide_delete_word function form Guido Gonzatos
-%   ide.sl mode, put here to be usable also with other emulations.
+%  This is actually the ide_delete_word function form Guido Gonzatos
+%  ide.sl mode, put here to be usable also with other emulations.
 %\seealso{delete_word, delete_cmd, cua_kill_region}
 %!%-
 public define cua_delete_word ()		% ^T, Key_Ctrl_Del
@@ -68,8 +68,8 @@ public define cua_repeat_search ()
 %\synopsis{Indent the current line or (if defined) the region}
 %\usage{Void cua_indent_region_or_line ()}
 %\description
-%   Call the indent_line_hook for every line in a region.
-%   If no region is defined, call it for the current line.
+%  Call the indent_line_hook for every line in a region.
+%  If no region is defined, call it for the current line.
 %\seealso{indent_line, set_buffer_hook, is_visible_mark}
 %!%-
 public define cua_indent_region_or_line ()
@@ -96,8 +96,8 @@ public define cua_indent_region_or_line ()
 %\synopsis{Escape from a command/action}
 %\usage{cua_escape_cmd()}
 %\description
-%   Undo/Stop an action. If a region is defined, undefine it. Else
-%   call kbd_quit.
+%  Undo/Stop an action. If a region is defined, undefine it. Else
+%  call kbd_quit.
 %\seealso{kbd_quit}
 %!%-
 define cua_escape_cmd()
@@ -133,31 +133,30 @@ define cua_meta_escape_cmd ()
 %\synopsis{Redefine the ESC key to issue "\\e\\e\\e"}
 %\usage{cua_one_press_escape()}
 %\description
-%   Depending on the jed-version, either x_set_keysym or
-%   meta_escape_cmd is used to map the ESC key to "\\e\\e\\e"
+%  Depending on the jed-version, either x_set_keysym or
+%  meta_escape_cmd is used to map the ESC key to "\\e\\e\\e"
 %\example
-% To let the ESC key abort functions but retain bindings for
-% keystrings that start with "\\e" do
+%  To let the ESC key abort functions but retain bindings for
+%  keystrings that start with "\\e" do
 %#v+
 %    cua_one_press_escape();
 %    setkey ("cua_escape_cmd", "\e\e\e");     % Triple-Esc -> abort
 %#v-
 %\notes
-%   The function is experimental and has side-effects if not using xjed.
-%   For not-x-jed:
+%  The function is experimental and has side-effects if not using xjed.
+%  For not-x-jed:
 %
-%   It uses the "^^" character for temporarily remapping, i.e. Ctrl-^ will
-%   call cua_escape_cmd().
+%  It uses the "^^" character for temporarily remapping, i.e. Ctrl-^ will
+%  call cua_escape_cmd().
 %
-%   In order to work, it must be loaded before any mode-specific keymaps are
-%   defined -- otherwise this modes will be widely unusable due to not
-%   working cursor keys...!
+%  In order to work, it must be loaded before any mode-specific keymaps are
+%  defined -- otherwise this modes will be widely unusable due to not
+%  working cursor keys...!
 %
-%   It breaks functions that rely on getkey() (e.g. isearch, showkey, old
-%   wmark(pre 99.16), ...)
+%  It breaks functions that rely on getkey() (e.g. isearch, showkey, old
+%  wmark(pre 99.16), ...)
 %
-%   It will not work in keyboard macros and might fail on slow terminal links.
-%
+%  It will not work in keyboard macros and might fail on slow terminal links.
 %\seealso{cua_escape_cmd, cua_escape_cmd, getkey, setkey, x_set_keysym}
 %!%-
 define cua_one_press_escape()
@@ -177,7 +176,7 @@ define cua_one_press_escape()
 %\synopsis{cua_save_buffer}
 %\usage{Void cua_save_buffer();}
 %\description
-% Save current buffer.
+%  Save current buffer.
 %!%-
 define cua_save_buffer()
 {
@@ -199,4 +198,3 @@ define cua_save_buffer()
 %}}}
 
 provide ("cuamisc");
-

@@ -1822,43 +1822,43 @@ dfa_set_init_callback( &setup_dfa_callback, $1 );
 %\synopsis{php_mode}
 %\usage{Void php_mode ();}
 %\description
-% This is a mode that is dedicated to facilitate the editing of PHP language files.
-% It calls the function \var{php_mode_hook} if it is defined. It also manages
-% to recognize whenever it is in a php block or in a html block, for those people
-% that doesn't separate function from form ;)
+%  This is a mode that is dedicated to facilitate the editing of PHP language files.
+%  It calls the function \var{php_mode_hook} if it is defined. It also manages
+%  to recognize whenever it is in a php block or in a html block, for those people
+%  that doesn't separate function from form ;)
 %
-% Functions that affect this mode include:
+%  Functions that affect this mode include:
 %#v+
-%  function:             default binding:
-%  php_top_of_function        ESC Ctrl-A
-%  php_end_of_function        ESC Ctrl-E
-%  php_mark_function          ESC Ctrl-H
-%  php_mark_matching          ESC Ctrl-M
-%  php_indent_buffer          Ctrl-C Ctrl-B
-%  php_insert_class           Ctrl-C Ctrl-C
-%  php_insert_function        Ctrl-C Ctrl-F
-%  php_insert_bra             {
-%  php_insert_ket             }
-%  php_insert_colon           :
-%  php_format_paragraph       ESC q
-%  indent_line                TAB
-%  newline_and_indent         RETURN
-%  goto_match                 Ctrl-\
-%  php_insert_tab             Ctrl-C Ctrl-I
+%   function:                  default binding:
+%   php_top_of_function        ESC Ctrl-A
+%   php_end_of_function        ESC Ctrl-E
+%   php_mark_function          ESC Ctrl-H
+%   php_mark_matching          ESC Ctrl-M
+%   php_indent_buffer          Ctrl-C Ctrl-B
+%   php_insert_class           Ctrl-C Ctrl-C
+%   php_insert_function        Ctrl-C Ctrl-F
+%   php_insert_bra             {
+%   php_insert_ket             }
+%   php_insert_colon           :
+%   php_format_paragraph       ESC q
+%   indent_line                TAB
+%   newline_and_indent         RETURN
+%   goto_match                 Ctrl-\
+%   php_insert_tab             Ctrl-C Ctrl-I
 %#v-
-% Variables affecting indentation include:
+%  Variables affecting indentation include:
 %#v+
-% PHP_INDENT
-% PHP_BRACE
-% PHP_BRA_NEWLINE
-% PHP_KET_NEWLINE
-% PHP_Colon_Offset
-% PHP_CONTINUED_OFFSET
-% PHP_Class_Offset
-% PHP_Autoinsert_Comments
-% PHP_Switch_Offset
+%  PHP_INDENT
+%  PHP_BRACE
+%  PHP_BRA_NEWLINE
+%  PHP_KET_NEWLINE
+%  PHP_Colon_Offset
+%  PHP_CONTINUED_OFFSET
+%  PHP_Class_Offset
+%  PHP_Autoinsert_Comments
+%  PHP_Switch_Offset
 %#v-
-% Hooks: \var{php_mode_hook}
+%  Hooks: \var{php_mode_hook}
 %!%-
 define php_mode( )
 {

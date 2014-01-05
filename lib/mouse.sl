@@ -8,14 +8,14 @@ custom_variable ("Mouse_Wheel_Scroll_Lines", 3);
 %\synopsis{Characters that delimit double-click selections}
 %\usage{String_Type Mouse_Selection_Word_Chars}
 %\description
-% The value of this variable represents a set of characters that serve
-% to delimit double-click selections.  The default value of this
-% variable is
+%  The value of this variable represents a set of characters that serve
+%  to delimit double-click selections.  The default value of this
+%  variable is
 %#v+
 %    Mouse_Selection_Word_Chars = "^ \n\"%&'()*,;<=>?@[]^`{|}";
 %#v-
-% If the value of this variable is NULL, the word characters
-% associated with the buffer will be used.
+%  If the value of this variable is NULL, the word characters
+%  associated with the buffer will be used.
 %\seealso{define_word}
 %!%-
 custom_variable ("Mouse_Selection_Word_Chars","^ \n\"%&'()*,;<=>?@[]^`{|}");

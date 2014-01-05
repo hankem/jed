@@ -13,8 +13,9 @@
 %\usage{Int_Type mailutils_find_header_separator ()}
 %\description
 %  This function searches for the line separating the mail headers
-%  from the body.  It returns 1 if found, and 0 otherwise.  It does not
-%  preserve the spot upon failure.
+%  from the body.  It returns 1 if found, and 0 otherwise.
+%\notes
+%  It does not preserve the spot upon failure.
 %\seealso{mailutils_narrow_to_header}
 %!%-
 public define mailutils_find_header_separator ()
@@ -34,8 +35,8 @@ public define mailutils_find_header_separator ()
 %\synopsis{Narrow to the mail headers}
 %\usage{Int_Type mailutils_narrow_to_header ()}
 %\description
-% This function narrows the buffer to the mail headers.  It returns 0
-% if successful (headers were found), or -1 upon failure.
+%  This function narrows the buffer to the mail headers.
+%  It returns 0 if successful (headers were found), or -1 upon failure.
 %\seealso{mailutils_find_header_separator, mailutils_set_keyword_value, widen}
 %!%-
 public define mailutils_narrow_to_header ()
@@ -72,11 +73,10 @@ private define mark_this_keywords_value ()
 %\synopsis{Obtain the value of a header keyword}
 %\usage{String_Type mailutils_get_keyword_value (kw)}
 %\description
-% This function returns the value of a mail header specified by the
-% \exmp{kw} parameter.  If no such header exists, \NULL will be
-% returned.
+%  This function returns the value of a mail header specified by the
+%  \exmp{kw} parameter.  If no such header exists, \NULL will be returned.
 %\notes
-% This function does not preserve the editing point.
+%  This function does not preserve the editing point.
 %\seealso{mailutils_set_keyword_value}
 %!%-
 public define mailutils_get_keyword_value (kw)
@@ -104,13 +104,13 @@ public define mailutils_get_keyword_value (kw)
 %\synopsis{Set the value of a mail header}
 %\usage{mailutils_set_keyword_value (String_Type kw, String_Type val)}
 %\description
-% This function sets the value of the header keyword specified by the
-% \exmp{kw} argument to that of the \exmp{val} argument.  If no such
-% header exists, one will be created.  The editing point will be left
-% at the end of the header's value.  If the header exists and has a
-% value, then that value will be replace.
+%  This function sets the value of the header keyword specified by the
+%  \exmp{kw} argument to that of the \exmp{val} argument.  If no such
+%  header exists, one will be created.  The editing point will be left
+%  at the end of the header's value.  If the header exists and has a
+%  value, then that value will be replace.
 %\notes
-% This function does not preserve the editing point.
+%  This function does not preserve the editing point.
 %\seealso{mailutils_get_keyword_value, mailutils_find_header_separator}
 %!%-
 public define mailutils_set_keyword_value (field, value)

@@ -7,11 +7,11 @@ ifnot (is_defined ("Fold_Bob_Eob_Error_Action")) %{{{
 %\synopsis{Fold_Bob_Eob_Error_Action}
 %\usage{Integer Fold_Bob_Eob_Error_Action = 1;}
 %\description
-% This value of this variable determines the what will happen upon
-% reaching the boundary of the current fold via the up/down keys.
-% If the value is 0, an error will be generated; if the value is 1,
-% the fold will be exited; otherwise, the next/previous fold will be
-% entered.
+%  This value of this variable determines the what will happen upon
+%  reaching the boundary of the current fold via the up/down keys.
+%  If the value is 0, an error will be generated; if the value is 1,
+%  the fold will be exited; otherwise, the next/previous fold will be
+%  entered.
 %!%-
 variable Fold_Bob_Eob_Error_Action = 1;
 }

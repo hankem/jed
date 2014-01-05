@@ -292,12 +292,11 @@ definekey ("vhdl_indent_region",	"\e^I", $1);
 
 %!%+
 %\function{vhdl_mode}
-%\synopsis{vhdl_mode}
+%\usage{vhdl_mode}
 %\description
-% Mode designed for the purpose of editing VHDL files.
-% After the mode is loaded, the hook 'vhdl_hook' is called.
-% Useful functions include
-%
+%  Mode designed for the purpose of editing VHDL files.
+%  After the mode is loaded, the hook 'vhdl_hook' is called.
+%  Useful functions include:
 %  Function:                    Default Binding:
 %   vhdl_beg_of_subprogram         ESC ^A
 %        moves cursor to beginning of current function/process
@@ -306,13 +305,12 @@ definekey ("vhdl_indent_region",	"\e^I", $1);
 %   vhdl_mark_subprogram           ESC ^H
 %        mark the current function/process
 %
-% Variables include:
+%  Variables include:
 %   VHDL_Comment_String : string used by 'vhdl_comment' to
 %                         comment out a line.  Default is "--".
 %   VHDL_Indent_Amount  : number of spaces to indent statements in
 %                         a block.  The default is 2.
 %!%-
-
 define vhdl_mode ()
 {
   variable mode = "VHDL";
