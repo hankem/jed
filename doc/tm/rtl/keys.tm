@@ -128,7 +128,7 @@
   The value of the \var{X_LAST_KEYSYM} variable represents the keysym
   of the most previously processed key.
 \notes
-  This variable is availible only in the XWindows version of \jed.
+  This variable is available only in the XWindows version of \jed.
 \seealso{LASTKEY}
 \done
 
@@ -248,7 +248,7 @@
 \usage{Integer input_pending (Integer tsecs);}
 \description
   This function is used to see if keyboard input is available to be read
-  or not. The paramter \var{tsecs} is the amount of time to wait for input
+  or not. The parameter \var{tsecs} is the amount of time to wait for input
   before returning if input is not available.  The time unit for \var{tsecs}
   is one-tenth of a second.  That is, to wait up to one second, pass a
   value of ten to this routine.  It returns zero if no input is
@@ -356,7 +356,7 @@
 \done
 
 \function{set_current_kbd_command}
-\synopsis{Do as if "s" were entered from the keybord}
+\synopsis{Do as if "s" were entered from the keyboard}
 \usage{Void set_current_kbd_command (String s);}
 \description
   Undocumented

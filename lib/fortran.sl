@@ -424,7 +424,7 @@ set_fortran_comment_chars ($1, "^0-9 \t\n");
 %   fortran_electric_label            0-9
 %     Generates a label for current line or simply inserts a digit.
 %   fortran_next_statement            ^C^N
-%     moves to next fortran statementm skips comment lines
+%     moves to next fortran statement, skips comment lines
 %   fortran_previous_statement        ^C^P
 %     moves to previous fortran statement, skips comment lines
 %   fortran_ruler                     ^C^R

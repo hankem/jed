@@ -1,4 +1,4 @@
-\function{Replace all text in the rectangle by spaces}
+\function{blank_rect}
 \synopsis{Replace the rectangle defined by point and mark with spaces}
 \usage{Void blank_rect ()}
 \description

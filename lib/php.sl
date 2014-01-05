@@ -1822,10 +1822,10 @@ dfa_set_init_callback( &setup_dfa_callback, $1 );
 %\synopsis{php_mode}
 %\usage{Void php_mode ();}
 %\description
-% This is a mode that is dedicated to faciliate the editing of PHP language files.
+% This is a mode that is dedicated to facilitate the editing of PHP language files.
 % It calls the function \var{php_mode_hook} if it is defined. It also manages
-% to recognice whetever it is in a php block or in a html block, for those people
-% that doesnt seperate function from form ;)
+% to recognize whenever it is in a php block or in a html block, for those people
+% that doesn't separate function from form ;)
 %
 % Functions that affect this mode include:
 %#v+

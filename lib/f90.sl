@@ -1014,7 +1014,7 @@ public define f90_fixed_format_mode ()
 %   f90_electric_label            0-9
 %     Generates a label for current line or simply inserts a digit.
 %   f90_next_statement            ^C^N
-%     moves to next f90 statementm skips comment lines
+%     moves to next f90 statement, skips comment lines
 %   f90_previous_statement        ^C^P
 %     moves to previous f90 statement, skips comment lines
 %   f90_ruler                     ^C^R

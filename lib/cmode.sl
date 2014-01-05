@@ -87,7 +87,7 @@ custom_variable ("C_Class_Offset", 3);
 %\usage{Integer C_Param_Offset_Max = -1}
 %\description
 % This variable may be changed to adjust the indentation of parameters
-% in a funcion call that extends over multiple lines.
+% in a function call that extends over multiple lines.
 %
 % If the value is less than 0, the feature is off, otherwise
 % it holds the max number of spaces to indent the parameters on
@@ -119,7 +119,7 @@ custom_variable ("C_Macro_Indent", 3);
 % left parenthesis. A value greater than zero uses C_INDENT to determine the
 % indentation level. Additionally, common operators are outdented.
 %
-% eg,
+% e.g.,
 %    while
 %    (
 %        expr1

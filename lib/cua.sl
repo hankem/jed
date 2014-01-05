@@ -66,7 +66,7 @@ setkey("menu_select_menu(\"Global.&Help\")",   Key_F1);
 %setkey("context_help",                        Key_Shift_F1); % with hyperhelp mode
 setkey("cua_save_buffer",                      Key_F2);
 setkey("write_buffer",                         Key_Shift_F2); % save as
-setkey("repeat_search",                        Key_F3);
+setkey("repeat_search",                        Key_F3);  % Mh: Should this rather be "cua_repeat_search" ?
 % setkey("menu_select_menu(\"Global.&Search\")", Key_F3); % open Search menu
 
 % The "named" keys

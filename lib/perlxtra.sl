@@ -29,7 +29,7 @@
 %\usage{String Perl_Flags = "-w";}
 %\description
 % Extra (or 'expert') command-line options (switches) for running Perl.
-% eg, \var{'-I'} or \var{'-M'}.
+% e.g., \var{'-I'} or \var{'-M'}.
 % You only need these if you know why you need these.
 %
 % Warnings are *always* enabled, regardless of what you try here.
@@ -46,7 +46,7 @@ custom_variable("Perl_Flags", Null_String);
 %\description
 % This value determines the number of columns the current line is indented
 % past the previous line containing an opening \exmp{'\{'} character.
-% eg.,
+% e.g.,
 %#v+
 %  if (test) {
 %      statement();
@@ -78,7 +78,7 @@ static variable
 % The \var{perltidy} program (available from \var{http://perltidy.sourceforge.net})
 % must be installed for this to work!
 %
-% With a numerical prefix argument (eg Ctrl-U), prompts for extra flags
+% With a numerical prefix argument (e.g., Ctrl-U), prompts for extra flags
 % for \var{perltidy}.
 %
 % The following style preferences settings in \var{~/.perltidyrc} seem to

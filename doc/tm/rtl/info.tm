@@ -41,7 +41,7 @@
 \synopsis{Test if the current position is at the end of the buffer}
 \usage{Integer eobp ();}
 \description
-  The functio \var{eobp} is used to determine if the current position is at
+  The function \var{eobp} is used to determine if the current position is at
   the end of the buffer or not.  It returns a non-zero value if at the
   end of the buffer or zero if not.
 \seealso{eob, bolp, eolp}
@@ -52,7 +52,7 @@
 \usage{Integer eolp ();}
 \description
   This function may be used to determine whether or not the current
-  position is at the end of a line ot not.  If it is, the routine
+  position is at the end of a line or not.  If it is, the routine
   returns a non-zero value; otherwise it returns zero.
 \seealso{eol, bolp, eobp, bobp}
 \done

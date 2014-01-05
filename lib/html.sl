@@ -560,10 +560,10 @@ dfa_set_init_callback (&setup_dfa_callback, "html");
 %     ^C^P    mark prior HTML tag from '<' to '>'
 %     ^C&     insert HTML text for '&'
 %     ^C>     insert HTML text for '>'
-%     ^C<     insert HMTL text for '<'
-%     ^C<enter> insert HMTL text for '<br>'
-%     ^C<space> insert HMTL text for NonBreakableSPace
-%     ^Ce     insert HMTL text for 'Eurosymbol'
+%     ^C<     insert HTML text for '<'
+%     ^C<enter> insert HTML text for '<br>'
+%     ^C<space> insert HTML text for NonBreakableSPace
+%     ^Ce     insert HTML text for 'Eurosymbol'
 %     ^CC     insert HTML comment (around region, if marked)
 %
 % For a complete list of keybindings, use \var{describe_bindings}.

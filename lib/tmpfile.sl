@@ -41,7 +41,7 @@ define make_tmp_file (base)
 %    fp           : The FP_Type file pointer
 %#v-
 % If \exmp{base} represents an absolute path, then the file
-% will be opened in the correspondind directory.  Otherwise the value
+% will be opened in the corresponding directory.  Otherwise the value
 % of the \svar{Jed_Tmp_Directory} variable will be used.
 %
 % If this function fails, an exception will be thrown.

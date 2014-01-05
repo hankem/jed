@@ -73,10 +73,11 @@ variable Jed_Bin_Dir;
 %!%+
 %\variable{Jed_Highlight_Cache_Path}
 %\synopsis{Search path for DFA syntax tables}
-% A comma-separated list of directories to search for cached DFA syntax
-% highlighting tables.  If a table is not found, it will be created on the
-% fly and then cached in the directory specified by the
-% \var{Jed_Highlight_Cache_Dir} variable.
+%\description
+%  A comma-separated list of directories to search for cached DFA syntax
+%  highlighting tables.  If a table is not found, it will be created on
+%  the fly and then cached in the directory specified by the
+%  \var{Jed_Highlight_Cache_Dir} variable.
 %\seealso{Jed_Highlight_Cache_Dir, use_dfa_syntax}
 %!%-
 variable Jed_Highlight_Cache_Path;     %  search paths for EXISTING files
@@ -84,8 +85,9 @@ variable Jed_Highlight_Cache_Path;     %  search paths for EXISTING files
 %!%+
 %\variable{Jed_Highlight_Cache_Dir}
 %\synopsis{Directory where newly created DFA syntax tables are placed}
-% If the caching of DFA syntax tables is enabled, the newly created tables
-% will be saved in the directory specified by this variable.
+%\description
+%  If the caching of DFA syntax tables is enabled, the newly created
+%  tables will be saved in the directory specified by this variable.
 %\seealso{Jed_Highlight_Cache_Path, use_dfa_syntax}
 %!%-
 variable Jed_Highlight_Cache_Dir;      %  dir where NEW files kept
@@ -144,9 +146,9 @@ variable C_Comment_Column = 40;
 %\synopsis{C_INDENT}
 %\usage{Integer C_INDENT = 3;}
 %\description
-% This value determines the number of columns the current line is indented
-% past the previous line containing an opening \exmp{'\{'} character.
-%\seealso{C_BRACE, C_BRA_NEWLINE.}
+%  This value determines the number of columns the current line is indented
+%  past the previous line containing an opening \exmp{'\{'} character.
+%\seealso{C_BRACE, C_BRA_NEWLINE}
 %!%-
 variable C_INDENT = 3;
 
@@ -166,7 +168,7 @@ variable C_BRACE = 2;
 %\synopsis{C_BRA_NEWLINE}
 %\usage{Integer C_BRA_NEWLINE = 1;}
 %\description
-% This variable is used by the indentation routines for the C langauge.
+% This variable is used by the indentation routines for the C language.
 % If it is non-zero, the \exmp{'\{'} character will be placed on a line by
 % itself when one presses the \exmp{'\{'} character.  For K&R indentation style,
 % set this variable to zero.
@@ -228,7 +230,7 @@ public define custom_variable (name, value)
 %\synopsis{str_replace_all}
 %\usage{String str_replace_all (str, old, new);}
 %\description
-% Replace all occurances of \var{old} in \var{str} with \var{new} and return the
+% Replace all occurences of \var{old} in \var{str} with \var{new} and return the
 % result.
 %\seealso{str_replace, replace_cmd}
 %!%-
@@ -558,7 +560,7 @@ define find_jedlib_file(file)
 %\description
 % breaks a filespec into dir filename---
 % this routine returns dir and filename such that a simple strcat will
-% suffice to put them together again.  For example, on unix, /a/b/c
+% suffice to put them together again.  For example, on Unix, /a/b/c
 % returns /a/b/ and c
 %!%-
 define parse_filename(fn)
@@ -959,7 +961,7 @@ define go_down() { () = down(); }
 %\synopsis{down_1}
 %\usage{Int_Type down_1 ();}
 %\description
-% Move down exactly one line.  If sucessful, 1 is returned otherwise
+% Move down exactly one line.  If successful, 1 is returned otherwise
 % zero is returned.
 %\seealso{go_up, down, go_down_1}
 %!%-
@@ -1007,10 +1009,8 @@ define go_right_1() { go_right (1); }
 
 %!%+
 %\function{go_left_1}
-%\synopsis{go_left_1}
+%\synopsis{Move backward 1 character}
 %\usage{Void go_left_1 ();}
-%\description
-% Move forward 1 characters.
 %\seealso{left, go_left}
 %!%-
 define go_left_1() { go_left (1); }
@@ -1045,7 +1045,7 @@ define insert_single_space ()
 %\usage{Integer looking_at_char (Integer ch);}
 %\description
 % This function returns non-zero if the character at the current editing
-% point is 'ch' otherwise it retuns zero.  This function performs a case
+% point is 'ch' otherwise it returns zero.  This function performs a case
 % sensitive comparison.
 %!%-
 define looking_at_char ()
@@ -1460,8 +1460,8 @@ define enable_xmouse ()
 %\usage{value = get_blocal_var (String name, [default])}
 %\description
 %  This function returns the value of the buffer-local variable
-%  specified by \exmp{name}.  If the the optional \exmp{default}
-%  argument is given, it will be returned if no local variable of the
+%  specified by \exmp{name}.  If the optional \exmp{default} argument
+%  is given, it will be returned if no local variable of the
 %  specified name exists. Otherwise an error will be thrown.
 %\example
 %#v+
@@ -1722,7 +1722,7 @@ public define redo ()
 %\synopsis{no_mode}
 %\description
 %  Generic mode not designed for anything in particular.
-%  Related Functions: \var{text_mode}, \var{c_mode}
+%\seealso{text_mode, c_mode}
 %!%-
 define no_mode ()
 {
@@ -2769,7 +2769,7 @@ define smart_set_mark_cmd ()
 %\synopsis{buffer_format_in_columns}
 %\description
 % Prototype Void buffer_format_in_columns();
-% takes a buffer consisting of a sigle column of items and converts the
+% takes a buffer consisting of a single column of items and converts the
 % buffer to a multi-column format.
 %!%-
 define buffer_format_in_columns()

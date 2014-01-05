@@ -155,7 +155,7 @@ define history_save ()
 % If you give the same filename as in \var{History_File} but use a different
 % path, then \var{history_load} will load this file into the mini-buffer every
 % time you start jed from that (and only from that) directory. This behavior is
-% only useful when the value of \var{History_File} is an absoulte filename
+% only useful when the value of \var{History_File} is an absolute filename
 % and you want a local history when you start jed from some specific directory.
 %\seealso{history_load, history_save}
 %\seealso{History_File}

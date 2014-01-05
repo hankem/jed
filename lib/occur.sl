@@ -36,7 +36,7 @@ define occur_goto_line ()
 %\synopsis{occur}
 %\usage{Void occur ();}
 %\description
-% This function may be used to search for all occurances of a string in the
+% This function may be used to search for all occurences of a string in the
 % current buffer.  It creates a separate buffer called \var{*occur*} and
 % associates a keymap called \var{Occur} with the new buffer.  In this
 % buffer, the \var{g} key may be used to go to the line described by the
@@ -68,7 +68,7 @@ define occur()
 	insert(());
 	newline();
 	setbuf(Occur_Buffer);
-	ifnot (down_1 ()) %% so we do not find another occurance on same line
+	ifnot (down_1 ()) %% so we do not find another occurence on same line
 	  break;
      }
    pop_spot();

@@ -34,7 +34,7 @@ ifnot (keymap_p($1))
 %  '"'  :  tex_insert_quote
 %  '\'' :  tex_insert_quote
 %  '$'  :  tex_blink_dollar
-%  '.'  :  tex_ldots.  Inserts a '.' except if preceeded by two dots.  In
+%  '.'  :  tex_ldots.  Inserts a '.' except if preceded by two dots.  In
 %           this case, the dots are converted to \ldots.
 %#v-
 %  When tex mode is loaded, 'tex_mode_hook' is called.  This hook will allow

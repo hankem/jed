@@ -52,7 +52,7 @@
 \usage{Void call(String f)}
 \description
   The \var{call} function is used to execute an internal function which is
-  not directly accessable to the S-Lang interpreter.
+  not directly accessible to the S-Lang interpreter.
 \seealso{is_internal}
 \done
 
@@ -110,7 +110,7 @@
         define exit_hook ()
         {
           flush ("Really Exit?");
-       
+
           forever
             {
               switch (getkey () & 0x20)    % map to lowercase
@@ -130,7 +130,7 @@
 \usage{String get_last_macro ()}
 \description
   This function returns characters composing the last keyboard macro.  The
-  charactors that make up the macro are encoded as themselves except the
+  characters that make up the macro are encoded as themselves except the
   following characters:
 #v+
         '\n'    ---->   \J
@@ -149,7 +149,7 @@
 #v+
         dir:     login directory
         shell:   login shell
-        pwd:     encripted password
+        pwd:     encrypted password
         uid:     user identification number
         gid:     group identification number
 #v-
@@ -169,9 +169,9 @@
 \synopsis{Test if function "f" is defined as an internal function}
 \usage{Integer is_internal(String f)}
 \description
-  \var{is_internal} returns non-zero is function \var{f} is defined as an
-  internal function or returns zero if not.  Internal functions not
-  immediately accessable from S-Lang; rather, they must be called using
+  \var{is_internal} returns non-zero if function \var{f} is defined as an
+  internal function or returns zero if not.  Internal functions are not
+  immediately accessible from S-Lang; rather, they must be called using
   the \var{call} function.  See also the related S-Lang function
   \var{is_defined} in the S-Lang Programmer's Reference.
 \seealso{call}
@@ -184,7 +184,7 @@
  This function quits the editor immediately without saving any buffers
  and without any exit hooks called.  The function \ifun{exit_jed}
  should be called when it is desired to exit in a safe way.
- 
+
  The exit status of the program may be specified via the optional
  integer argument.  If called with no argument, a value of 0 will be
  used as the exit status.
@@ -204,7 +204,7 @@
   Example: generate 1000 random integers in the range 0-500 and insert
   them into buffer:
 #v+
-        () = random (-1, 0);  % seed generator usingtime and pid
+        () = random (-1, 0);  % seed generator using time and pid
         loop (1000)
           insert (Sprintf ("%d\n", random (0, 500), 1));
 #v-
@@ -220,7 +220,7 @@
 \description
   This function may be used to turn on or off the read-only state of the
   current line.  If the integer parameter \var{flag} is non-zero, the line
-  will be made read-only.  If the paramter is zero, the read-only state
+  will be made read-only.  If the parameter is zero, the read-only state
   will be turned off.
 \seealso{getbuf_info}
 \done
@@ -230,9 +230,9 @@
 \usage{set_undo_position ()}
 \description
  This function adds the current position to the buffer's undo stack.
- Ocassionally this may be necessary when using
- \ifun{narrow_to_region} to prevent the cursor from moving to the
- beginning or the end of a previously narrowed region during "undo".
+ Occasionally this may be necessary when using \ifun{narrow_to_region}
+ to prevent the cursor from moving to the beginning or the end
+ of a previously narrowed region during "undo".
 \seealso{narrow_to_region}
 \done
 

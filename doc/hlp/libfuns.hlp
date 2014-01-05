@@ -40,11 +40,11 @@ save_buffer_as
   Void save_buffer_as(force_overwrite=0)
 
  DESCRIPTION
-   Asks for a new filename and saves the buffer under this name.
-   Asks before overwriting an existing file, if not called with
-   force_overwrite=1.
-   Sets readonly flag to 0, becouse if we are able to write,
-   we can also modify.
+  Asks for a new filename and saves the buffer under this name.
+  Asks before overwriting an existing file, if not called with
+  force_overwrite=1.
+  Sets readonly flag to 0, because if we are able to write,
+  we can also modify.
 
  SEE ALSO
   save_buffer, write_buffer
@@ -181,7 +181,7 @@ C_Param_Offset_Max
 
  DESCRIPTION
  This variable may be changed to adjust the indentation of parameters
- in a funcion call that extends over multiple lines.
+ in a function call that extends over multiple lines.
 
  If the value is less than 0, the feature is off, otherwise
  it holds the max number of spaces to indent the parameters on
@@ -228,7 +228,7 @@ C_Bracket_Indent
  left parenthesis. A value greater than zero uses C_INDENT to determine the
  indentation level. Additionally, common operators are outdented.
 
- eg,
+ e.g.,
     while
     (
         expr1
@@ -522,13 +522,13 @@ cua_delete_word
 
 --------------------------------------------------------------
 
-repeat_search
+cua_repeat_search
 
  SYNOPSIS
-  continue searching with last searchstring
+  Continue searching with last search string
 
  USAGE
-  define repeat_search ()
+  cua_repeat_search ()
 
  SEE ALSO
   LAST_SEARCH, search_forward, search_backward
@@ -555,7 +555,7 @@ cua_indent_region_or_line
 cua_escape_cmd
 
  SYNOPSIS
-  Escape from a command/aktion
+  Escape from a command/action
 
  USAGE
   cua_escape_cmd()
@@ -569,20 +569,20 @@ cua_escape_cmd
 
 --------------------------------------------------------------
 
-cua_escape_cmd
+cua_meta_escape_cmd
 
  SYNOPSIS
   Distinguish the ESC key from other keys starting with "\e"
 
  USAGE
-  Void cua_escape_cmd()
+  Void cua_meta_escape_cmd()
 
  DESCRIPTION
-   If there is input pending (i.e. if the keycode is multi-character),
-   "\e" will be put back to the input stream. Otherwise (if the
-   ESC key is pressed, "\e\e\e" is pushed back. With ALT_CHAR = 27, the Alt
-   key can be used as Meta-key as usual (i.e. press both ALT + <some-key>
-   to get the equivalent of the ESC <some-key> key sequence.
+  If there is input pending (i.e. if the keycode is multi-character),
+  "\e" will be put back to the input stream. Otherwise, if the ESC key
+  is pressed, "\e\e\e" is pushed back. With ALT_CHAR = 27, the Alt key
+  can be used as Meta-key as usual, i.e. press both ALT + <some-key>
+  to get the equivalent of the ESC <some-key> key sequence.
 
  SEE ALSO
   escape_cmd, one_press_escape, kbd_quit, map_input, setkey
@@ -598,7 +598,7 @@ cua_one_press_escape
   cua_one_press_escape()
 
  DESCRIPTION
-   Dependend on the jed-version, either x_set_keysym or
+   Depending on the jed-version, either x_set_keysym or
    meta_escape_cmd is used to map the ESC key to "\e\e\e"
 
  EXAMPLE
@@ -610,7 +610,7 @@ cua_one_press_escape
 
 
  NOTES
-   The function is experimental and has sideeffects if not using xjed.
+   The function is experimental and has side-effects if not using xjed.
    For not-x-jed:
 
    It uses the "^^" character for temporarily remapping, i.e. Ctrl-^ will
@@ -623,7 +623,7 @@ cua_one_press_escape
    It breaks functions that rely on getkey() (e.g. isearch, showkey, old
    wmark(pre 99.16), ...)
 
-   It will not work in keybord macros and might fail on slow terminal links.
+   It will not work in keyboard macros and might fail on slow terminal links.
 
  SEE ALSO
   cua_escape_cmd, cua_escape_cmd, getkey, setkey, x_set_keysym
@@ -795,7 +795,7 @@ dired
  	files tagged for deletion and ask for confirmation before actually
  	deleting the files.
 
- `r'	Rename file on the current line; prompts for a newname
+ `r'	Rename file on the current line; prompts for a new name
  `m'	Move tagged files to a new dir; prompts for dir name
 
  `g'	Update the entire contents of the Dired buffer
@@ -1051,7 +1051,7 @@ f90_mode
    f90_electric_label            0-9
      Generates a label for current line or simply inserts a digit.
    f90_next_statement            ^C^N
-     moves to next f90 statementm skips comment lines
+     moves to next f90 statement, skips comment lines
    f90_previous_statement        ^C^P
      moves to previous f90 statement, skips comment lines
    f90_ruler                     ^C^R
@@ -1066,7 +1066,7 @@ f90_mode
  Variables include:
 
    F90_Continue_Char   --- character used as a continuation character.
-     By default, its value is ">"
+     By default, its value is "&"
    F90_Comment_String  --- string used by 'f90_comment' to
      comment out a line.  The default string is "C ";
    F90_Indent_Amount   --- number of spaces to indent statements in
@@ -1113,7 +1113,7 @@ fortran_mode
    fortran_electric_label            0-9
      Generates a label for current line or simply inserts a digit.
    fortran_next_statement            ^C^N
-     moves to next fortran statementm skips comment lines
+     moves to next fortran statement, skips comment lines
    fortran_previous_statement        ^C^P
      moves to previous fortran statement, skips comment lines
    fortran_ruler                     ^C^R
@@ -1172,6 +1172,60 @@ expand_keystring
 
  SEE ALSO
   setkey
+
+--------------------------------------------------------------
+
+help_for_apropos
+
+ SYNOPSIS
+  Void help_for_apropos (String)
+
+ DESCRIPTION
+ find apropos context for a particular string
+
+ SEE ALSO
+  apropos, help_apropos
+
+--------------------------------------------------------------
+
+apropos
+
+ SYNOPSIS
+  Void apropos (Void)
+
+ DESCRIPTION
+ prompt for a string and find the apropos context
+
+ SEE ALSO
+  help_apropos, help_for_apropos
+
+--------------------------------------------------------------
+
+help_apropos
+
+ SYNOPSIS
+  Void help_apropos (Void)
+
+ DESCRIPTION
+ use either the marked region or else extract an alphanumeric keyword,
+ and then display S-Lang apropos context for this entry
+
+ SEE ALSO
+  apropos, help_slang, help_for_apropos
+
+--------------------------------------------------------------
+
+help_slang
+
+ SYNOPSIS
+  Void help_slang (Void)
+
+ DESCRIPTION
+ use either the marked region or else extract an alphanumeric keyword,
+ and then display S-Lang function/variable help
+
+ SEE ALSO
+  apropos, help_apropos, help_for_function
 
 --------------------------------------------------------------
 
@@ -1275,7 +1329,7 @@ history_local_save
  If you give the same filename as in `History_File' but use a different
  path, then `history_load' will load this file into the mini-buffer every
  time you start jed from that (and only from that) directory. This behavior is
- only useful when the value of `History_File' is an absoulte filename
+ only useful when the value of `History_File' is an absolute filename
  and you want a local history when you start jed from some specific directory.
 
  SEE ALSO
@@ -1357,10 +1411,10 @@ html_mode
      ^C^P    mark prior HTML tag from '<' to '>'
      ^C&     insert HTML text for '&'
      ^C>     insert HTML text for '>'
-     ^C<     insert HMTL text for '<'
-     ^C<enter> insert HMTL text for '<br>'
-     ^C<space> insert HMTL text for NonBreakableSPace
-     ^Ce     insert HMTL text for 'Eurosymbol'
+     ^C<     insert HTML text for '<'
+     ^C<enter> insert HTML text for '<br>'
+     ^C<space> insert HTML text for NonBreakableSPace
+     ^Ce     insert HTML text for 'Eurosymbol'
      ^CC     insert HTML comment (around region, if marked)
 
  For a complete list of keybindings, use `describe_bindings'.
@@ -1486,7 +1540,7 @@ mailutils_narrow_to_header
 
  DESCRIPTION
  This function narrows the buffer to the mail headers.  It returns 0
- if sucessful (headers were found), or -1 upon failure.
+ if successful (headers were found), or -1 upon failure.
 
  SEE ALSO
   mailutils_find_header_separator, mailutils_set_keyword_value, widen
@@ -1820,7 +1874,7 @@ occur
   Void occur ();
 
  DESCRIPTION
- This function may be used to search for all occurances of a string in the
+ This function may be used to search for all occurences of a string in the
  current buffer.  It creates a separate buffer called `*occur*' and
  associates a keymap called `Occur' with the new buffer.  In this
  buffer, the `g' key may be used to go to the line described by the
@@ -2033,7 +2087,7 @@ Perl_Flags
 
  DESCRIPTION
  Extra (or 'expert') command-line options (switches) for running Perl.
- eg, `'-I'' or `'-M''.
+ e.g., `'-I'' or `'-M''.
  You only need these if you know why you need these.
 
  Warnings are *always* enabled, regardless of what you try here.
@@ -2054,7 +2108,7 @@ Perl_Indent
  DESCRIPTION
  This value determines the number of columns the current line is indented
  past the previous line containing an opening `'{'' character.
- eg.,
+ e.g.,
 
   if (test) {
       statement();
@@ -2081,7 +2135,7 @@ perltidy
  The `perltidy' program (available from `http://perltidy.sourceforge.net')
  must be installed for this to work!
 
- With a numerical prefix argument (eg Ctrl-U), prompts for extra flags
+ With a numerical prefix argument (e.g., Ctrl-U), prompts for extra flags
  for `perltidy'.
 
  The following style preferences settings in `~/.perltidyrc' seem to
@@ -2182,10 +2236,10 @@ php_mode
   Void php_mode ();
 
  DESCRIPTION
- This is a mode that is dedicated to faciliate the editing of PHP language files.
+ This is a mode that is dedicated to facilitate the editing of PHP language files.
  It calls the function `php_mode_hook' if it is defined. It also manages
- to recognice whetever it is in a php block or in a html block, for those people
- that doesnt seperate function from form ;)
+ to recognize whenever it is in a php block or in a html block, for those people
+ that doesn't separate function from form ;)
 
  Functions that affect this mode include:
 
@@ -2268,7 +2322,7 @@ Recentx_Cache_Filename
  used for recently accessed files.  If the filename is given
  as a relative path, it will be taken as relative to value of the
  Jed_Home_Directory variable, which typically coincides with the
- users's HOME directory.
+ user's HOME directory.
 
  NOTES
  This variable is defined in `recentx.sl'.
@@ -2445,10 +2499,11 @@ Jed_Highlight_Cache_Path
  SYNOPSIS
   Search path for DFA syntax tables
 
- A comma-separated list of directories to search for cached DFA syntax
- highlighting tables.  If a table is not found, it will be created on the
- fly and then cached in the directory specified by the
- `Jed_Highlight_Cache_Dir' variable.
+ DESCRIPTION
+  A comma-separated list of directories to search for cached DFA syntax
+  highlighting tables.  If a table is not found, it will be created on
+  the fly and then cached in the directory specified by the
+  `Jed_Highlight_Cache_Dir' variable.
 
  SEE ALSO
   Jed_Highlight_Cache_Dir, use_dfa_syntax
@@ -2460,8 +2515,9 @@ Jed_Highlight_Cache_Dir
  SYNOPSIS
   Directory where newly created DFA syntax tables are placed
 
- If the caching of DFA syntax tables is enabled, the newly created tables
- will be saved in the directory specified by this variable.
+ DESCRIPTION
+  If the caching of DFA syntax tables is enabled, the newly created
+  tables will be saved in the directory specified by this variable.
 
  SEE ALSO
   Jed_Highlight_Cache_Path, use_dfa_syntax
@@ -2548,11 +2604,11 @@ C_INDENT
   Integer C_INDENT = 3;
 
  DESCRIPTION
- This value determines the number of columns the current line is indented
- past the previous line containing an opening `'{'' character.
+  This value determines the number of columns the current line is indented
+  past the previous line containing an opening `'{'' character.
 
  SEE ALSO
-  C_BRACE, C_BRA_NEWLINE.
+  C_BRACE, C_BRA_NEWLINE
 
 --------------------------------------------------------------
 
@@ -2582,7 +2638,7 @@ C_BRA_NEWLINE
   Integer C_BRA_NEWLINE = 1;
 
  DESCRIPTION
- This variable is used by the indentation routines for the C langauge.
+ This variable is used by the indentation routines for the C language.
  If it is non-zero, the `'{'' character will be placed on a line by
  itself when one presses the `'{'' character.  For K&R indentation style,
  set this variable to zero.
@@ -2623,7 +2679,7 @@ str_replace_all
   String str_replace_all (str, old, new);
 
  DESCRIPTION
- Replace all occurances of `old' in `str' with `new' and return the
+ Replace all occurences of `old' in `str' with `new' and return the
  result.
 
  SEE ALSO
@@ -2783,7 +2839,7 @@ parse_filename
  DESCRIPTION
  breaks a filespec into dir filename---
  this routine returns dir and filename such that a simple strcat will
- suffice to put them together again.  For example, on unix, /a/b/c
+ suffice to put them together again.  For example, on Unix, /a/b/c
  returns /a/b/ and c
 
 --------------------------------------------------------------
@@ -2895,7 +2951,7 @@ down_1
   Int_Type down_1 ();
 
  DESCRIPTION
- Move down exactly one line.  If sucessful, 1 is returned otherwise
+ Move down exactly one line.  If successful, 1 is returned otherwise
  zero is returned.
 
  SEE ALSO
@@ -2970,13 +3026,10 @@ go_right_1
 go_left_1
 
  SYNOPSIS
-  go_left_1
+  Move backward 1 character
 
  USAGE
   Void go_left_1 ();
-
- DESCRIPTION
- Move forward 1 characters.
 
  SEE ALSO
   left, go_left
@@ -3019,7 +3072,7 @@ looking_at_char
 
  DESCRIPTION
  This function returns non-zero if the character at the current editing
- point is 'ch' otherwise it retuns zero.  This function performs a case
+ point is 'ch' otherwise it returns zero.  This function performs a case
  sensitive comparison.
 
 --------------------------------------------------------------
@@ -3378,8 +3431,8 @@ get_blocal_var
 
  DESCRIPTION
   This function returns the value of the buffer-local variable
-  specified by `name'.  If the the optional `default'
-  argument is given, it will be returned if no local variable of the
+  specified by `name'.  If the optional `default' argument
+  is given, it will be returned if no local variable of the
   specified name exists. Otherwise an error will be thrown.
 
  EXAMPLE
@@ -3453,7 +3506,9 @@ no_mode
 
  DESCRIPTION
   Generic mode not designed for anything in particular.
-  Related Functions: `text_mode', `c_mode'
+
+ SEE ALSO
+  text_mode, c_mode
 
 --------------------------------------------------------------
 
@@ -3944,7 +3999,7 @@ buffer_format_in_columns
 
  DESCRIPTION
  Prototype Void buffer_format_in_columns();
- takes a buffer consisting of a sigle column of items and converts the
+ takes a buffer consisting of a single column of items and converts the
  buffer to a multi-column format.
 
 --------------------------------------------------------------
@@ -4209,7 +4264,7 @@ tex_mode
   '"'  :  tex_insert_quote
   '\'' :  tex_insert_quote
   '$'  :  tex_blink_dollar
-  '.'  :  tex_ldots.  Inserts a '.' except if preceeded by two dots.  In
+  '.'  :  tex_ldots.  Inserts a '.' except if preceded by two dots.  In
            this case, the dots are converted to \ldots.
 
   When tex mode is loaded, 'tex_mode_hook' is called.  This hook will allow
@@ -4299,7 +4354,7 @@ open_unique_filename
     fp           : The FP_Type file pointer
 
  If `base' represents an absolute path, then the file
- will be opened in the correspondind directory.  Otherwise the value
+ will be opened in the corresponding directory.  Otherwise the value
  of the `Jed_Tmp_Directory' variable will be used.
 
  If this function fails, an exception will be thrown.

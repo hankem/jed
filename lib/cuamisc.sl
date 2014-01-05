@@ -48,9 +48,9 @@ define cua_bdelete_word ()              % Key_Ctrl_BS
 }
 
 %!%+
-%\function{repeat_search}
-%\synopsis{continue searching with last searchstring}
-%\usage{define repeat_search ()}
+%\function{cua_repeat_search}
+%\synopsis{Continue searching with last search string}
+%\usage{cua_repeat_search ()}
 %\seealso{LAST_SEARCH, search_forward, search_backward}
 %!%-
 public define cua_repeat_search ()
@@ -93,7 +93,7 @@ public define cua_indent_region_or_line ()
 
 %!%+
 %\function{cua_escape_cmd}
-%\synopsis{Escape from a command/aktion}
+%\synopsis{Escape from a command/action}
 %\usage{cua_escape_cmd()}
 %\description
 %   Undo/Stop an action. If a region is defined, undefine it. Else
@@ -109,15 +109,15 @@ define cua_escape_cmd()
 }
 
 %!%+
-%\function{cua_escape_cmd}
+%\function{cua_meta_escape_cmd}
 %\synopsis{Distinguish the ESC key from other keys starting with "\\e"}
-%\usage{Void cua_escape_cmd()}
+%\usage{Void cua_meta_escape_cmd()}
 %\description
-%   If there is input pending (i.e. if the keycode is multi-character),
-%   "\\e" will be put back to the input stream. Otherwise (if the
-%   ESC key is pressed, "\\e\\e\\e" is pushed back. With ALT_CHAR = 27, the Alt
-%   key can be used as Meta-key as usual (i.e. press both ALT + <some-key>
-%   to get the equivalent of the ESC <some-key> key sequence.
+%  If there is input pending (i.e. if the keycode is multi-character),
+%  "\\e" will be put back to the input stream. Otherwise, if the ESC key
+%  is pressed, "\\e\\e\\e" is pushed back. With ALT_CHAR = 27, the Alt key
+%  can be used as Meta-key as usual, i.e. press both ALT + <some-key>
+%  to get the equivalent of the ESC <some-key> key sequence.
 %\seealso{escape_cmd, one_press_escape, kbd_quit, map_input, setkey}
 %!%-
 define cua_meta_escape_cmd ()
@@ -133,7 +133,7 @@ define cua_meta_escape_cmd ()
 %\synopsis{Redefine the ESC key to issue "\\e\\e\\e"}
 %\usage{cua_one_press_escape()}
 %\description
-%   Dependend on the jed-version, either x_set_keysym or
+%   Depending on the jed-version, either x_set_keysym or
 %   meta_escape_cmd is used to map the ESC key to "\\e\\e\\e"
 %\example
 % To let the ESC key abort functions but retain bindings for
@@ -143,7 +143,7 @@ define cua_meta_escape_cmd ()
 %    setkey ("cua_escape_cmd", "\e\e\e");     % Triple-Esc -> abort
 %#v-
 %\notes
-%   The function is experimental and has sideeffects if not using xjed.
+%   The function is experimental and has side-effects if not using xjed.
 %   For not-x-jed:
 %
 %   It uses the "^^" character for temporarily remapping, i.e. Ctrl-^ will
@@ -156,7 +156,7 @@ define cua_meta_escape_cmd ()
 %   It breaks functions that rely on getkey() (e.g. isearch, showkey, old
 %   wmark(pre 99.16), ...)
 %
-%   It will not work in keybord macros and might fail on slow terminal links.
+%   It will not work in keyboard macros and might fail on slow terminal links.
 %
 %\seealso{cua_escape_cmd, cua_escape_cmd, getkey, setkey, x_set_keysym}
 %!%-

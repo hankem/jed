@@ -331,7 +331,7 @@ bury_buffer
 
  DESCRIPTION
   The `bury_buffer' function may be used to make it unlikely for the
-  buffer specified by the paramter `name' to appear in a window.
+  buffer specified by the parameter `name' to appear in a window.
 
  SEE ALSO
   sw2buf, getbuf_info
@@ -347,10 +347,10 @@ check_buffers
   check_buffers ()
 
  DESCRIPTION
-  The `check_buffers' function checks to see whether or not any of
-  the disk files that are associated with the editor's buffers have been
-  modified since the assocation was made.  The buffer flags are
-  updated accordingly.
+  The `check_buffers' function checks to see whether or not any of the
+  disk files that are associated with the editor's buffers have been
+  modified since the association was made.  The buffer flags are updated
+  accordingly.
 
  SEE ALSO
   file_time_compare, file_changed_on_disk
@@ -580,7 +580,7 @@ setbuf_info
            setbuf_info (getbuf_info () | 0x10);
         }
 
-  Here, `(1 shl 4)' has been written as the hexidecimal number
+  Here, `(1 shl 4)' has been written as the hexadecimal number
   `0x10'.
 
  SEE ALSO
@@ -668,7 +668,7 @@ write_buffer
 add_color_object
 
  SYNOPSIS
-  Return the object number associated with "obj"
+  Create a color object
 
  USAGE
   add_color_object (String_Type name)
@@ -751,7 +751,7 @@ set_color
  Using "default" as a foreground or background color instructs the
  editor to tell the terminal to use the default foreground and
  background colors of the window.  If you use a terminal that uses a
- transparant background, then you need to specify "default" as the
+ transparent background, then you need to specify "default" as the
  background color.  Not all terminals support the notion of the
  "default" color.
 
@@ -792,7 +792,7 @@ set_color
    "trailing_whitespace"
    "html"        <html> and '<' syntax objects.
 
- If line attributes are available, then you may also specifiy the color
+ If line attributes are available, then you may also specify the color
  of the hidden line indicator:
 
    "..."         Hidden line indicator
@@ -808,7 +808,7 @@ set_color
  Xjed defines the following objects:
 
    "mouse"                  Mouse cursor color
-   "border"                 Window borde color
+   "border"                 Window border color
 
 
  SEE ALSO
@@ -1049,7 +1049,7 @@ delete_file
 
  DESCRIPTION
   This function may be used to delete a file specified by the `file'
-  parameter.  It returns non-zero if the file was sucessfully deleted
+  parameter.  It returns non-zero if the file was successfully deleted
   or zero otherwise.
 
  SEE ALSO
@@ -1064,7 +1064,7 @@ directory
 
  DESCRIPTION
    returns the number of files and a list of files which match filename.
-      On unix, this defaults to filename*.  It is primarily useful for
+      On Unix, this defaults to filename*.  It is primarily useful for
       DOS and VMS to expand wildcard filenames
 
 --------------------------------------------------------------
@@ -1413,7 +1413,7 @@ add_to_hook
   add_to_hook (String_Type hook_name, Ref_Type funct)
 
  DESCRIPTION
-  `add_to_hook' adds the function `funct' to the beginnning of the
+  `add_to_hook' adds the function `funct' to the beginning of the
   list of hooks associated with `hook_name'.  The currently
   supported hooks include:
 
@@ -1687,7 +1687,7 @@ eobp
   Integer eobp ();
 
  DESCRIPTION
-  The functio `eobp' is used to determine if the current position is at
+  The function `eobp' is used to determine if the current position is at
   the end of the buffer or not.  It returns a non-zero value if at the
   end of the buffer or zero if not.
 
@@ -1706,7 +1706,7 @@ eolp
 
  DESCRIPTION
   This function may be used to determine whether or not the current
-  position is at the end of a line ot not.  If it is, the routine
+  position is at the end of a line or not.  If it is, the routine
   returns a non-zero value; otherwise it returns zero.
 
  SEE ALSO
@@ -2342,7 +2342,7 @@ X_LAST_KEYSYM
   of the most previously processed key.
 
  NOTES
-  This variable is availible only in the XWindows version of jed.
+  This variable is available only in the XWindows version of jed.
 
  SEE ALSO
   LASTKEY
@@ -2540,7 +2540,7 @@ input_pending
 
  DESCRIPTION
   This function is used to see if keyboard input is available to be read
-  or not. The paramter `tsecs' is the amount of time to wait for input
+  or not. The parameter `tsecs' is the amount of time to wait for input
   before returning if input is not available.  The time unit for `tsecs'
   is one-tenth of a second.  That is, to wait up to one second, pass a
   value of ten to this routine.  It returns zero if no input is
@@ -2693,7 +2693,7 @@ set_abort_char
 set_current_kbd_command
 
  SYNOPSIS
-  Do as if "s" were entered from the keybord
+  Do as if "s" were entered from the keyboard
 
  USAGE
   Void set_current_kbd_command (String s);
@@ -2971,7 +2971,7 @@ goto_user_mark
  DESCRIPTION
   This function returns to the position of the User Mark `mark'.  Before
   this function may be called, the current buffer must be the buffer
-  associated with the makr.
+  associated with the mark.
 
  SEE ALSO
   move_user_mark, create_user_mark, user_mark_buffer
@@ -3497,7 +3497,7 @@ menu_set_menu_bar_prefix
 menu_set_object_available
 
  SYNOPSIS
-  Set the availablity of a menu item
+  Set the availability of a menu item
 
  USAGE
   menu_set_object_available (String_Type menuitem, Int_Type flag)
@@ -4014,7 +4014,7 @@ call
 
  DESCRIPTION
   The `call' function is used to execute an internal function which is
-  not directly accessable to the S-Lang interpreter.
+  not directly accessible to the S-Lang interpreter.
 
  SEE ALSO
   is_internal
@@ -4132,7 +4132,7 @@ get_last_macro
 
  DESCRIPTION
   This function returns characters composing the last keyboard macro.  The
-  charactors that make up the macro are encoded as themselves except the
+  characters that make up the macro are encoded as themselves except the
   following characters:
 
         '\n'    ---->   \J
@@ -4157,7 +4157,7 @@ get_passwd_info
 
         dir:     login directory
         shell:   login shell
-        pwd:     encripted password
+        pwd:     encrypted password
         uid:     user identification number
         gid:     group identification number
 
@@ -4189,9 +4189,9 @@ is_internal
   Integer is_internal(String f)
 
  DESCRIPTION
-  `is_internal' returns non-zero is function `f' is defined as an
-  internal function or returns zero if not.  Internal functions not
-  immediately accessable from S-Lang; rather, they must be called using
+  `is_internal' returns non-zero if function `f' is defined as an
+  internal function or returns zero if not.  Internal functions are not
+  immediately accessible from S-Lang; rather, they must be called using
   the `call' function.  See also the related S-Lang function
   `is_defined' in the S-Lang Programmer's Reference.
 
@@ -4240,7 +4240,7 @@ random
   Example: generate 1000 random integers in the range 0-500 and insert
   them into buffer:
 
-        () = random (-1, 0);  % seed generator usingtime and pid
+        () = random (-1, 0);  % seed generator using time and pid
         loop (1000)
           insert (Sprintf ("%d\n", random (0, 500), 1));
 
@@ -4262,7 +4262,7 @@ set_line_readonly
  DESCRIPTION
   This function may be used to turn on or off the read-only state of the
   current line.  If the integer parameter `flag' is non-zero, the line
-  will be made read-only.  If the paramter is zero, the read-only state
+  will be made read-only.  If the parameter is zero, the read-only state
   will be turned off.
 
  SEE ALSO
@@ -4280,9 +4280,9 @@ set_undo_position
 
  DESCRIPTION
  This function adds the current position to the buffer's undo stack.
- Ocassionally this may be necessary when using
- `narrow_to_region' to prevent the cursor from moving to the
- beginning or the end of a previously narrowed region during "undo".
+ Occasionally this may be necessary when using `narrow_to_region'
+ to prevent the cursor from moving to the beginning or the end
+ of a previously narrowed region during "undo".
 
  SEE ALSO
   narrow_to_region
@@ -4467,7 +4467,7 @@ mouse_set_default_hook
   and it must return an integer.  The parameters `line' and
   `column' correspond to the line and column numbers in the
   buffer where the event took place. `btn' is an integer that
-  corresonds to the button triggering the event.  It can take
+  corresponds to the button triggering the event.  It can take
   on values `1', `2', and `4' corresponding to the left,
   middle, and right buttons, respectively.  `shift' can take on
   values `0', `1', or `2' where `0' indicates that no modifier
@@ -4477,7 +4477,7 @@ mouse_set_default_hook
   the function `mouse_get_event_info'.
 
   When the hook is called, the editor will automatically change
-  to the window where the event occured.  The return value of
+  to the window where the event occurred.  The return value of
   the hook is used to dictate whether or not hook handled the
   event or whether the editor should switch back to the window
   prior to the event.  Specifically, the return value is interpreted
@@ -4836,9 +4836,9 @@ skip_chars
   Void skip_chars(String s)
 
  DESCRIPTION
-  This fnction may be used to move the editing point forward past all
+  This function may be used to move the editing point forward past all
   characters in string `s' which contains the chars to skip, or a range
-  of characters.  A character range is denoted by two charcters
+  of characters.  A character range is denoted by two characters
   separated by a hyphen.  If the first character of the string `s' is a
   `'^'' character, then the list of characters actually denotes the
   complement of the set of characters to be skipped.  To explicitly
@@ -5226,7 +5226,7 @@ signal_process
 
 --------------------------------------------------------------
 
-Replace all text in the rectangle by spaces
+blank_rect
 
  SYNOPSIS
   Replace the rectangle defined by point and mark with spaces
@@ -5333,7 +5333,7 @@ KILL_ARRAY_SIZE
  argument in the functions that manipulate this array.
 
  NOTES
- This variable is a read-only varaible and may not available on 16
+ This variable is a read-only variable and may not available on 16
  bit systems.
 
  SEE ALSO
@@ -5497,16 +5497,16 @@ count_narrows
 narrow
 
  SYNOPSIS
-  Restict editing to the region (complete lines)
+  Restrict editing to the region (complete lines)
 
  USAGE
   Void narrow ()
 
  DESCRIPTION
-  This function may be used to restict editing to the region of lines
+  This function may be used to restrict editing to the region of lines
   between the mark and the editing point.  The region includes the line
   containing the mark as well as the line at the current point. All
-  other lines outside this region are completely inacessable without
+  other lines outside this region are completely inaccessible without
   first lifting the restriction using the `widen' function. As a simple
   example, suppose that there is a function called `print_buffer' that
   operates on the entire buffer.  Then the following function will work
@@ -5533,7 +5533,7 @@ narrow
 narrow_to_region
 
  SYNOPSIS
-  Restict editing exactly to the region
+  Restrict editing exactly to the region
 
  USAGE
   Void narrow_to_region (void)
@@ -6168,13 +6168,13 @@ regexp_nth_match
 replace
 
  SYNOPSIS
-  Replace all occurances of "old" with "new"
+  Replace all occurences of "old" with "new"
 
  USAGE
   Void replace(String old, String new)
 
  DESCRIPTION
-  This function may be used to replace all occurances of the string
+  This function may be used to replace all occurences of the string
   `old' with the string, `new', from current editing point to the end
   of the buffer. The editing point is returned to the initial location.
   That is, this function does not move the editing point.
@@ -6351,9 +6351,9 @@ define_syntax
 
   If `type' is `'+'', the first parameter is a string whose characters
   are given the operator syntax.  If type is `','', the first parameter
-  is a string composed of characters that are condered to be
-  delimiters.  If type is '0', the first parameter is a string composed
-  of characters that make up a number.
+  is a string composed of characters that are considered to be delimiters.
+  If type is '0', the first parameter is a string composed of characters
+  that make up a number.
 
   If `type' is `<', the first parameter is a string whose successive
   characters form begin and end keyword highlight directives.
@@ -6433,7 +6433,7 @@ dfa_define_highlight_rule
 
   The regular expression syntax understands character classes
   like `[a-z]' and `[^a-z0-9]', parentheses, `+', `*', `?', `|'
-  and `.'. Any metacharacter can be escaped using a backslash
+  and `.'. Any meta-character can be escaped using a backslash
   so that it can be used as a normal character, but beware that
   due to the syntax of S-Lang strings the backslash has to be
   doubled when specified as a string constant. For example:
@@ -6560,7 +6560,7 @@ set_fortran_comment_chars
   The string `list' is simply a set of characters and may include
   character ranges.  If the first character of `list' is
   `'^'', then the meaning is that only those characters that do
-  not specify fortran sytle comments are included in the list.
+  not specify fortran style comments are included in the list.
 
  EXAMPLE
   Fortran mode uses the following:
@@ -6627,7 +6627,7 @@ set_syntax_flags
   `set_fortran_comment_chars' function.
 
   If the `0x04' bit is set, then whitespace at the beginning of a
-  line in a C comment preceeding a `'*'' character will not be
+  line in a C comment preceding a `'*'' character will not be
   highlighted.
 
   A TeX-like keyword is any word that follows the quote character.
@@ -6900,7 +6900,7 @@ set_term_vtxxx
   takes a single integer parameter.  If non-zero, the terminal type is set
   for a vt100.  This means the terminal lacks the ability to insert/delete
   lines and characters.  If the parameter is zero, the terminal is assumed
-  to be vt102 compatable.  Unless you are using a VERY old terminal or
+  to be vt102 compatible.  Unless you are using a VERY old terminal or
   a primitive emulator, use zero as the parameter.
 
 --------------------------------------------------------------
@@ -7113,7 +7113,7 @@ HORIZONTAL_PAN
   Int_Type HORIZONTAL_PAN
 
  DESCRIPTION
-  If the value of this variable is non-zero, the window wil pan when
+  If the value of this variable is non-zero, the window will pan when
   the cursor goes outside the border of the window.  More precisely,
   if the value is less than zero, the entire window will pan.  If the
   value is positive, only the current line will pan.  The
@@ -7499,14 +7499,14 @@ update_sans_update_hook
 w132
 
  SYNOPSIS
-  Set the number of columns on a vtxxx compatable terminal to 132.
+  Set the number of columns on a vtxxx compatible terminal to 132.
 
  USAGE
   Void w132 ()
 
  DESCRIPTION
   This function may be used to set the number of columns on a vtxxx
-  compatable terminal to 132.
+  compatible terminal to 132.
 
  SEE ALSO
   w80, set_term_vtxxx
@@ -7516,14 +7516,14 @@ w132
 w80
 
  SYNOPSIS
-  Set the number of columns on a vtxxx compatable terminal to 80
+  Set the number of columns on a vtxxx compatible terminal to 80
 
  USAGE
   Void w80 ()
 
  DESCRIPTION
   This function may be used to set the number of columns on a vtxxx
-  compatable terminal to 80.
+  compatible terminal to 80.
 
  SEE ALSO
   w132, set_term_vtxxx
@@ -7718,7 +7718,7 @@ x_set_keysym
   x_set_keysym (Int_Type keysym, Int_Type shift, String_Type str)
 
  DESCRIPTION
- This function may be used to assocate a string `str' with a key
+ This function may be used to associate a string `str' with a key
  `keysym' modified by mask `shift'. Pressing the key
  associated with `keysym' will then generate the keysequence
  given by `str'. The function keys are mapped to integers in the
@@ -7749,14 +7749,14 @@ x_set_keysym
 x_set_meta_keys
 
  SYNOPSIS
-  Specify which modifier keys are to be interpreteted as meta keys
+  Specify which modifier keys are to be interpreted as meta keys
 
  USAGE
   x_set_meta_keys (Int_Type mod_mask)
 
  DESCRIPTION
   The `x_set_meta_keys' function allows the user to specify which
-  modifier keys are to be interpreteted as meta keys.  The parameter
+  modifier keys are to be interpreted as meta keys.  The parameter
   `mod_mask' is a bitmapped value whose bits correspond to a
   modifier mask:
 
@@ -7789,7 +7789,7 @@ x_toggle_visibility
 
  DESCRIPTION
  Makes the window visible or invisible. If the argument `hide' is
- not given, the visility of the windows is toggled, e.g. if the window
+ not given, the visibility of the windows is toggled, e.g. if the window
  is invisible it becomes visible and vice versa. If the optional
  argument `hide' is given the state to the window becomes visible
  if `hide' is non-zero or invisible if `hide' is zero,

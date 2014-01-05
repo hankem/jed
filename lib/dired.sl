@@ -666,7 +666,7 @@ define dired_rename ()
 % 	files tagged for deletion and ask for confirmation before actually
 % 	deleting the files.
 %
-% \var{r}	Rename file on the current line; prompts for a newname
+% \var{r}	Rename file on the current line; prompts for a new name
 % \var{m}	Move tagged files to a new dir; prompts for dir name
 %
 % \var{g}	Update the entire contents of the Dired buffer

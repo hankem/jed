@@ -35,7 +35,7 @@
 \description
   This function returns to the position of the User Mark \var{mark}.  Before
   this function may be called, the current buffer must be the buffer
-  associated with the makr.
+  associated with the mark.
 \seealso{move_user_mark, create_user_mark, user_mark_buffer}
 \done
 

@@ -25,7 +25,7 @@ custom_variable ("Recentx_Cache_Filename", ".jedrecent");
 % used for recently accessed files.  If the filename is given
 % as a relative path, it will be taken as relative to value of the
 % Jed_Home_Directory variable, which typically coincides with the
-% users's HOME directory.
+% user's HOME directory.
 %\notes
 % This variable is defined in \file{recentx.sl}.
 %\seealso{Recentx_Cache_Exclude_Patterns, Recentx_Max_Files, Recentx_Use_Cache}

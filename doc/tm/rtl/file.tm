@@ -48,7 +48,7 @@
 \usage{Int_Type delete_file (String_Type file)}
 \description
   This function may be used to delete a file specified by the \var{file}
-  parameter.  It returns non-zero if the file was sucessfully deleted
+  parameter.  It returns non-zero if the file was successfully deleted
   or zero otherwise.
 \seealso{rmdir}
 \done
@@ -57,7 +57,7 @@
 \synopsis{Return number of files and list of files matching filename}
 \description
    returns the number of files and a list of files which match filename.
-      On unix, this defaults to filename*.  It is primarily useful for
+      On Unix, this defaults to filename*.  It is primarily useful for
       DOS and VMS to expand wildcard filenames
 \done
 

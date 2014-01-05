@@ -58,7 +58,7 @@
 \synopsis{Set the horizontal panning mode}
 \usage{Int_Type HORIZONTAL_PAN}
 \description
-  If the value of this variable is non-zero, the window wil pan when
+  If the value of this variable is non-zero, the window will pan when
   the cursor goes outside the border of the window.  More precisely, 
   if the value is less than zero, the entire window will pan.  If the
   value is positive, only the current line will pan.  The
@@ -289,20 +289,20 @@
 \done
 
 \function{w132}
-\synopsis{Set the number of columns on a vtxxx compatable terminal to 132.}
+\synopsis{Set the number of columns on a vtxxx compatible terminal to 132.}
 \usage{Void w132 ()}
 \description
   This function may be used to set the number of columns on a vtxxx
-  compatable terminal to 132.
+  compatible terminal to 132.
 \seealso{w80, set_term_vtxxx}
 \done
 
 \function{w80}
-\synopsis{Set the number of columns on a vtxxx compatable terminal to 80}
+\synopsis{Set the number of columns on a vtxxx compatible terminal to 80}
 \usage{Void w80 ()}
 \description
   This function may be used to set the number of columns on a vtxxx
-  compatable terminal to 80.
+  compatible terminal to 80.
 \seealso{w132, set_term_vtxxx}
 \done
 

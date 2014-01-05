@@ -116,11 +116,11 @@ public define next_buffer ()
 %\synopsis{Save the buffer to a different file/directory}
 %\usage{Void save_buffer_as(force_overwrite=0)}
 %\description
-%   Asks for a new filename and saves the buffer under this name.
-%   Asks before overwriting an existing file, if not called with
-%   force_overwrite=1.
-%   Sets readonly flag to 0, becouse if we are able to write,
-%   we can also modify.
+%  Asks for a new filename and saves the buffer under this name.
+%  Asks before overwriting an existing file, if not called with
+%  force_overwrite=1.
+%  Sets readonly flag to 0, because if we are able to write,
+%  we can also modify.
 %\seealso{save_buffer, write_buffer}
 %!%-
 define save_buffer_as ()
@@ -146,4 +146,3 @@ define save_buffer_as ()
    set_readonly(0);       % if we are able to write, we can also modify
 }
 %}}}
-

@@ -35,7 +35,7 @@ public define mailutils_find_header_separator ()
 %\usage{Int_Type mailutils_narrow_to_header ()}
 %\description
 % This function narrows the buffer to the mail headers.  It returns 0
-% if sucessful (headers were found), or -1 upon failure.
+% if successful (headers were found), or -1 upon failure.
 %\seealso{mailutils_find_header_separator, mailutils_set_keyword_value, widen}
 %!%-
 public define mailutils_narrow_to_header ()
